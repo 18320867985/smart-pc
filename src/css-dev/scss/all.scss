@@ -1,0 +1,34 @@
+
+@import "var.scss";                           // variable    
+
+//@import "normalize.scss";                  //  reset css style             
+
+@import "bs-scss-3/_bootstrap.scss";        // bootstrap 3.* scss
+
+@import "mixin.scss";                          // 函数
+
+@import "df-pc.scss";                            // pc端     default scss
+
+@import "component-scss/comp-all.scss";          //  默认-组件
+
+@import "vue-component/vue-all.scss";          // vue-组件
+
+
+@import "vd.scss";                             // 验证   scss
+
+@import "h5File.scss";                           // h5文件上传
+
+@import "page-scss/all-page.scss";                 // 子页面scss集合 
+
+@import "test.scss";
+
+
+
+
+
+
+
+
+
+
+
