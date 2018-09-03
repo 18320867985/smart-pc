@@ -6264,11 +6264,266 @@ select.form-control {
   width: 600px;
   margin: 0 auto; }
 
-.iconfont.renminbi {
-  margin-right: -5px; }
-
 /*head*/
 /*footer*/
-/*index*/
-.index h1 {
-  color: blue; }
+/*登录页*/
+/* body背景*/
+html {
+  height: 100%; }
+
+.login-bg {
+  width: 100%;
+  height: 100%;
+  background: url(../images/login-bg.png) no-repeat center;
+  background-size: 100% 100%; }
+
+.login {
+  position: relative; }
+
+.login-box {
+  position: fixed;
+  right: 20%;
+  top: 50%;
+  z-index: 99;
+  margin-top: -187px;
+  width: 357px;
+  height: 374px;
+  background: #d5d8e1;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 2px #ddd;
+          box-shadow: 0 2px 2px #ddd;
+  /*标题*/
+  /*文本框*/
+  /*IE10+*/
+  /*Firefox4-18*/
+  /*Firefox19+*/
+  /*文本进入焦点*/
+  /* 图标*/ }
+  .login-box > h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "微软雅黑";
+    text-align: center;
+    color: #3C5D8E; }
+  .login-box .form-gp {
+    position: relative;
+    width: 206px;
+    margin: 0 auto;
+    margin-bottom: 8px; }
+  .login-box .txt {
+    width: 100%;
+    height: 35px;
+    padding: 8px 10px;
+    padding-left: 50px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;
+    background: transparent; }
+  .login-box input::-webkit-input-placeholder {
+    color: #fff; }
+  .login-box input:-ms-input-placeholder {
+    color: #fff; }
+  .login-box input:-moz-placeholder {
+    color: #fff; }
+  .login-box input::-moz-placeholder {
+    color: #fff; }
+  .login-box .form-gp.active {
+    /*IE10+*/
+    /*Firefox4-18*/
+    /*Firefox19+*/ }
+    .login-box .form-gp.active .txt {
+      background: #fff;
+      color: #333; }
+    .login-box .form-gp.active .iconfont {
+      color: #ccc; }
+    .login-box .form-gp.active input::-webkit-input-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input:-ms-input-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input:-moz-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input::-moz-placeholder {
+      color: #ccc; }
+  .login-box .form-gp .iconfont {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 24px;
+    color: #fff;
+    color: #fff; }
+  .login-box .form-gp-ck {
+    padding: 0 10px; }
+  .login-box .checkbox {
+    margin-top: 5px; }
+    .login-box .checkbox label,
+    .login-box .checkbox input[type=checkbox] {
+      color: #A3B0C4; }
+    .login-box .checkbox.active label {
+      color: #3C5D8E; }
+  .login-box a.find-pwd {
+    margin-top: 5px;
+    color: #3C5D8E; }
+    .login-box a.find-pwd:hover {
+      text-decoration: underline; }
+  .login-box .form-gp.submit-box {
+    margin-top: 36px !important; }
+  .login-box .submit {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #f0f0f0;
+    color: #999;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 27px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: default; }
+    .login-box .submit.active {
+      background: #3c5d8e;
+      color: white;
+      cursor: pointer; }
+      .login-box .submit.active:hover {
+        background: #2d466a; }
+
+/*登录页*/
+/* body背景*/
+html {
+  height: 100%; }
+
+.login-bg {
+  width: 100%;
+  height: 100%;
+  background: url(../images/login-bg.png) no-repeat center;
+  background-size: 100% 100%; }
+
+.login {
+  position: relative; }
+
+.login-box {
+  position: fixed;
+  right: 20%;
+  top: 50%;
+  z-index: 99;
+  margin-top: -187px;
+  width: 357px;
+  height: 374px;
+  background: #d5d8e1;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 2px #ddd;
+          box-shadow: 0 2px 2px #ddd;
+  /*标题*/
+  /*文本框*/
+  /*IE10+*/
+  /*Firefox4-18*/
+  /*Firefox19+*/
+  /*文本进入焦点*/
+  /* 图标*/ }
+  .login-box > h2 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "微软雅黑";
+    text-align: center;
+    color: #3C5D8E; }
+  .login-box .form-gp {
+    position: relative;
+    width: 206px;
+    margin: 0 auto;
+    margin-bottom: 8px; }
+  .login-box .txt {
+    width: 100%;
+    height: 35px;
+    padding: 8px 10px;
+    padding-left: 50px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    outline: none;
+    background: transparent; }
+  .login-box input::-webkit-input-placeholder {
+    color: #fff; }
+  .login-box input:-ms-input-placeholder {
+    color: #fff; }
+  .login-box input:-moz-placeholder {
+    color: #fff; }
+  .login-box input::-moz-placeholder {
+    color: #fff; }
+  .login-box .form-gp.active {
+    /*IE10+*/
+    /*Firefox4-18*/
+    /*Firefox19+*/ }
+    .login-box .form-gp.active .txt {
+      background: #fff;
+      color: #333; }
+    .login-box .form-gp.active .iconfont {
+      color: #ccc; }
+    .login-box .form-gp.active input::-webkit-input-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input:-ms-input-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input:-moz-placeholder {
+      color: #ccc; }
+    .login-box .form-gp.active input::-moz-placeholder {
+      color: #ccc; }
+  .login-box .form-gp .iconfont {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    font-size: 24px;
+    color: #fff;
+    color: #fff; }
+  .login-box .form-gp-ck {
+    padding: 0 10px; }
+  .login-box .checkbox {
+    margin-top: 5px; }
+    .login-box .checkbox label,
+    .login-box .checkbox input[type=checkbox] {
+      color: #A3B0C4; }
+    .login-box .checkbox.active label {
+      color: #3C5D8E; }
+  .login-box a.find-pwd {
+    margin-top: 5px;
+    color: #3C5D8E; }
+    .login-box a.find-pwd:hover {
+      text-decoration: underline; }
+  .login-box .form-gp.submit-box {
+    margin-top: 36px !important; }
+  .login-box .submit {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #f0f0f0;
+    color: #999;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 27px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    cursor: default; }
+    .login-box .submit.active {
+      background: #3c5d8e;
+      color: white;
+      cursor: pointer; }
+      .login-box .submit.active:hover {
+        background: #2d466a; }

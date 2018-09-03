@@ -1,0 +1,165 @@
+/*登录页*/
+
+
+/* body背景*/
+
+html {
+    height: 100%;
+}
+
+.login-bg {
+    width: 100%;
+    height: 100%;
+    background: url(../images/login-bg.png) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.login {
+    position: relative;
+}
+
+.login-box {
+    position: fixed;
+    right: 20%;
+    top: 50%;
+    z-index: 99;
+    margin-top: -187px;
+    width: 357px;
+    height: 374px;
+    background: rgba(213, 216, 225, 1);
+    background-size: 100% 100%;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 2px #ddd;
+    /*标题*/
+    >h2 {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        font-size: 22px;
+        font-weight: 500;
+        font-family: "微软雅黑"; //Adobe Heiti Std R;
+        text-align: center;
+        color: #3C5D8E;
+    }
+    .form-gp {
+        position: relative;
+        width: 206px;
+        margin: 0 auto;
+        margin-bottom: 8px;
+    }
+    /*文本框*/
+    .txt {
+        width: 100%;
+        height: 35px;
+        padding: 8px 10px;
+        padding-left: 50px;
+        border-radius: 20px;
+        font-size: 16px;
+        border: 1px solid #fff;
+        color: #fff;
+        outline: none;
+        background: transparent;
+    }
+    input::-webkit-input-placeholder {
+        color: #fff;
+    }
+    /*IE10+*/
+    input:-ms-input-placeholder {
+        color: #fff;
+    }
+    /*Firefox4-18*/
+    input:-moz-placeholder {
+        color: #fff;
+    }
+    /*Firefox19+*/
+    input::-moz-placeholder {
+        color: #fff;
+    }
+    /*文本进入焦点*/
+    .form-gp.active {
+        .txt {
+            background: #fff;
+            color: #333;
+        }
+        .iconfont {
+            color: #ccc;
+        }
+        input::-webkit-input-placeholder {
+            color: #ccc;
+        }
+        /*IE10+*/
+        input:-ms-input-placeholder {
+            color: #ccc;
+        }
+        /*Firefox4-18*/
+        input:-moz-placeholder {
+            color: #ccc;
+        }
+        /*Firefox19+*/
+        input::-moz-placeholder {
+            color: #ccc;
+        }
+    }
+    /* 图标*/
+    .form-gp .iconfont {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        font-size: 24px;
+        color: #fff;
+        color: #fff;
+    }
+    .form-gp-ck {
+        padding: 0 10px;
+    }
+    .checkbox {
+        margin-top: 5px;
+        label,
+        input[type=checkbox] {
+            color: #A3B0C4;
+        }
+        
+        &.active{
+            label{
+                 color: #3C5D8E;
+            }
+        }
+    }
+    a.find-pwd {
+        margin-top: 5px;
+        color: #3C5D8E;
+        &:hover {
+             text-decoration: underline;
+        }
+    }
+    .form-gp.submit-box {
+        margin-top: 36px !important;
+    }
+    .submit {
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        color: #fff;
+        outline: none;
+        border: none;
+        background: #f0f0f0;
+        color: #999;
+        border-radius: 15px;
+        font-size: 17px;
+        font-weight: normal;
+        line-height: 27px;
+        transition: all .5s;
+        cursor: default;
+        &.active {
+            background: rgb(60, 93, 142);
+            color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+            &:hover {
+                background: darken(#3c5d8e, 10%)
+            }
+        }
+    }
+    
+    
+}

@@ -20,11 +20,11 @@
 				get: r
 			})
 		}, n.r = function(t) {
-			Object.defineProperty(t, "__esModule", {
+			Object.defineProperty(t, "__esModule__", {
 				value: !0
 			})
 		}, n.n = function(t) {
-			var e = t && t.__esModule ? function() {
+			var e = t && t.__esModule__ ? function() {
 				return t.default
 			} : function() {
 				return t
@@ -53,7 +53,7 @@
 					return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
 				})(t)
 			}
-			Object.defineProperty(e, "__esModule", {
+			Object.defineProperty(e, "__esModule__", {
 				value: !0
 			}), e.pushParams = a, e.popParams = l, e.withParams = function(t, e) {
 				if("object" === o(t) && void 0 !== e) return n = t, r = e, c(function(t) {
@@ -158,7 +158,7 @@
 					})
 				}(e))
 			}
-			Object.defineProperty(e, "__esModule", {
+			Object.defineProperty(e, "__esModule__", {
 				value: !0
 			}), e.patchChildren = function(t, e) {
 				o(t) && o(e) ? t !== e && function(t, e) {
@@ -183,7 +183,7 @@
 		},
 		28: function(t, e, n) {
 			"use strict";
-			Object.defineProperty(e, "__esModule", {
+			Object.defineProperty(e, "__esModule__", {
 				value: !0
 			}), e.Vuelidate = O, Object.defineProperty(e, "withParams", {
 				enumerable: !0,
