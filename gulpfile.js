@@ -87,7 +87,7 @@ gulp.task("scss", function() {
 		.pipe(sass().on('error', sass.logError)) // sass编译
 		.pipe(postcss([autoprefixer])) // 自动添加css3缀-webkit-  适合用于手机端 
 		//.pipe(minCss("all.css")) // 压缩css文件
-		.pipe(gulp.dest('./src/css'));
+		.pipe(rename("build.css")).pipe(gulp.dest('./src/css'));
 
 	gulp.src(paths.scssPath).pipe(connect.reload());
 
@@ -156,7 +156,7 @@ gulp.task('build', async function() {
 	});
 
 	await bundle.write({
-		file: './src/js/all.js',
+		file: './src/js/build.js',
 		format: 'umd',
 		name: 'umd',
 		//sourcemap: true,

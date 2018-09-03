@@ -29,7 +29,12 @@
 					}
 
 					var obj = window[parent];
-
+					if(!obj){
+						 return;
+					}
+					if(!obj[prop1]){
+						 return;
+					}
 					var fn = obj[prop1][prop2];
 
 					if(typeof fn === "function") {
