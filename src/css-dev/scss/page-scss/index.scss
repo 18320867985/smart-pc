@@ -1,165 +1,242 @@
-/*登录页*/
+/*管理index頁*/
 
-
-/* body背景*/
-
-html {
+.index {
     height: 100%;
 }
 
-.login-bg {
-    width: 100%;
+.index-box {
+    display: flex;
+    flex-flow: row nowrap;
     height: 100%;
-    background: url(../images/login-bg.png) no-repeat center;
-    background-size: 100% 100%;
 }
 
-.login {
-    position: relative;
+
+/*左邊caidan*/
+
+.index-aside {
+    width: 270px;
+    height: 100%;
+    color: white;
+    background: $index-bg;
 }
 
-.login-box {
-    position: fixed;
-    right: 20%;
-    top: 50%;
-    z-index: 99;
-    margin-top: -187px;
-    width: 357px;
-    height: 374px;
-    background: rgba(213, 216, 225, 1);
-    background-size: 100% 100%;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 2px #ddd;
-    /*标题*/
-    >h2 {
-        margin-top: 60px;
-        margin-bottom: 40px;
-        font-size: 22px;
-        font-weight: 500;
-        font-family: "微软雅黑"; //Adobe Heiti Std R;
-        text-align: center;
-        color: #3C5D8E;
+
+/*logo*/
+
+.index-aside-logo {
+    padding: 11px 27px 16px 27px;
+    img {
+        width: 145px;
     }
-    .form-gp {
-        position: relative;
-        width: 206px;
-        margin: 0 auto;
-        margin-bottom: 8px;
-    }
-    /*文本框*/
-    .txt {
-        width: 100%;
-        height: 35px;
-        padding: 8px 10px;
-        padding-left: 50px;
-        border-radius: 20px;
-        font-size: 16px;
-        border: 1px solid #fff;
-        color: #fff;
-        outline: none;
-        background: transparent;
-    }
-    input::-webkit-input-placeholder {
-        color: #fff;
-    }
-    /*IE10+*/
-    input:-ms-input-placeholder {
-        color: #fff;
-    }
-    /*Firefox4-18*/
-    input:-moz-placeholder {
-        color: #fff;
-    }
-    /*Firefox19+*/
-    input::-moz-placeholder {
-        color: #fff;
-    }
-    /*文本进入焦点*/
-    .form-gp.active {
-        .txt {
-            background: #fff;
-            color: #333;
+}
+
+
+/*侧边菜单*/
+
+.index-aside-nemu {
+    padding-left: 5px;
+     display: flex;
+    ._nemu-1 {
+        >div {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            width: 85px;
+            height: 84px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            &.active {
+                border-left: 5px solid #fff;
+                background: $text-primary;
+                transition: all .5s;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+                span {
+                    color: #fff;
+                }
+            }
+            >img {
+                width: 46px;
+                height: 46px;
+                margin-bottom: 5px;
+            }
+            >span {
+                display: block;
+                font-size: 13px;
+                color: #8390A4;
+                line-height: 19px;
+            }
         }
-        .iconfont {
-            color: #ccc;
+        
+         
+    }
+    ._nemu-2 {
+        margin-left: 5px;
+        flex: 1;
+        ._nemu-item {
+             transition: all .5s;
+            dl>dd {
+                display: none;
+            }
+            dt {
+                padding-left: 10px;
+                padding-top: 10px;
+                font-size: 14px;
+                font-family: PingFangSC-Regular;
+                font-weight: 400;
+                 color: rgba(131, 144, 164, 1); 
+                line-height: 19px;
+                cursor: pointer;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                .iconfont {
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+                >a{
+                      color: rgba(131, 144, 164, 1); 
+                }
+            }
+            &.active {
+                background: #3F4151;
+                dt {
+                    color: #fff;
+                    font-size: 14px;
+                    transition: all .5s;
+                    .iconfont {
+                        font-size: 20px;
+                        margin-right: 5px;
+                        font-weight: 400;
+                    }
+                    >a{
+                      color: #fff; 
+                }
+                }
+            }
+             
+            // 三级列表
+            &.active {
+                dd {
+                    display: block;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    padding: 5px;
+                    margin-right: 10px;
+                    text-align: left;
+                    color: #777;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    transition: all .5s;
+                    a{
+                        color:#999;
+                    }
+                    .iconfont {
+                        margin-right: 3px;
+                    }
+                    &.active {
+                        color: #f8f8f8;
+                        background: $text-primary;
+                        >a{
+                            color: #f8f8f8;
+                        }
+                    }
+                }
+            }
+            
+//         &:hover{
+//             background: #3F4151;
+//          }  
+        }
+        ._nemu-item+._nemu-item {
+//          margin-top: 10px;
+        }
+      
+    }
+}
+
+
+/*右边*/
+
+.index-cont {
+    flex: 1;
+    border-left: 1px solid #333;
+}
+
+.index-cont-top {
+    width: 100%;
+    height: 70px;
+    background: $index-bg;
+    color: #fff;
+    line-height: 70px;
+    // 搜索框
+    >div {
+        position: relative;
+        top: 20px;
+        height: 34px;
+        line-height: 34px;
+        margin-right: 50px;
+        .txt.form-control {
+            //          padding: 6px 10px;
+            padding-left: 40px;
+            width: 200px;
+            //          height: 34px;  
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background: transparent;
+            color: #fff;
+        }
+        .iconfont.icon-sousuo {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            font-size: 24px;
+            color: #f8f8f8;
+            cursor: pointer;
         }
         input::-webkit-input-placeholder {
             color: #ccc;
+            padding: 6px 10px;
         }
         /*IE10+*/
         input:-ms-input-placeholder {
             color: #ccc;
+            padding: 6px 10px;
         }
         /*Firefox4-18*/
         input:-moz-placeholder {
             color: #ccc;
+            padding: 6px 10px;
         }
         /*Firefox19+*/
         input::-moz-placeholder {
             color: #ccc;
+            padding: 6px 10px;
         }
     }
-    /* 图标*/
-    .form-gp .iconfont {
-        position: absolute;
-        top: 0;
-        left: 15px;
+    .icon-user,
+    .icon-639 {
         font-size: 24px;
-        color: #fff;
-        color: #fff;
+        cursor: pointer;
     }
-    .form-gp-ck {
-        padding: 0 10px;
+    ._list {
+        margin-right: 50px;
     }
-    .checkbox {
-        margin-top: 5px;
-        label,
-        input[type=checkbox] {
-            color: #A3B0C4;
-        }
-        
-        &.active{
-            label{
-                 color: #3C5D8E;
-            }
+    .icon-639 {
+        .tooltip {
+            width: 100px;
         }
     }
-    a.find-pwd {
-        margin-top: 5px;
-        color: #3C5D8E;
-        &:hover {
-             text-decoration: underline;
+    /*用户点击下拉菜单*/
+    .icon-user {
+        padding-right: 50px;
+    }
+    .dropdown-menu {
+        min-width: 88px;
+        .glyphicon {
+            margin-right: 5px;
         }
     }
-    .form-gp.submit-box {
-        margin-top: 36px !important;
-    }
-    .submit {
-        width: 100%;
-        height: 34px;
-        line-height: 34px;
-        text-align: center;
-        color: #fff;
-        outline: none;
-        border: none;
-        background: #f0f0f0;
-        color: #999;
-        border-radius: 15px;
-        font-size: 17px;
-        font-weight: normal;
-        line-height: 27px;
-        transition: all .5s;
-        cursor: default;
-        &.active {
-            background: rgb(60, 93, 142);
-            color: rgba(255, 255, 255, 1);
-            cursor: pointer;
-            &:hover {
-                background: darken(#3c5d8e, 10%)
-            }
-        }
-    }
-    
-    
 }

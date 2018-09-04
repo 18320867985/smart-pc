@@ -3,10 +3,6 @@
 
 /* body背景*/
 
-html {
-    height: 100%;
-}
-
 .login-bg {
     width: 100%;
     height: 100%;
@@ -50,8 +46,8 @@ html {
     /*文本框*/
     .txt {
         width: 100%;
-        height: 35px;
-        padding: 8px 10px;
+        height: 34px;
+        padding: 6px 10px;
         padding-left: 50px;
         border-radius: 20px;
         font-size: 16px;
@@ -163,3 +159,13 @@ html {
     
     
 }
+
+
+/* iframe 框架*/
+ .iframe-box {
+        position: relative;
+        border: none;
+        width: 100% !important;
+        overflow: scroll;
+        
+    }

@@ -1,23 +1,21 @@
 /*var*/
 
-//
-//@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-//@brand-success:         #5cb85c;
-//@brand-info:            #5bc0de;
-//@brand-warning:         #f0ad4e;
-//@brand-danger:          #d9534f;
-
+/*全局*/
 $font-family:"微软雅黑","宋体","Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-color:#333 !default;
-$font-size:12px !default;
-$bg-color:#f7f7f7 !default;
+$font-color:#333 ;
+$font-size:14px ;
+$body-bg:#fff ;
 
-$text-default: #8e8e8e; // 默认
-$text-primary: #2d80f6; // 选中
+$text-default: #000; // 默认
+$text-primary: #467CC3; // 选中
 $text-info : #5bc0de; // 信息
 $text-success: #5cb85c; // 警告 
 $text-warning: #f0ad4e; // 警告   
 $text-danger : #f05a00; // 危险 
+
+
+/*頁面*/
+$index-bg:#191722;   // 管理頁背景
 
 
 

@@ -7,71 +7,134 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<meta name="Keywords" content="" />
 		<meta name="Description" content="" />
-		<title></title>
+		<title>神州云海后台管理中心</title>
+
+		<!--check css-->
+		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--css3 prefix-->
+		<script src="js/prefix-css3.min.js" type="text/javascript" charset="utf-8"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
+		<style type="text/css">
+			html,
+			body {
+				height: 100%;
+			}
+		</style>
 	</head>
 
 	<body>
 
 		<div class="container-fluid-12 index">
-			<div class="row">
+			<div class=" row index-box">
 				<!--菜单-->
 				<aside class="index-aside">
-					<div class="index-aside-logo">
-						<img src="images/LOGO.png" alt="" />
 
+					<!--logo-->
+					<div class="index-aside-logo">
+						<img src="images/LOGO-dg.png" alt="" />
 					</div>
 
 					<div class="index-aside-nemu clearfix">
+
+						<!--菜单1级-->
 						<div class="_nemu-1 pull-left">
-							<div>
+							<div class="_nemu-item active" data-toggle="tab" data-target="#select1">
 								<img src="images/nemu-1-1.png" alt="" />
 								<span>伊工社长</span>
 							</div>
 
-							<div>
-								<img src="images/nemu-1-2.png" alt="" />
-								<span>伊工社长</span>
+							<div class="_nemu-item"  data-toggle="tab" data-target="#select2">
+								<img src="images/nemu-1-df.png" alt="" />
+								<span>迎宾</span>
 							</div>
 
 						</div>
-						<div class="nemu-2 pull-left">
-							<div class="_nemu-item">
-								<dl>
-									<dt>模式模式管理</dt>
-									<dd></dd>
-								</dl>
-							</div>
-							<div class="_nemu-item">
-								<dl>
-									<dt>机器人管理</dt>
-									<dd></dd>
-								</dl>
-							</div>
-							
-							
-							<div class="_nemu-item">
-								<dl>
-									<dt>导航管理管理</dt>
-									<dd></dd>
-								</dl>
-							</div>
-							<div class="nemu-item">
-								<dl>
-									<dt>监控管理</dt>
-									<dd></dd>
-								</dl>
-							</div>
-							
-							<div class="_nemu-item">
-								<dl>
-									<dt>维护管理</dt>
-									<dd></dd>
-								</dl>
-							</div>
 
+						<!--菜单2级-->
+						<div class="_nemu-2 pull-left tab-content">
+							<!-- select1-->
+							<div id="select1" class="tab-pane active fade in">
+								<div class="_nemu-item ">
+									<dl>
+										<dt>
+											<span class="iconfont icon-qiehuanmoshi"></span>
+											<a href="javascript:;">模式管理</a>
+											
+										</dt>
+										<dd>
+											
+										</dd>
+									</dl>
+								</div>
+								<div class="_nemu-item">
+									<dl>
+										<dt> 
+											<span class="iconfont icon-jiqiren"></span>
+								
+											<a href="javascript:;">机器人管理</a>
+										</dt>
+										<dd></dd>
+									</dl>
+								</div>
+								<div class="_nemu-item active clearfix">
+									<dl>
+										<dt> <span class="iconfont icon-quanxianguanli"></span>
+											<a href="javascript:;">权限管理</a>
+										</dt>
+										<!--三级菜单-->
+										<dd class="active">
+											<span class=" iconfont icon-user"></span>
+											<a href="javascript:;">管理员管理</a>
+										</dd>
+										<dd>
+											<span class="iconfont icon-jiaose"></span>
+											<a href="javascript:;">权限角色管理</a>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="_nemu-item">
+									<dl>
+										<dt> <span class="iconfont icon-bf-icon-navigation"></span>
+									
+											<a href="javascript:;">导航管理</a>
+										</dt>
+										<dd></dd>
+									</dl>
+								</div>
+								<div class="_nemu-item">
+									<dl>
+										<dt> <span class="iconfont icon-jiankong"></span>
+										
+											<a href="javascript:;">监控管理</a>
+										</dt>
+										<dd></dd>
+									</dl>
+								</div>
+
+								<div class="_nemu-item">
+									<dl>
+										<dt>
+											<span class="iconfont icon-weihu"></span>
+									
+											<a href="javascript:;">维护管理</a>
+										</dt>
+										<dd></dd>
+									</dl>
+								</div>
+							</div>
+							
+							<!-- select2-->
+							<div id="select2"  class="tab-pane">
+								<div class="_nemu-item active">
+									<dl>
+										<dt> <span class="iconfont icon-jiudianyingbinzengli"></span>迎宾模式</dt>
+										<dd></dd>
+									</dl>
+								</div>
+								
 						</div>
 					</div>
 
@@ -79,48 +142,51 @@
 
 				<!--右边内容-->
 				<section class="index-cont">
-					<div class="index-cont-top">
-						<!--搜索框-->
-						<div class="_serah-box">
-							<input type="" name="" id="" value="" />
-							<span></span>
-						</div>
-						
-						<div  class="">
-							
-						</div>
+					<!--top 按钮-->
+					<div class="index-cont-top clearfix">
 						
 						<!--用户按钮-->
-						<div>
-							<span></span>
-							
+						<div class="pull-right _list">
+							<span class="iconfont icon-user " data-toggle="dropdown"></span>
+							<!--下拉菜单-->
+							<ul class="dropdown-menu">
+								<li>
+									<a href="javascript:;"> <span class="glyphicon glyphicon-edit text-muted"></span>修改密码</a>
+								</li>
+								<li>
+									<a href="javascript:;"> <span class="glyphicon glyphicon-off text-danger"></span> 退出登录</a>
+								</li>
+
+							</ul>
+
 						</div>
-						
-					
+						<div class="pull-right">
+							<!--tooltip --->
+							<span class="iconfont icon-639"></span>
+						</div>
+
+						<!--搜索框-->
+						<div class="_serah-box pull-right">
+							<input class="txt  form-control" type="search" name="" id="" value="" placeholder="输入查询的关键字" />
+							<span class="iconfont icon-sousuo"></span>
+						</div>
+
 					</div>
-					
-						<!--iframe 框架-->
-						<iframe  border="none"></iframe>
-							
-						
+
+					<!--iframe 框架-->
+					<iframe id="iframe" class="iframe-box " src="admin-df.html"></iframe>
+
 				</section>
 
 			</div>
 
 		</div>
 
-		<!--check css-->
-		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<!--css3 prefix-->
-		<script src="js/prefix-css3.min.js" type="text/javascript" charset="utf-8"></script>
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lte IE 8]>
-			<script src="js/html5shiv.js" type="text/javascript" charset="utf-8"></script>
-			<script src="js/respond.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 9]>
+			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
 		<script data-parent="umd" data-umd="index.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-		</script>
+
 	</body>
 
 </html>
