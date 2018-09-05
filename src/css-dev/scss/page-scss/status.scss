@@ -2,3 +2,68 @@
  状态管理
  
  * */
+
+.status {
+  width: 1300px;
+//  height: 380px;
+    margin: 0 auto;
+    margin-top: 70px;
+    //  border: 1px solid  #ccc;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.status-item {
+    position: relative;
+    width: 295px; //188px;
+    height: 246px;//157px;
+    background: #fff;
+    margin-top: 20px;
+     overflow: hidden;
+}
+
+.status-ttl {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    background: #f4f4fc;
+    font-size: 13px;
+    color: #777;
+}
+
+.status-cont {
+    height: 206px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {}
+}
+
+.status-det{
+      position: absolute;
+      z-index: 99;
+      top:40px;
+      left: -295px;
+      width: 100%;
+      height: 206px;
+      padding-left: 42px;
+      transition:  all .8s;
+      background:rgba(255,255,255,.8);
+       li{
+           margin-top: 17px;
+            color:#777;
+           
+       }
+      
+    
+}
+
+.status-item:hover .status-det {
+    
+       left:0px;
+}

@@ -21365,10 +21365,15 @@ var iframe = function ($) {
 	// 设置iframe 高度
 	var _setHeight = function _setHeight() {
 		$(function () {
-			var windows_h = $(document).height() + 50;
-			$(window.parent.document).find(".iframe-box").css("height", windows_h);
-			//console.log($(document).height());
+			set();
 		});
+
+		function set() {
+			var window_h = $(document).height() + 50;
+			var window_w = $(document).width();
+			$(window.parent.document).find(".iframe-box").css("height", window_h);
+			$(window.parent.document).find(".iframe-box").css("width", window_w);
+		}
 	};
 
 	return {
@@ -21412,23 +21417,27 @@ var index = {
 	init: function init() {
 
 		// 一级菜单点击
-		$(".index-aside-nemu ._nemu-1 ._nemu-item").on("click", function () {
-
+		$(".index-aside-nemu ._nemu-1 ._nemu-item").on("click", function (event) {
+			event.preventDefault();
 			$(this).siblings().removeClass("active").find("img").attr("src", "images/nemu-1-df.png");
 			$(this).addClass("active").find("img").attr("src", "images/nemu-1-1.png");
 		});
 
 		// 二级菜单点击
-		$(".index-aside-nemu ._nemu-2  ._nemu-item").on("click", function () {
-
+		$(".index-aside-nemu ._nemu-2  ._nemu-item").on("click", function (event) {
+			event.preventDefault();
 			$(this).siblings().removeClass("active");
 			$(this).addClass("active");
+			var src = $(this).find(" dt a").attr("href");
+			if (src) {
+				$(".iframe-box").attr("src", src);
+			}
 		});
 
 		// 三级菜单点击
-		$(".index-aside-nemu ._nemu-2 dd").on("click", function () {
-
-			$(this).siblings().removeClass("active");
+		$(".index-aside-nemu ._nemu-2 dd").on("click", function (event) {
+			event.preventDefault();
+			$(this).parents("._nemu-2").find("dd").removeClass("active");
 			$(this).addClass("active");
 			var src = $(this).attr("href") || "javascript:";
 			$(".iframe-box").attr("src", src);

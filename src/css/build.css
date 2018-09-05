@@ -5820,6 +5820,9 @@ button.close {
           box-sizing: border-box;
   outline: none; }
 
+html, body {
+  height: 100%; }
+
 body {
   font-size: 14px;
   font-family: "微软雅黑", "宋体", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -6264,10 +6267,6 @@ select.form-control {
   line-height: 28px; }
 
 /*modal ie8*/
-.no-opacity .modal {
-  width: 600px;
-  margin: 0 auto; }
-
 /*head*/
 /*footer*/
 /*管理index頁*/
@@ -6357,6 +6356,7 @@ select.form-control {
         color: #8390a4;
         line-height: 19px;
         cursor: pointer;
+        width: 146px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -6398,11 +6398,13 @@ select.form-control {
         font-size: 12px;
         text-align: left;
         color: #777;
+        width: 111px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
         -webkit-transition: all .5s;
-        transition: all .5s; }
+        transition: all .5s;
+        cursor: pointer; }
         .index-aside-nemu ._nemu-2 ._nemu-item.active dd a {
           color: #999;
           font-size: 12px; }
@@ -6452,16 +6454,18 @@ select.form-control {
   /*用户名称*/ }
   .index-cont-top > div {
     position: relative;
-    top: 13px;
-    height: 34px;
-    line-height: 34px;
+    top: 14px;
+    height: 31px;
+    line-height: 31px;
     margin-right: 40px;
     /*IE10+*/
     /*Firefox4-18*/
     /*Firefox19+*/ }
     .index-cont-top > div .txt.form-control {
+      padding: 4px 10px;
       padding-left: 40px;
-      width: 200px;
+      width: 185px;
+      height: 31px;
       border: 1px solid #ddd;
       border-radius: 15px;
       background: transparent;
@@ -6498,9 +6502,12 @@ select.form-control {
     padding-left: 30px; }
   .index-cont-top .dropdown-menu {
     min-width: 88px;
-    top: 126%; }
+    width: 110px;
+    top: 137%; }
     .index-cont-top .dropdown-menu .glyphicon {
       margin-right: 5px; }
+    .index-cont-top .dropdown-menu li > a {
+      padding: 3px 12px; }
   .index-cont-top ._admin-ttl {
     position: absolute;
     top: 20px;
@@ -6517,7 +6524,7 @@ select.form-control {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 45px;
+  height: 34px;
   background: #3F4151; }
 
 /*iframe*/
@@ -6525,7 +6532,12 @@ select.form-control {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  overflow: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.iframe-box {
+  width: 100%;
+  overflow-x: hidden; }
 
 /*下面导航*/
 /*登录页*/
@@ -6676,10 +6688,104 @@ img.login-bg {
   overflow: scroll; }
 
 /*
- 状态管理
- 
- * */
-/*
  * 模式管理
  * 
  */
+/*
+ 状态管理
+ 
+ * */
+.status {
+  width: 1300px;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.status-item {
+  position: relative;
+  width: 295px;
+  height: 246px;
+  background: #fff;
+  margin-top: 20px;
+  overflow: hidden; }
+
+.status-ttl {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  background: #f4f4fc;
+  font-size: 13px;
+  color: #777; }
+
+.status-cont {
+  height: 206px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.status-det {
+  position: absolute;
+  z-index: 99;
+  top: 40px;
+  left: -295px;
+  width: 100%;
+  height: 206px;
+  padding-left: 42px;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+  background: rgba(255, 255, 255, 0.8); }
+  .status-det li {
+    margin-top: 17px;
+    color: #777; }
+
+.status-item:hover .status-det {
+  left: 0px; }
+
+/*
+ 状态管理-详情
+ 
+ * */
+.statusdtl-bg {
+  height: 100%; }
+
+.statusdtl {
+  height: 100%; }
+
+.statusdtl-cont {
+  position: relative;
+  height: 768px;
+  background: url(../images/status/detail3.png) no-repeat 648px 200px, url(../../../images/status/detail1.png) no-repeat 320px 150px, url(../images/status/detail@3x.png) no-repeat center center;
+  background-size: auto, auto, 100% 100%; }
+
+.statusdtl-box {
+  position: absolute;
+  z-index: 99;
+  top: 233px;
+  left: 720px; }
+  .statusdtl-box li {
+    margin-bottom: 5px;
+    color: #7371FD; }
+    .statusdtl-box li label {
+      font-size: 16px;
+      font-weight: 400; }
+    .statusdtl-box li span {
+      font-size: 14px; }

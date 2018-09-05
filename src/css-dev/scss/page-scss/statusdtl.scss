@@ -1,0 +1,37 @@
+/*
+ 状态管理-详情
+ 
+ * */
+
+.statusdtl-bg {
+    height: 100%;
+}
+
+.statusdtl {
+    height: 100%;
+}
+
+.statusdtl-cont {
+    position: relative;
+    height: 768px;
+    background: url(../images/status/detail3.png) no-repeat 648px 200px, url(../../../images/status/detail1.png) no-repeat 320px 150px, url(../images/status/detail@3x.png) no-repeat center center;
+    background-size: auto, auto, 100% 100%;
+}
+
+.statusdtl-box {
+    position: absolute;
+    z-index: 99;
+    top: 233px;
+    left: 720px;
+    li {
+        margin-bottom: 5px;
+        color: #7371FD;
+        label {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+}
