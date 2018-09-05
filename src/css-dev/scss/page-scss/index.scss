@@ -14,7 +14,7 @@
 /*左邊caidan*/
 
 .index-aside {
-    width: 270px;
+    width: 236px;
     height: 100%;
     color: white;
     background: $index-bg;
@@ -35,7 +35,7 @@
 
 .index-aside-nemu {
     padding-left: 5px;
-     display: flex;
+    display: flex;
     ._nemu-1 {
         >div {
             display: flex;
@@ -67,14 +67,12 @@
                 line-height: 19px;
             }
         }
-        
-         
     }
     ._nemu-2 {
-        margin-left: 5px;
+        //      margin-left: 5px;
         flex: 1;
         ._nemu-item {
-             transition: all .5s;
+            transition: all .5s;
             dl>dd {
                 display: none;
             }
@@ -84,7 +82,7 @@
                 font-size: 14px;
                 font-family: PingFangSC-Regular;
                 font-weight: 400;
-                 color: rgba(131, 144, 164, 1); 
+                color: rgba(131, 144, 164, 1);
                 line-height: 19px;
                 cursor: pointer;
                 overflow: hidden;
@@ -92,11 +90,21 @@
                 text-overflow: ellipsis;
                 vertical-align: middle;
                 .iconfont {
-                    font-size: 20px;
+                    font-size: 18px;
                     margin-right: 5px;
                 }
-                >a{
-                      color: rgba(131, 144, 164, 1); 
+                >img {
+                    width: 22px;
+                    height: 22px;
+                }
+                >img.active {
+                    display: none;
+                }
+                >a {
+                    color: rgba(131, 144, 164, 1);
+                }
+                >* {
+                    vertical-align: middle;
                 }
             }
             &.active {
@@ -106,54 +114,75 @@
                     font-size: 14px;
                     transition: all .5s;
                     .iconfont {
-                        font-size: 20px;
+                        font-size: 22px;
                         margin-right: 5px;
                         font-weight: 400;
                     }
-                    >a{
-                      color: #fff; 
+                    >a {
+                        color: #fff;
+                    }
                 }
+                img.df {
+                    display: none;
+                }
+                img.active {
+                    display: inline-block;
                 }
             }
-             
             // 三级列表
             &.active {
                 dd {
                     display: block;
-                    margin-left: 20px;
+                    margin-left: 35px;
                     margin-top: 10px;
                     padding: 5px;
-                    margin-right: 10px;
+                    font-size: 12px;
                     text-align: left;
                     color: #777;
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     transition: all .5s;
-                    a{
-                        color:#999;
+                    a {
+                        color: #999;
+                        font-size: 12px;
                     }
+                    img.active {
+                            display: none;
+                     }
+                     img.df {
+                            display: inline-block;
+                        }
                     .iconfont {
+                        font-size: 16px;
                         margin-right: 3px;
                     }
                     &.active {
                         color: #f8f8f8;
                         background: $text-primary;
-                        >a{
+                        >a {
                             color: #f8f8f8;
                         }
+                        img.df {
+                            display: none;
+                        }
+                        img.active {
+                            display: inline-block;
+                        }
+                    }
+                    
+                    >* {
+                        vertical-align: middle;
                     }
                 }
             }
-            
-//         &:hover{
-//             background: #3F4151;
-//          }  
+            //         &:hover{
+            //             background: #3F4151;
+            //          }  
         }
         ._nemu-item+._nemu-item {
-//          margin-top: 10px;
+            //          margin-top: 10px;
         }
-      
     }
 }
 
@@ -161,23 +190,27 @@
 /*右边*/
 
 .index-cont {
+    position: relative;
     flex: 1;
+    display: flex;
+    flex-flow: column;
     border-left: 1px solid #333;
 }
 
 .index-cont-top {
     width: 100%;
-    height: 70px;
+    height: 60px;
+    flex-basis: 60px;
     background: $index-bg;
     color: #fff;
-    line-height: 70px;
+    line-height: 00px;
     // 搜索框
     >div {
         position: relative;
-        top: 20px;
+        top: 13px;
         height: 34px;
         line-height: 34px;
-        margin-right: 50px;
+        margin-right: 40px;
         .txt.form-control {
             //          padding: 6px 10px;
             padding-left: 40px;
@@ -231,12 +264,57 @@
     }
     /*用户点击下拉菜单*/
     .icon-user {
-        padding-right: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
     }
     .dropdown-menu {
         min-width: 88px;
+        top: 126%;
         .glyphicon {
             margin-right: 5px;
         }
     }
+    /*用户名称*/
+    ._admin-ttl {
+        position: absolute;
+        top: 20px;
+        z-index: 999;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+}
+
+
+/*导航*/
+
+.index-nav {
+    display: flex;
+    height: 45px;
+    background: #3F4151;
+}
+
+
+/*iframe*/
+
+.index-cont-iframe {
+    flex: 1;
+    overflow: auto;
+}
+
+
+/*下面导航*/
+
+.index-bottom-nav {
+    //  position: absolute;
+    //  bottom: 0;
+    //  left: 50%;
+    //  margin-left:4 ;
+    //  width: 846px;
+    //  height: 64px;
+    //  background: url(../images/index-nav.png) no-repeat  center center;
+    //  background-size:100% 100% ;
 }

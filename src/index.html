@@ -31,7 +31,7 @@
 				<!--菜单-->
 				<aside class="index-aside">
 
-					<!--logo-->
+					<!--logo 图片-->
 					<div class="index-aside-logo">
 						<img src="images/LOGO-dg.png" alt="" />
 					</div>
@@ -39,13 +39,13 @@
 					<div class="index-aside-nemu clearfix">
 
 						<!--菜单1级-->
-						<div class="_nemu-1 pull-left">
+						<div class="_nemu-1">
 							<div class="_nemu-item active" data-toggle="tab" data-target="#select1">
 								<img src="images/nemu-1-1.png" alt="" />
 								<span>伊工社长</span>
 							</div>
 
-							<div class="_nemu-item"  data-toggle="tab" data-target="#select2">
+							<div class="_nemu-item" data-toggle="tab" data-target="#select2">
 								<img src="images/nemu-1-df.png" alt="" />
 								<span>迎宾</span>
 							</div>
@@ -53,26 +53,29 @@
 						</div>
 
 						<!--菜单2级-->
-						<div class="_nemu-2 pull-left tab-content">
+						<div class="_nemu-2 tab-content">
 							<!-- select1-->
 							<div id="select1" class="tab-pane active fade in">
 								<div class="_nemu-item ">
 									<dl>
 										<dt>
-											<span class="iconfont icon-qiehuanmoshi"></span>
+											<img class="df" src="images/icon/pattern-icon2@2x.png" alt="" />
+											<img class="active" src="images/icon/pattern-icon1@2x.png" alt="" />
+										
 											<a href="javascript:;">模式管理</a>
 											
 										</dt>
 										<dd>
-											
+
 										</dd>
 									</dl>
 								</div>
 								<div class="_nemu-item">
 									<dl>
 										<dt> 
-											<span class="iconfont icon-jiqiren"></span>
-								
+										
+											<img class="df" src="images/icon/quanxian@2x.png" alt="" />
+											<img class="active" src="images/icon/quanxian focus@2x.png" alt="" />
 											<a href="javascript:;">机器人管理</a>
 										</dt>
 										<dd></dd>
@@ -80,16 +83,23 @@
 								</div>
 								<div class="_nemu-item active clearfix">
 									<dl>
-										<dt> <span class="iconfont icon-quanxianguanli"></span>
+										<dt> 
+											
+											<img  class="df" src="images/icon/robot@2x.png" alt="" />
+												<img  class="active" src="images/icon/robot focus@2x.png" alt="" />
 											<a href="javascript:;">权限管理</a>
 										</dt>
 										<!--三级菜单-->
 										<dd class="active">
-											<span class=" iconfont icon-user"></span>
+											<!--<span class=" iconfont icon-user"></span>-->
+											<img class="df" src="images/icon/admin@2x.png" alt="" />
+											<img  class="active" src="images/icon/admin focus@2x.png" alt="" />
 											<a href="javascript:;">管理员管理</a>
 										</dd>
 										<dd>
-											<span class="iconfont icon-jiaose"></span>
+											<!--<span class="iconfont icon-jiaose"></span>-->
+											<img class="df" src="images/icon/role@2x.png" alt="" />
+											<img  class="active" src="images/icon/role focus@2x.png" alt="" />
 											<a href="javascript:;">权限角色管理</a>
 										</dd>
 									</dl>
@@ -97,8 +107,10 @@
 
 								<div class="_nemu-item">
 									<dl>
-										<dt> <span class="iconfont icon-bf-icon-navigation"></span>
-									
+										<dt> 
+											
+											<img class="df" src="images/icon/status-icon1@2x.png" alt="" />
+											<img class="active" src="images/icon/status-icon2@2x.png" alt="" />
 											<a href="javascript:;">导航管理</a>
 										</dt>
 										<dd></dd>
@@ -106,8 +118,10 @@
 								</div>
 								<div class="_nemu-item">
 									<dl>
-										<dt> <span class="iconfont icon-jiankong"></span>
-										
+										<dt> 
+											
+										<img class="df" src="images/icon/camera@2x.png" alt="" />
+										<img class="active" src="images/icon/camera focus@2x.png" alt="" />
 											<a href="javascript:;">监控管理</a>
 										</dt>
 										<dd></dd>
@@ -117,26 +131,27 @@
 								<div class="_nemu-item">
 									<dl>
 										<dt>
-											<span class="iconfont icon-weihu"></span>
-									
+											
+										<img class="df" src="images/icon/set-icon2@2x.png" alt=""  />
+										<img class="active" src="images/icon/set-icon1@2x.png" alt="" >
 											<a href="javascript:;">维护管理</a>
 										</dt>
 										<dd></dd>
 									</dl>
 								</div>
 							</div>
-							
+
 							<!-- select2-->
-							<div id="select2"  class="tab-pane">
+							<div id="select2" class="tab-pane">
 								<div class="_nemu-item active">
 									<dl>
 										<dt> <span class="iconfont icon-jiudianyingbinzengli"></span>迎宾模式</dt>
 										<dd></dd>
 									</dl>
 								</div>
-								
+
+							</div>
 						</div>
-					</div>
 
 				</aside>
 
@@ -144,10 +159,14 @@
 				<section class="index-cont">
 					<!--top 按钮-->
 					<div class="index-cont-top clearfix">
-						
+
 						<!--用户按钮-->
 						<div class="pull-right _list">
-							<span class="iconfont icon-user " data-toggle="dropdown"></span>
+							<div data-toggle="dropdown">
+								<span class="iconfont icon-user "></span>
+								<div class="_admin-ttl">admin</div>
+							</div>
+
 							<!--下拉菜单-->
 							<ul class="dropdown-menu">
 								<li>
@@ -160,6 +179,7 @@
 							</ul>
 
 						</div>
+
 						<div class="pull-right">
 							<!--tooltip --->
 							<span class="iconfont icon-639"></span>
@@ -172,20 +192,31 @@
 						</div>
 
 					</div>
+					<!--页面导航-->
+					<div class="index-nav">
+
+					</div>
 
 					<!--iframe 框架-->
-					<iframe id="iframe" class="iframe-box " src="admin-df.html"></iframe>
+					<div class="index-cont-iframe">
+						<iframe id="iframe" class="iframe-box " src="admin-pattern.html"></iframe>
+
+						<!--下面导航-->
+						<!--<div class="index-bottom-nav">
+							
+						</div>-->
+					</div>
 
 				</section>
 
+				</div>
+
 			</div>
 
-		</div>
-
-		<!--[if lte IE 9]>
+			<!--[if lte IE 9]>
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
-		<script data-parent="umd" data-umd="index.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
+			<script data-parent="umd" data-umd="index.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
 
 	</body>
 

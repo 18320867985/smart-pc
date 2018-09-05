@@ -21430,6 +21430,8 @@ var index = {
 
 			$(this).siblings().removeClass("active");
 			$(this).addClass("active");
+			var src = $(this).attr("href") || "javascript:";
+			$(".iframe-box").attr("src", src);
 		});
 	}
 };

@@ -1,17 +1,31 @@
 /*登录页*/
 
-
-/* body背景*/
-
-.login-bg {
-    width: 100%;
-    height: 100%;
-    background: url(../images/login-bg.png) no-repeat center;
-    background-size: 100% 100%;
-}
-
 .login {
     position: relative;
+    height: 100%;
+    min-height: 600px;
+    &.container-fluid-12 .row{
+        height: 100%;
+    }
+}
+
+/* body背景*/
+img.login-bg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*logo 图标*/
+.login-logo{
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    z-index: 99;
+    width: 145px;
+    img{
+        width: 100%;
+    }
 }
 
 .login-box {
@@ -114,10 +128,9 @@
         input[type=checkbox] {
             color: #A3B0C4;
         }
-        
-        &.active{
-            label{
-                 color: #3C5D8E;
+        &.active {
+            label {
+                color: #3C5D8E;
             }
         }
     }
@@ -125,7 +138,7 @@
         margin-top: 5px;
         color: #3C5D8E;
         &:hover {
-             text-decoration: underline;
+            text-decoration: underline;
         }
     }
     .form-gp.submit-box {
@@ -156,16 +169,14 @@
             }
         }
     }
-    
-    
 }
 
 
 /* iframe 框架*/
- .iframe-box {
-        position: relative;
-        border: none;
-        width: 100% !important;
-        overflow: scroll;
-        
-    }
+
+.iframe-box {
+    position: relative;
+    border: none;
+    width: 100% !important;
+    overflow: scroll;
+}
