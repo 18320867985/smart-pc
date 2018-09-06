@@ -21365,14 +21365,32 @@ var iframe = function ($) {
 	// 设置iframe 高度
 	var _setHeight = function _setHeight() {
 		$(function () {
+			set(true);
+		});
+
+		$(window).resize(function () {
+
 			set();
 		});
 
-		function set() {
-			var window_h = $(document).height() + 50;
-			var window_w = $(document).width();
-			$(window.parent.document).find(".iframe-box").css("height", window_h);
-			$(window.parent.document).find(".iframe-box").css("width", window_w);
+		function set(bl) {
+			var p_w = $(window.parent.document).find(".index-cont-iframe").height() - 4;
+			$(window.parent.document).find(".iframe-box").css("height", p_w);
+			$(window.parent.document).find(".iframe-box").css("width", 0);
+			var window_h = $("body").height();
+			var window_w = $("body").width();
+
+			if (window_h > p_w && bl) {
+
+				$(window.parent.document).find(".iframe-box").css("height", window_h);
+				$(window.parent.document).find(".iframe-box").css("width", window_w);
+			} else {
+				$(window.parent.document).find(".iframe-box").css("height", 0);
+				$(window.parent.document).find(".iframe-box").css("height", window_h);
+				$(window.parent.document).find(".iframe-box").css("width", window_w);
+			}
+
+			//console.log(window_h)
 		}
 	};
 
@@ -21429,28 +21447,71 @@ var index = {
 			$(this).siblings().removeClass("active");
 			$(this).addClass("active");
 			var src = $(this).find(" dt a").attr("href");
-			if (src) {
+			if (src && src != "javascript:;") {
 				$(".iframe-box").attr("src", src);
+				$(this).parents("._nemu-2").find("dd").removeClass("active");
 			}
 		});
 
 		// 三级菜单点击
 		$(".index-aside-nemu ._nemu-2 dd").on("click", function (event) {
 			event.preventDefault();
+			event.stopPropagation();
 			$(this).parents("._nemu-2").find("dd").removeClass("active");
 			$(this).addClass("active");
-			var src = $(this).attr("href") || "javascript:";
+			var src = $(this).find("a").attr("href") || "javascript:";
 			$(".iframe-box").attr("src", src);
 		});
 	}
 };
 
-// index页面;
+/*pattren模块*/
+
+var pattern = {
+	init: function init() {
+
+		var vm = new Vue({
+			el: ".app",
+			data: {
+				list: [{
+					ck: false,
+					id: 1,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}]
+
+			}
+
+		});
+	}
+};
+
+//pattern页面;
 
 exports.common = common;
 exports.iframe = iframe;
 exports.login = login;
 exports.index = index;
+exports.pattern = pattern;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

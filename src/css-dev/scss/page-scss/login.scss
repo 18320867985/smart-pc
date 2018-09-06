@@ -4,36 +4,78 @@
     position: relative;
     height: 100%;
     min-height: 600px;
-    &.container-fluid-12 .row{
+    perspective: 1000px;
+    &.container-fluid-12 .row {
         height: 100%;
     }
+    
 }
 
+/*3d动画*/
+.csstransforms3d {
+   .row{
+        transform-style: preserve-3d ;
+        
+        .login-box{
+            transition: all 1s;
+//          transform: rotateY(15deg);
+//transform: rotateY(45deg) ;
+        transform: rotateY(0deg)  ;
+                animation:  logo 2s 1s ease forwards;
+        }
+        
+          .login-box:hover{
+               //transform: rotateY(0deg);
+          }
+    } 
+    
+}
+
+@keyframes logo{
+    %0{
+         transform: rotateY(15deg) ;
+    }
+    50%{
+          transform: rotateY(10deg) ;
+    }
+   
+    100%{
+          transform: rotateY(0deg) ;
+    }
+    
+}
+
+
+
+
 /* body背景*/
-img.login-bg {
+
+.login-bg {
     width: 100%;
     height: 100%;
+    background: url(../images/login-bg.png) no-repeat center center;
+    background-attachment: fixed;
 }
 
 
 /*logo 图标*/
-.login-logo{
+
+.login-logo {
     position: absolute;
-    left: 100px;
-    top: 50px;
+    left: 56px;
+    top: 26px;
     z-index: 99;
     width: 145px;
-    img{
+    img {
         width: 100%;
     }
 }
 
 .login-box {
-    position: fixed;
-    right: 20%;
-    top: 50%;
+    position: absolute;
+    right:0px;
+    top: 216px;
     z-index: 99;
-    margin-top: -187px;
     width: 357px;
     height: 374px;
     background: rgba(213, 216, 225, 1);
@@ -172,11 +214,12 @@ img.login-bg {
 }
 
 
-/* iframe 框架*/
-
-.iframe-box {
-    position: relative;
-    border: none;
-    width: 100% !important;
-    overflow: scroll;
+.login-footer{
+    position:  absolute;
+    bottom: 39px;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    
 }

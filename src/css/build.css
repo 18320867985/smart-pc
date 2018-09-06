@@ -5820,7 +5820,7 @@ button.close {
           box-sizing: border-box;
   outline: none; }
 
-html, body {
+html {
   height: 100%; }
 
 body {
@@ -5847,6 +5847,29 @@ body {
 .container-fluid-12 .row {
   margin-right: -15px;
   margin-left: -15px; }
+
+/*iframe 使用*/
+@media (min-width: 960px) {
+  .container-child-center {
+    margin-right: auto;
+    margin-left: auto;
+    width: 960px; } }
+
+@media (min-width: 960px) {
+  .container-child-12 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 960px; } }
+
+@media (min-width: 1360px) {
+  .container-child-12 {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1360px; } }
 
 .container {
   min-width: 300px; }
@@ -5885,7 +5908,7 @@ ul {
 
 /*边框与背景*/
 .rd {
-  border-radius: 5px; }
+  border-radius: 15px; }
 
 .rd-no {
   border-radius: 0px; }
@@ -6218,9 +6241,6 @@ select option {
 
 /****placeholder****/
 /*webkit*/
-/*IE10+*/
-/*Firefox4-18*/
-/*Firefox19+*/
 /*ellipsis*/
 .ellipsis {
   max-width: 100%;
@@ -6285,7 +6305,7 @@ select.form-control {
 
 /*左邊caidan*/
 .index-aside {
-  width: 236px;
+  width: 240px;
   height: 100%;
   color: white;
   background: #191722; }
@@ -6539,36 +6559,80 @@ select.form-control {
   width: 100%;
   overflow-x: hidden; }
 
+/* iframe 框架*/
+.iframe-box {
+  position: relative;
+  border: none;
+  width: 100% !important;
+  overflow: scroll; }
+
 /*下面导航*/
 /*登录页*/
 .login {
   position: relative;
   height: 100%;
-  min-height: 600px; }
+  min-height: 600px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px; }
   .login.container-fluid-12 .row {
     height: 100%; }
 
+/*3d动画*/
+.csstransforms3d .row {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+  .csstransforms3d .row .login-box {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-animation: logo 2s 1s ease forwards;
+            animation: logo 2s 1s ease forwards; }
+
+@-webkit-keyframes logo {
+  %0 {
+    -webkit-transform: rotateY(15deg);
+            transform: rotateY(15deg); }
+  50% {
+    -webkit-transform: rotateY(10deg);
+            transform: rotateY(10deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); } }
+
+@keyframes logo {
+  %0 {
+    -webkit-transform: rotateY(15deg);
+            transform: rotateY(15deg); }
+  50% {
+    -webkit-transform: rotateY(10deg);
+            transform: rotateY(10deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); } }
+
 /* body背景*/
-img.login-bg {
+.login-bg {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background: url(../images/login-bg.png) no-repeat center center;
+  background-attachment: fixed; }
 
 /*logo 图标*/
 .login-logo {
   position: absolute;
-  left: 100px;
-  top: 50px;
+  left: 56px;
+  top: 26px;
   z-index: 99;
   width: 145px; }
   .login-logo img {
     width: 100%; }
 
 .login-box {
-  position: fixed;
-  right: 20%;
-  top: 50%;
+  position: absolute;
+  right: 0px;
+  top: 216px;
   z-index: 99;
-  margin-top: -187px;
   width: 357px;
   height: 374px;
   background: #d5d8e1;
@@ -6680,25 +6744,116 @@ img.login-bg {
       .login-box .submit.active:hover {
         background: #2d466a; }
 
-/* iframe 框架*/
-.iframe-box {
-  position: relative;
-  border: none;
-  width: 100% !important;
-  overflow: scroll; }
+.login-footer {
+  position: absolute;
+  bottom: 39px;
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+  color: #fff; }
 
 /*
  * 模式管理
  * 
  */
+.pattern-box {
+  padding-top: 100px; }
+
+/*tab 择项卡*/
+.pattern-ttl {
+  position: relative;
+  height: 40px;
+  left: -1px;
+  margin-bottom: -2px;
+  /*btn1*/ }
+  .pattern-ttl ._btn-list,
+  .pattern-ttl ._btn-two {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    float: left; }
+  .pattern-ttl ._btn-list {
+    width: 118px;
+    height: 40px;
+    background: url(../images/pattern/btn-list2.png) no-repeat center center;
+    background-size: 118px 40px;
+    color: #fff;
+    padding-left: 10px; }
+  .pattern-ttl ._btn-two {
+    position: absolute;
+    left: 68px;
+    width: 261px;
+    background: url(../images/pattern/btn-two.png) no-repeat center center;
+    background-size: 261px 40px;
+    color: #71727E;
+    text-align: center; }
+
+/*table*/
+.pattern-table.table {
+  position: relative;
+  top: -3px;
+  /*checkbox*/ }
+  .pattern-table.table thead th {
+    border-bottom: none;
+    color: #777;
+    background: #fff; }
+  .pattern-table.table thead th:last-child {
+    border-radius: 0 8px 0 0; }
+  .pattern-table.table thead tr:nth-child(1) th {
+    padding: 10px 20px !important;
+    background: #f4f4fc;
+    font-weight: 600; }
+  .pattern-table.table tbody tr td {
+    padding: 6px 20px;
+    height: 30px;
+    line-height: 30px;
+    color: #777;
+    background: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    .pattern-table.table tbody tr td > * {
+      vertical-align: middle; }
+  .pattern-table.table tbody tr:last-child td:last-child {
+    border-radius: 0 0 8px 0; }
+  .pattern-table.table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 8px; }
+  .pattern-table.table img {
+    width: 23px;
+    height: 23px;
+    cursor: pointer; }
+  .pattern-table.table .btn.btn-default.btn-sm, .pattern-table.table .btn-group-sm > .btn.btn-default {
+    background: #f4f4fc;
+    border: 1px solid #f4f4fc;
+    color: #777; }
+    .pattern-table.table .btn.btn-default.btn-sm:hover, .pattern-table.table .btn-group-sm > .btn.btn-default:hover {
+      background: #ececfa; }
+  .pattern-table.table td .btn + .btn {
+    margin-left: 5px; }
+
+/*submit btn*/
+.pattern-submit {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center; }
+  .pattern-submit .btn {
+    padding: 0;
+    width: 211px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 15px; }
+
 /*
  状态管理
  
  * */
 .status {
-  width: 1300px;
+  width: 900px;
+  height: 100%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6714,8 +6869,8 @@ img.login-bg {
 
 .status-item {
   position: relative;
-  width: 295px;
-  height: 246px;
+  width: 200px;
+  height: 160px;
   background: #fff;
   margin-top: 20px;
   overflow: hidden; }
@@ -6723,15 +6878,15 @@ img.login-bg {
 .status-ttl {
   margin: 0;
   padding: 0;
-  height: 40px;
-  line-height: 40px;
+  height: 34px;
+  line-height: 34px;
   padding-left: 10px;
   background: #f4f4fc;
   font-size: 13px;
   color: #777; }
 
 .status-cont {
-  height: 206px;
+  height: 124px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6741,46 +6896,137 @@ img.login-bg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .status-cont img {
+    -webkit-transition: all .8s;
+    transition: all .8s; }
 
 .status-det {
   position: absolute;
   z-index: 99;
-  top: 40px;
+  top: 34px;
   left: -295px;
   width: 100%;
-  height: 206px;
-  padding-left: 42px;
+  height: 124px;
+  padding-left: 20px;
   -webkit-transition: all .8s;
   transition: all .8s;
   background: rgba(255, 255, 255, 0.8); }
   .status-det li {
-    margin-top: 17px;
-    color: #777; }
+    margin-top: 3px;
+    color: #777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .status-item:hover .status-det {
   left: 0px; }
+  .status-item:hover .status-det img {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg); }
+
+.status-item:hover img {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg); }
+
+@media (min-width: 1360px) {
+  .status {
+    width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start; }
+  .status-item {
+    position: relative;
+    width: 251px;
+    height: 209px;
+    background: #fff;
+    margin-top: 40px;
+    overflow: hidden; }
+  .status-ttl {
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    background: #f4f4fc;
+    font-size: 15px;
+    color: #777; }
+  .status-cont {
+    height: 169px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .status-det {
+    position: absolute;
+    z-index: 99;
+    top: 40px;
+    left: -295px;
+    width: 100%;
+    height: 169px;
+    padding-left: 20px;
+    -webkit-transition: all .8s;
+    transition: all .8s;
+    background: rgba(255, 255, 255, 0.8); }
+    .status-det li {
+      margin-top: 10px;
+      color: #777;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+  .status-item:hover .status-det {
+    left: 0px; } }
 
 /*
  状态管理-详情
  
  * */
 .statusdtl-bg {
-  height: 100%; }
+  height: 100%;
+  background: url(../images/status/detail@3x.png) no-repeat center center;
+  background-size: 100% 100%;
+  background-attachment: fixed; }
 
 .statusdtl {
   height: 100%; }
 
 .statusdtl-cont {
+  position: relative; }
+
+.statusdtl-img {
   position: relative;
-  height: 768px;
-  background: url(../images/status/detail3.png) no-repeat 648px 200px, url(../../../images/status/detail1.png) no-repeat 320px 150px, url(../images/status/detail@3x.png) no-repeat center center;
-  background-size: auto, auto, 100% 100%; }
+  top: 157px;
+  left: 92px; }
+  .statusdtl-img ._img1 {
+    position: absolute;
+    width: 411px; }
+  .statusdtl-img ._img2 {
+    position: absolute;
+    width: 352px;
+    top: 30px;
+    left: 313px; }
 
 .statusdtl-box {
   position: absolute;
   z-index: 99;
-  top: 233px;
-  left: 720px; }
+  top: 56px;
+  left: 377px; }
   .statusdtl-box li {
     margin-bottom: 5px;
     color: #7371FD; }

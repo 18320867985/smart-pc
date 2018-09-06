@@ -17,20 +17,25 @@ var index = {
 			$(this).siblings().removeClass("active");
 			$(this).addClass("active");
 			var src = $(this).find(" dt a").attr("href");
-			if(src) {
+			if(src&&src!="javascript:;") {
 				$(".iframe-box").attr("src", src);
+				$(this).parents("._nemu-2").find("dd").removeClass("active");
 				
 			}
+			
+				
 
 		});
 
 		// 三级菜单点击
 		$(".index-aside-nemu ._nemu-2 dd").on("click", function(event) {
 			event.preventDefault();
+			event.stopPropagation();
 			$(this).parents("._nemu-2").find("dd").removeClass("active");
 			$(this).addClass("active");
-			var src = $(this).attr("href") || "javascript:";
+			var src = $(this).find("a").attr("href") || "javascript:";
 			$(".iframe-box").attr("src", src);
+		
 			
 		});
 

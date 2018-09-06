@@ -14,7 +14,7 @@
 /*左邊caidan*/
 
 .index-aside {
-    width: 236px;
+    width: 240px;
     height: 100%;
     color: white;
     background: $index-bg;
@@ -319,6 +319,15 @@
 .iframe-box{
  width: 100%;
  overflow-x: hidden;
+}
+
+/* iframe 框架*/
+//
+.iframe-box {
+    position: relative;
+    border: none;
+    width: 100% !important;
+    overflow: scroll;
 }
 
 
