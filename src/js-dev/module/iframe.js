@@ -13,10 +13,7 @@ var iframe = (function($) {
 
 		});
 		
-		$(window).resize(function(){
-			
-			set();
-		});
+	}
 		
 		function set(bl) {
 			var p_w=$(window.parent.document).find(".index-cont-iframe").height()-4;
@@ -35,10 +32,10 @@ var iframe = (function($) {
 				$(window.parent.document).find(".iframe-box").css("width", window_w);
 			}
 			
-			//console.log(window_h)
+			console.log(window_h)
 		}
 
-	}
+	
 
 	return {
 		setHeight: _setHeight

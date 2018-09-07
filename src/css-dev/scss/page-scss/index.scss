@@ -4,6 +4,9 @@
     height: 100%;
 }
 
+.index-bg{
+    height: 100%;
+}
 .index-box {
     display: flex;
     flex-flow: row nowrap;
@@ -14,7 +17,7 @@
 /*左邊caidan*/
 
 .index-aside {
-    width: 240px;
+    width: 236px;
     height: 100%;
     color: white;
     background: $index-bg;

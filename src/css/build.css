@@ -6293,6 +6293,9 @@ select.form-control {
 .index {
   height: 100%; }
 
+.index-bg {
+  height: 100%; }
+
 .index-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6305,7 +6308,7 @@ select.form-control {
 
 /*左邊caidan*/
 .index-aside {
-  width: 240px;
+  width: 236px;
   height: 100%;
   color: white;
   background: #191722; }
@@ -6756,30 +6759,49 @@ select.form-control {
  * 模式管理
  * 
  */
+.pattern {
+  position: relative; }
+
+.pattern-bg {
+  height: 100%; }
+
 .pattern-box {
-  padding-top: 100px; }
+  position: absolute;
+  width: auto;
+  top: 100px;
+  left: 8%;
+  right: 8%;
+  z-index: 999; }
 
 /*tab 择项卡*/
 .pattern-ttl {
+  position: relative;
+  width: 100%; }
+
+.pattern-ttl1 {
   position: relative;
   height: 40px;
   left: -1px;
   margin-bottom: -2px;
   /*btn1*/ }
-  .pattern-ttl ._btn-list,
-  .pattern-ttl ._btn-two {
+  .pattern-ttl1 ._btn-list,
+  .pattern-ttl1 ._btn-two {
     height: 40px;
     line-height: 40px;
     display: block;
     float: left; }
-  .pattern-ttl ._btn-list {
+  .pattern-ttl1 ._btn-list {
     width: 118px;
     height: 40px;
-    background: url(../images/pattern/btn-list2.png) no-repeat center center;
+    background: url(../images/pattern/btn-list.png) no-repeat center center;
     background-size: 118px 40px;
-    color: #fff;
+    color: #71727E;
     padding-left: 10px; }
-  .pattern-ttl ._btn-two {
+    .pattern-ttl1 ._btn-list.active {
+      background: url(../images/pattern/btn-list2.png) no-repeat center center;
+      background-size: 118px 40px;
+      color: #fff; }
+  .pattern-ttl1 ._btn-two {
     position: absolute;
     left: 68px;
     width: 261px;
@@ -6787,8 +6809,75 @@ select.form-control {
     background-size: 261px 40px;
     color: #71727E;
     text-align: center; }
+    .pattern-ttl1 ._btn-two.active {
+      background: url(../images/pattern/btn-two2.png) no-repeat center center;
+      color: #fff;
+      background-size: 256px 36px; }
+
+.pattern-ttl2 {
+  position: relative;
+  width: 223px;
+  height: 30px;
+  line-height: 30px;
+  right: 5px;
+  background: #f4f4fc;
+  border-radius: 15px; }
+  .pattern-ttl2 ._btn1,
+  .pattern-ttl2 ._btn2,
+  .pattern-ttl2 ._btn3 {
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: #f4f4fc;
+    border: 1px solid #dbe3f8;
+    border-radius: 13px;
+    color: #777;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
+    .pattern-ttl2 ._btn1 .iconfont,
+    .pattern-ttl2 ._btn2 .iconfont,
+    .pattern-ttl2 ._btn3 .iconfont {
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+      color: #777;
+      margin-right: -5px;
+      margin-left: 0px; }
+    .pattern-ttl2 ._btn1 > *,
+    .pattern-ttl2 ._btn2 > *,
+    .pattern-ttl2 ._btn3 > * {
+      vertical-align: top; }
+    .pattern-ttl2 ._btn1.active,
+    .pattern-ttl2 ._btn2.active,
+    .pattern-ttl2 ._btn3.active {
+      background: #467CC3;
+      color: #fff; }
+      .pattern-ttl2 ._btn1.active .iconfont,
+      .pattern-ttl2 ._btn2.active .iconfont,
+      .pattern-ttl2 ._btn3.active .iconfont {
+        color: #fff; }
+  .pattern-ttl2 ._btn1 {
+    z-index: 3;
+    width: 121px;
+    color: #777; }
+  .pattern-ttl2 ._btn2 {
+    left: 103px;
+    z-index: 2;
+    width: 70px; }
+  .pattern-ttl2 ._btn3 {
+    left: 153px;
+    z-index: 1;
+    width: 70px; }
 
 /*table*/
+.table-big {
+  height: 100px;
+  overflow-y: scroll; }
+
 .pattern-table.table {
   position: relative;
   top: -3px;
@@ -6845,6 +6934,48 @@ select.form-control {
     font-size: 19px;
     border-radius: 15px; }
 
+/*admin-pattern-overview 场景总览*/
+.pattern-box.pattern-overview .pattern-ttl2 {
+  right: -140px;
+  float: right !important;
+  width: 173px; }
+
+.pattern-overview .pattern-ttl3 {
+  position: relative;
+  float: right;
+  right: 230px; }
+  .pattern-overview .pattern-ttl3 ._ck-ttl {
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer; }
+  .pattern-overview .pattern-ttl3 ._ck {
+    position: relative;
+    display: block;
+    float: left;
+    width: 53px;
+    height: 26px;
+    padding: 1px 2px;
+    background: #fff;
+    border-radius: 15px; }
+    .pattern-overview .pattern-ttl3 ._ck.active {
+      background: #467CC3;
+      color: #fff; }
+    .pattern-overview .pattern-ttl3 ._ck ._ck-hd {
+      position: absolute;
+      left: 2px;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #ddd;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+    .pattern-overview .pattern-ttl3 ._ck.active ._ck-hd {
+      left: 28px; }
+
 /*
  状态管理
  
@@ -6866,6 +6997,9 @@ select.form-control {
           align-items: center;
   -ms-flex-line-pack: start;
       align-content: flex-start; }
+
+.status-bg {
+  height: 100%; }
 
 .status-item {
   position: relative;
@@ -7035,3 +7169,74 @@ select.form-control {
       font-weight: 400; }
     .statusdtl-box li span {
       font-size: 14px; }
+
+/*密碼*/
+/*修改密碼*/
+.pwdedit {
+  height: 100%; }
+
+.pwdeidt-form {
+  position: relative;
+  top: 100px;
+  width: 350px;
+  min-height: 400px;
+  padding: 20px;
+  top: 200px;
+  min-height: 500px;
+  margin: 0 auto;
+  /*IE10+*/
+  /*Firefox4-18*/
+  /*Firefox19+*/ }
+  .pwdeidt-form ._label,
+  .pwdeidt-form ._input {
+    margin: 0;
+    float: left; }
+  .pwdeidt-form ._label {
+    display: block;
+    width: 95px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 19px;
+    font-weight: 400;
+    color: #80848d;
+    vertical-align: middle; }
+  .pwdeidt-form ._input {
+    position: relative;
+    vertical-align: middle;
+    height: 36px;
+    line-height: 36px; }
+    .pwdeidt-form ._input input {
+      width: 211px;
+      height: 36px;
+      padding: 6px 12px;
+      padding-left: 45px;
+      line-height: 20px;
+      border: 1px solid #467cc3;
+      border-radius: 18px;
+      font-size: 16px;
+      background: transparent; }
+  .pwdeidt-form .iconfont {
+    position: absolute;
+    left: 14px;
+    top: 1px;
+    color: #467CC3;
+    font-size: 24px; }
+  .pwdeidt-form .form-group {
+    margin-bottom: 20px; }
+  .pwdeidt-form input::-webkit-input-placeholder {
+    font-size: 16px; }
+  .pwdeidt-form input:-ms-input-placeholder {
+    font-size: 16px; }
+  .pwdeidt-form input:-moz-placeholder {
+    font-size: 16px; }
+  .pwdeidt-form input::-moz-placeholder {
+    font-size: 16px; }
+  .pwdeidt-form ._submit {
+    margin-left: 90px;
+    width: 211px; }
+    .pwdeidt-form ._submit .btn {
+      height: 36px;
+      font-size: 19px;
+      padding: 0;
+      text-align: center;
+      line-height: 36px; }

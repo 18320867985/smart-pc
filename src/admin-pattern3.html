@@ -22,32 +22,47 @@
 	<body class="pattern-bg">
 		<div class="pattern">
 
-			<div class="pattern-box app">
-				<div class="pattern-ttl">
-					<div class="pattern-ttl1 clearfix">
-						<a class="_btn-list active" href="javascript:;">模块列表</a>
-						<a class="_btn-two" href="javascript:;">编辑子页面询问实例子</a>
+			<div class="pattern-box app ">
+
+				<div class="pattern-ttl clearfix">
+					<div class="pattern-ttl1 clearfix pull-left">
+						<a class="_btn-list" href="javascript:;">模块列表</a>
+						<a class="_btn-two active" href="javascript:;">编辑子页面询问实例子</a>
 
 					</div>
 
+					<div class="pattern-ttl2 clearfix pull-right">
+						<a class="_btn1 " href="javascript:;"><span class="iconfont icon-jia1"></span> 
+							<span>添加询问实例</span>
+						</a>
+						<a class="_btn2" href="javascript:;">删除</a>
+
+						<a class="_btn3" href="javascript:;">全选</a>
+
+					</div>
 				</div>
+
 				<table class="pattern-table table  table-bordered  table-fixed ">
 
 					<thead>
 						<tr class="list-item">
-							<th class="table-1 text-center">
+							<th class="col-xs-1 text-center">
 								选择
 							</th>
-							<th class="table-1 text-center">
+							<th class="col-xs-1 text-center">
 								序号
 							</th>
-							<th class="table-2 text-center">
-								模块名称
+							
+							<th class="col-xs-3 text-center">
+								询管理员号
 							</th>
-							<th class="table-2 text-center">
-								询问事例
+							<th class="col-xs-2 text-center">
+								管理级别
 							</th>
-							<th class="table-4 text-center">
+							<th class="col-xs-2 text-center">
+								添加时间
+							</th>
+							<th class="col-xs-3 text-center">
 								操作
 							</th>
 						</tr>
@@ -55,49 +70,36 @@
 
 					<tbody>
 
-						<tr v-for=" item in list">
-							<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+						<tr v-for=" item in list ">
+							<td class="col-xs-1 text-center" v-on:click="item.ck=!item.ck">
 								<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
 								<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
 							</td>
-							<td class="table-1 text-center">
+							<td class="col-xs-1 text-center">
 								1
 							</td>
-							<td class=" table-2 text-center">
-								<span v-html="item.module"></span>
+							<td class="col-xs-3 text-center">
+								huangming@szyh-smart.com
 
 							</td>
-							<td class=" text-center">
-								<span v-html="item.hsy"></span>
+							<td class="col-xs-2 text-center">
+								基本管理
+
 							</td>
-							<td class="table-4 text-center">
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">模块重命名</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">重启</a>
+							<td class="col-xs-2 text-center">
+								2018-09-09
+
+							</td>
+							
+							<td class="table-3 text-center">
+								<a href="javascript:;" class="btn btn-sm btn-default rd">编辑</a>
+								<a href="javascript:;" class="btn btn-sm btn-default rd">禁用</a>
 
 							</td>
 
 						</tr>
 
-						<!--<tr>
-							<td class="table-1">
-								<img  class="active" src="images/pattern/ck-ok.png" alt="" />
-								<img class="default" src="images/pattern/ck.png" alt="" />
-							</td>
-							<td class="table-1">
-								1
-							</td>
-							<td class=" table-2 text-center">
-								主界面
-							</td>
-							<td class=" text-center">
-								主界面主界面主界面主界面主界面主界面主界面
-							</td>
-							<td class="table-4 text-center">
-								<a href="javascript:;" class="btn btn-sm btn-default rd">模块重命名</a>
-								<a href="javascript:;" class="btn btn-sm btn-default rd">隐藏</a>
-							</td>
-
-						</tr>-->
+						
 					</tbody>
 
 				</table>

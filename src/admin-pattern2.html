@@ -19,59 +19,68 @@
 
 	</head>
 
-	<body>
-		<div class="pattern container-child-12">
+	<body class="pattern-bg">
+		<div class="pattern">
 
-			<div class="pattern-box app">
+			<div class="pattern-box app ">
 
 				<div class="pattern-ttl clearfix">
-					<a class="_btn-list" href="javascript:;">模块列表</a>
-					<a class="_btn-two" href="javascript:;">编辑子页面询问实例子</a>
+					<div class="pattern-ttl1 clearfix pull-left">
+						<a class="_btn-list" href="javascript:;">模块列表</a>
+						<a class="_btn-two active" href="javascript:;">编辑子页面询问实例子</a>
 
+					</div>
+
+					<div class="pattern-ttl2 clearfix pull-right">
+						<a class="_btn1 " href="javascript:;"><span class="iconfont icon-jia1"></span> 
+							<span>添加询问实例</span>
+						</a>
+						<a class="_btn2" href="javascript:;">删除</a>
+
+						<a class="_btn3" href="javascript:;">全选</a>
+
+					</div>
 				</div>
 
 				<table class="pattern-table table  table-bordered  table-fixed ">
 
 					<thead>
 						<tr class="list-item">
-							<th class="table-1">
+							<th class="table-1 text-center">
 								选择
 							</th>
-							<th class="table-1">
+							<th class="table-1 text-center">
 								序号
 							</th>
-							<th class="table-2 text-center">
-								模块名称
-							</th>
-							<th class="table-2 text-center">
+							
+							<th class="table-4 text-center">
 								询问事例
-
-								<th class="table-4 text-center">
-									操作
-								</th>
+							</th>
+							<th class="table-4 text-center">
+								操作
+							</th>
 						</tr>
 					</thead>
 
 					<tbody>
 
-						<tr v-for=" item in list">
-							<td class="table-1" v-on:click="item.ck=!item.ck">
+						<tr v-for=" item in list ">
+							<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
 								<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
 								<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
 							</td>
-							<td class="table-1">
+							<td class="table-1 text-center">
 								1
 							</td>
-							<td class=" table-2 text-center">
-								<span v-html="item.module"></span>
+							<td class=" table-4 text-center">
+								<span v-html="item.hsy"></span>
 
 							</td>
-							<td class=" text-center">
-								<span v-html="item.hsy"></span>
-							</td>
+							
 							<td class="table-4 text-center">
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">模块重命名</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">重启</a>
+								<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
+								<a href="javascript:;" class="btn btn-sm btn-primary rd">删除</a>
+								<a href="javascript:;" class="btn btn-sm btn-primary rd">测试</a>
 
 							</td>
 
@@ -101,10 +110,10 @@
 
 				</table>
 
-					<div class="pattern-submit">
-						<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
-					</div>
-				
+				<div class="pattern-submit">
+					<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+				</div>
+
 				<!--{{$data}}-->
 
 			</div>

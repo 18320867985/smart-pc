@@ -1,0 +1,89 @@
+/*密碼*/
+
+
+/*修改密碼*/
+
+.pwdedit {
+    height: 100%;
+}
+
+.pwdeidt-form {
+    position: relative;
+    top: 100px;
+    width: 350px;
+    min-height: 400px;
+    padding: 20px;
+    
+    top:200px;
+    min-height: 500px;
+    margin: 0 auto;
+    //  background: #fff;
+    ._label,
+    ._input {
+        margin: 0;
+        float: left;
+    }
+    ._label {
+        display: block;
+        width: 95px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 19px;
+        font-weight: 400;
+        color: rgba(128, 132, 141, 1);
+        vertical-align: middle;
+    }
+    ._input {
+        position: relative;
+        vertical-align: middle;
+        height: 36px;
+        line-height: 36px;
+        input {
+            width: 211px;
+            height: 36px;
+            padding: 6px 12px;
+            padding-left: 45px;
+            line-height: 20px;
+            border: 1px solid rgba(70, 124, 195, 1);
+            border-radius: 18px;
+            font-size: 16px;
+            background: transparent;
+        }
+    }
+    .iconfont {
+        position: absolute;
+        left: 14px;
+        top: 1px;
+        color: #467CC3;
+        font-size: 24px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    input::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+    /*IE10+*/
+    input:-ms-input-placeholder {
+        font-size: 16px;
+    }
+    /*Firefox4-18*/
+    input:-moz-placeholder {
+        font-size: 16px;
+    }
+    /*Firefox19+*/
+    input::-moz-placeholder {
+        font-size: 16px;
+    }
+    ._submit {
+        margin-left: 90px;
+        width: 211px;
+        .btn {
+            height: 36px;
+            font-size: 19px;
+            padding: 0;
+            text-align: center;
+            line-height: 36px;
+        }
+    }
+}
