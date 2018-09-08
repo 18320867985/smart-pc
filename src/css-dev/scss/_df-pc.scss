@@ -427,7 +427,9 @@ input:focus,
 .v-hide {
     display: none;
 }
-
+.v-show {
+    display: block;
+}
 .v-hide-text-index {
     position: absolute !important;
     display: inline-block !important;

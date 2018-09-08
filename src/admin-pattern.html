@@ -31,63 +31,78 @@
 					</div>
 
 				</div>
-				<table class="pattern-table table  table-bordered  table-fixed ">
+				<!--tab1-->
+				<div class="pattern-tab scroll-bar-box">
+					<!--固定头部-->
+					<table class="pattern-table table  table-bordered  table-fixed ">
 
-					<thead>
-						<tr class="list-item">
-							<th class="table-1 text-center">
-								选择
-							</th>
-							<th class="table-1 text-center">
-								序号
-							</th>
-							<th class="table-2 text-center">
-								模块名称
-							</th>
-							<th class="table-2 text-center">
-								询问事例
-							</th>
-							<th class="table-4 text-center">
-								操作
-							</th>
-						</tr>
-					</thead>
+						<thead>
+							<tr class="list-item">
+								<th class="table-1 text-center">
+									选择
+								</th>
+								<th class="table-1 text-center">
+									序号
+								</th>
+								<th class="table-2 text-center">
+									模块名称
+								</th>
+								<th class="table-2 text-center">
+									询问事例
+								</th>
+								<th class="table-4 text-center">
+									操作
+								</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="pattern-scroll no-scroll-bar">
 
-					<tbody>
+						<!--滚动内容-->
+						<table class="pattern-table table  table-bordered  table-fixed ">
 
-						<tr v-for=" item in list">
-							<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
-								<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
-								<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
-							</td>
-							<td class="table-1 text-center">
-								1
-							</td>
-							<td class=" table-2 text-center">
-								<span v-html="item.module"></span>
+							<tbody>
 
-							</td>
-							<td class=" text-center">
-								<span v-html="item.hsy"></span>
-							</td>
-							<td class="table-4 text-center">
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">模块重命名</a>
-								<a href="javascript:;" class="btn btn-sm btn-primary rd">重启</a>
+								<tr v-for=" item in list">
+									<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+										<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+										<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+									</td>
+									<td class="table-1 text-center">
+										1
+									</td>
+									<td class=" table-2 text-center">
+										<span v-html="item.module"></span>
 
-							</td>
+									</td>
+									<td class=" table-2 text-center">
+										<span v-html="item.hsy"></span>
+									</td>
+									<td class="table-4 text-center">
+										<a href="javascript:;" class="btn btn-sm btn-primary rd">模块重命名</a>
+										<a href="javascript:;" class="btn btn-sm btn-primary rd">重启</a>
 
-						</tr>
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
 
 						
-					</tbody>
 
-				</table>
+					</div>
+					<div class="scroll-slide">
+						<div class="scroll-bar"></div>
+					</div>
 
-				<div class="pattern-submit">
-					<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+					<div class="pattern-submit">
+						<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+					</div>
+
+					<!--{{$data}}-->
 				</div>
-
-				<!--{{$data}}-->
 
 			</div>
 
@@ -97,7 +112,7 @@
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
 		<script data-parent="umd" data-umd="pattern.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
-		
+
 	</body>
 
 </html>

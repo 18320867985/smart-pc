@@ -8,44 +8,38 @@
     &.container-fluid-12 .row {
         height: 100%;
     }
-    
 }
+
 
 /*3d动画*/
+
 .csstransforms3d {
-   .row{
-        transform-style: preserve-3d ;
-        
-        .login-box{
+    .row {
+        transform-style: preserve-3d;
+        .login-box {
             transition: all 1s;
-//          transform: rotateY(15deg);
-//transform: rotateY(45deg) ;
-        transform: rotateY(0deg)  ;
-                animation:  logo 2s 1s ease forwards;
+            //          transform: rotateY(15deg);
+            //transform: rotateY(45deg) ;
+            transform: rotateY(0deg);
+            animation: logo 2s 1s ease forwards;
         }
-        
-          .login-box:hover{
-               //transform: rotateY(0deg);
-          }
-    } 
-    
+        .login-box:hover {
+            //transform: rotateY(0deg);
+        }
+    }
 }
 
-@keyframes logo{
-    %0{
-         transform: rotateY(15deg) ;
+@keyframes logo {
+    %0 {
+        transform: rotateY(15deg);
     }
-    50%{
-          transform: rotateY(10deg) ;
+    50% {
+        transform: rotateY(10deg);
     }
-   
-    100%{
-          transform: rotateY(0deg) ;
+    100% {
+        transform: rotateY(0deg);
     }
-    
 }
-
-
 
 
 /* body背景*/
@@ -73,7 +67,7 @@
 
 .login-box {
     position: absolute;
-    right:0px;
+    right: 0px;
     top: 216px;
     z-index: 99;
     width: 357px;
@@ -165,19 +159,25 @@
         padding: 0 10px;
     }
     .checkbox {
-        margin-top: 5px;
-        label,
-        input[type=checkbox] {
+        cursor: pointer;
+        .iconfont {
+            left: 0;
+            top: -6px;
+            font-size: 24px;
+            color:#A3B0C4;
+        }
+        ._keep {
+            margin-left: 23px;
             color: #A3B0C4;
         }
         &.active {
-            label {
-                color: #3C5D8E;
+            * {
+                color: $text-primary;
             }
         }
     }
     a.find-pwd {
-        margin-top: 5px;
+        margin-top: 9px;
         color: #3C5D8E;
         &:hover {
             text-decoration: underline;
@@ -213,13 +213,11 @@
     }
 }
 
-
-.login-footer{
-    position:  absolute;
+.login-footer {
+    position: absolute;
     bottom: 39px;
     z-index: 99;
     width: 100%;
     text-align: center;
-    color:#fff;
-    
+    color: #fff;
 }

@@ -32,7 +32,7 @@
 					</div>
 
 					<div class="pattern-ttl2 clearfix pull-right">
-						<a class="_btn1 " href="javascript:;"><span class="iconfont icon-jia1"></span> 
+						<a class="_btn1 " href="javascript:;"><span class="iconfont icon-jia1"></span>
 							<span>添加询问实例</span>
 						</a>
 						<a class="_btn2" href="javascript:;">删除</a>
@@ -42,73 +42,92 @@
 					</div>
 				</div>
 
-				<table class="pattern-table table  table-bordered  table-fixed ">
+				<!--tab1-->
+				<div class="pattern-tab scroll-bar-box">
+					<!--固定头部-->
+					<table class="pattern-table table  table-bordered  table-fixed ">
 
-					<thead>
-						<tr class="list-item">
-							<th class="col-xs-1 text-center">
-								选择
-							</th>
-							<th class="col-xs-1 text-center">
-								序号
-							</th>
-							
-							<th class="col-xs-3 text-center">
-								询管理员号
-							</th>
-							<th class="col-xs-2 text-center">
-								管理级别
-							</th>
-							<th class="col-xs-2 text-center">
-								添加时间
-							</th>
-							<th class="col-xs-3 text-center">
-								操作
-							</th>
-						</tr>
-					</thead>
+						<thead>
+							<tr class="list-item">
+								<th class="col-xs-1 text-center">
+									选择
+								</th>
+								<th class="col-xs-1 text-center">
+									序号
+								</th>
 
-					<tbody>
+								<th class="col-xs-3 text-center">
+									询管理员号
+								</th>
+								<th class="col-xs-2 text-center">
+									管理级别
+								</th>
+								<th class="col-xs-2 text-center">
+									添加时间
+								</th>
+								<th class="col-xs-3 text-center">
+									操作
+								</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="pattern-scroll no-scroll-bar">
 
-						<tr v-for=" item in list ">
-							<td class="col-xs-1 text-center" v-on:click="item.ck=!item.ck">
-								<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
-								<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
-							</td>
-							<td class="col-xs-1 text-center">
-								1
-							</td>
-							<td class="col-xs-3 text-center">
-								huangming@szyh-smart.com
+						<!--滚动内容-->
+						<table class="pattern-table table  table-bordered  table-fixed ">
 
-							</td>
-							<td class="col-xs-2 text-center">
-								基本管理
+							<tbody>
+								<tr v-for=" item in list ">
+									<td class="col-xs-1 text-center" v-on:click="item.ck=!item.ck">
+										<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+										<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+									</td>
+									<td class="col-xs-1 text-center">
+										1
+									</td>
+									<td class="col-xs-3 text-center">
+										huangming@szyh-smart.com
 
-							</td>
-							<td class="col-xs-2 text-center">
-								2018-09-09
+									</td>
+									<td class="col-xs-2 text-center">
+										基本管理
 
-							</td>
-							
-							<td class="table-3 text-center">
-								<a href="javascript:;" class="btn btn-sm btn-default rd">编辑</a>
-								<a href="javascript:;" class="btn btn-sm btn-default rd">禁用</a>
+									</td>
+									<td class="col-xs-2 text-center">
+										2018-09-09
 
-							</td>
+									</td>
 
-						</tr>
+									<td class="col-xs-3 text-center">
+										<a href="javascript:;" class="btn btn-sm btn-default rd">编辑</a>
+										<a href="javascript:;" class="btn btn-sm btn-default rd">禁用</a>
 
-						
-					</tbody>
+									</td>
 
-				</table>
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</div>
+					<div class="scroll-slide">
+						<div class="scroll-bar"></div>
+					</div>
+
+					<div class="pattern-submit">
+						<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+					</div>
+
+					<!--{{$data}}-->
+				</div>
 
 				<div class="pattern-submit">
 					<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
 				</div>
 
 				<!--{{$data}}-->
+
 
 			</div>
 
@@ -118,7 +137,7 @@
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
 		<script data-parent="umd" data-umd="pattern.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
-		
+
 	</body>
 
 </html>

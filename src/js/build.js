@@ -21472,6 +21472,54 @@ var pattern = {
 					module: "模块名称",
 					hsy: "询问事例"
 
+				}, {
+					ck: false,
+					id: 1,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 1,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
+				}, {
+					ck: false,
+					id: 2,
+					module: "模块名称",
+					hsy: "询问事例"
+
 				}]
 
 			}
@@ -21510,6 +21558,40 @@ var pattern = {
 			} else {
 				$(this).removeClass("active");
 			}
+		});
+
+		/*滚动条*/
+		$(".scroll-bar-box").each(function () {
+			var p = $(this);
+			$(".no-scroll-bar", p).scroll(function () {
+				var obj = $(this)[0];
+				var h = obj.clientHeight;
+				var scroll_h = obj.scrollHeight;
+				var scroll_t = obj.scrollTop;
+				if (scroll_h < h) {
+					return;
+				}
+
+				var slide_h = scroll_h - h;
+				var slide_sp = scroll_t / slide_h;
+				var scroll_slide = $(".scroll-slide", p).height();
+				var scroll_el_h = scroll_slide - $(".scroll-bar", p).height();
+
+				$(".scroll-bar", p).css("top", scroll_el_h * slide_sp);
+			});
+
+			var obj = $(".no-scroll-bar", p)[0];
+			var h = obj.clientHeight;
+			var scroll_h = obj.scrollHeight;
+			var scroll_t = obj.scrollTop;
+			if (scroll_h < h) {
+				return;
+			}
+
+			var sp = h / scroll_h;
+			var scroll_slide = $(".scroll-slide", p).height();
+			$(".scroll-bar", p).height(sp * scroll_slide);
+			console.log(scroll_h);
 		});
 	}
 
