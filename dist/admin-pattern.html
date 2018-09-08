@@ -16,44 +16,88 @@
 
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
-		
-		<style type="text/css">
-			 h1{
-			 	display: flex;
-			 	flex-flow: nowrap;
-			 	width: 200px;
-			 	height: 200px;
-			 	border: 1px solid red;
-			 
-			 }
-			h1> div{
-			 white-space: nowrap;
-			  overflow: hidden;
-			  text-overflow: ellipsis;
-			 }
-		</style>
-	
+
 	</head>
 
-	<body>
-		<div  class="pattern">
-			<h1><div>模式管理模式管理模式管理模式管理模式管理模式管理</div></h1>
-			
-			
+	<body class="pattern-bg no-scroll-bar">
+		<div class="pattern">
+
+			<div class="pattern-box app">
+				<div class="pattern-ttl">
+					<div class="pattern-ttl1 clearfix">
+						<a class="_btn-list active" href="javascript:;">模块列表</a>
+						<a class="_btn-two" href="javascript:;">编辑子页面询问实例子</a>
+
+					</div>
+
+				</div>
+				<table class="pattern-table table  table-bordered  table-fixed ">
+
+					<thead>
+						<tr class="list-item">
+							<th class="table-1 text-center">
+								选择
+							</th>
+							<th class="table-1 text-center">
+								序号
+							</th>
+							<th class="table-2 text-center">
+								模块名称
+							</th>
+							<th class="table-2 text-center">
+								询问事例
+							</th>
+							<th class="table-4 text-center">
+								操作
+							</th>
+						</tr>
+					</thead>
+
+					<tbody>
+
+						<tr v-for=" item in list">
+							<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+								<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+								<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+							</td>
+							<td class="table-1 text-center">
+								1
+							</td>
+							<td class=" table-2 text-center">
+								<span v-html="item.module"></span>
+
+							</td>
+							<td class=" text-center">
+								<span v-html="item.hsy"></span>
+							</td>
+							<td class="table-4 text-center">
+								<a href="javascript:;" class="btn btn-sm btn-primary rd">模块重命名</a>
+								<a href="javascript:;" class="btn btn-sm btn-primary rd">重启</a>
+
+							</td>
+
+						</tr>
+
+						
+					</tbody>
+
+				</table>
+
+				<div class="pattern-submit">
+					<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+				</div>
+
+				<!--{{$data}}-->
+
+			</div>
+
 		</div>
-		
-		
-	
+
 		<!--[if lte IE 9]>
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
-		<script data-parent="umd" data-umd="" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js-dev/libs/vue/vuelidate-all.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			
-			umd.iframe.setHeight();
-		</script>
-
+		<script data-parent="umd" data-umd="pattern.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
+		
 	</body>
 
 </html>

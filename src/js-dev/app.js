@@ -11,8 +11,6 @@ import   './libs/vue/vue.js'
 
 export  {common} from  './module/common.js'   
 
-export  {iframe} from  './module/iframe.js'  	 //iframe;
-
 export  {login} from  './module/login.js'   	// login页面;
 
 export  {index} from  './module/index.js'  		 // index页面;

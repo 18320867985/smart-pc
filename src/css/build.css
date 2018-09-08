@@ -5820,9 +5820,6 @@ button.close {
           box-sizing: border-box;
   outline: none; }
 
-html {
-  height: 100%; }
-
 body {
   font-size: 14px;
   font-family: "微软雅黑", "宋体", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -6287,6 +6284,66 @@ select.form-control {
   line-height: 28px; }
 
 /*modal ie8*/
+/* 隐藏滚动条*/
+/*webkit内核*/
+.no-scroll-bar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px; }
+
+.no-scroll-bar::-webkit-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-webkit-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0); }
+
+/*o内核*/
+.no-scroll-bar .-o-scrollbar {
+  -moz-appearance: none !important;
+  background: rgba(0, 255, 0, 0) !important; }
+
+.no-scroll-bar::-o-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-o-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-o-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-o-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-o-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-o-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0); }
+
+/*IE10,IE11,IE12*/
+.no-scroll-bar {
+  -ms-scroll-chaining: chained;
+  -ms-overflow-style: none;
+  -ms-content-zooming: zoom;
+  -ms-scroll-rails: none;
+  -ms-content-zoom-limit-min: 100%;
+  -ms-content-zoom-limit-max: 500%;
+  -ms-scroll-snap-type: proximity;
+  -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+  -ms-overflow-style: none;
+  overflow: auto; }
+
 /*head*/
 /*footer*/
 /*管理index頁*/
@@ -6310,12 +6367,17 @@ select.form-control {
 .index-aside {
   width: 236px;
   height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 236px;
+          flex: 0 0 236px;
   color: white;
   background: #191722; }
 
 /*logo*/
 .index-aside-logo {
-  padding: 11px 27px 16px 27px; }
+  padding: 11px 27px 16px 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   .index-aside-logo img {
     width: 145px; }
 
@@ -6324,7 +6386,9 @@ select.form-control {
   padding-left: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden; }
   .index-aside-nemu ._nemu-1 > div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6456,20 +6520,11 @@ select.form-control {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
   border-left: 1px solid #333; }
 
 .index-cont-top {
   width: 100%;
   height: 60px;
-  -ms-flex-preferred-size: 60px;
-      flex-basis: 60px;
   background: #191722;
   color: #fff;
   line-height: 00px;
@@ -6544,30 +6599,24 @@ select.form-control {
 
 /*导航*/
 .index-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 34px;
   background: #3F4151; }
 
 /*iframe*/
 .index-cont-iframe {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  overflow-y: auto;
-  overflow-x: hidden; }
-
-.iframe-box {
+  padding: 0;
+  height: 100%;
   width: 100%;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
-/* iframe 框架*/
 .iframe-box {
-  position: relative;
-  border: none;
   width: 100% !important;
-  overflow: scroll; }
+  height: 100% !important;
+  margin: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: none;
+  overflow-x: hidden; }
 
 /*下面导航*/
 /*登录页*/
@@ -6762,9 +6811,6 @@ select.form-control {
 .pattern {
   position: relative; }
 
-.pattern-bg {
-  height: 100%; }
-
 .pattern-box {
   position: absolute;
   width: auto;
@@ -6923,6 +6969,7 @@ select.form-control {
 /*submit btn*/
 .pattern-submit {
   margin-top: 30px;
+  padding-bottom: 20px;
   width: 100%;
   text-align: center; }
   .pattern-submit .btn {
@@ -6959,7 +7006,8 @@ select.form-control {
     height: 26px;
     padding: 1px 2px;
     background: #fff;
-    border-radius: 15px; }
+    border-radius: 15px;
+    cursor: pointer; }
     .pattern-overview .pattern-ttl3 ._ck.active {
       background: #467CC3;
       color: #fff; }

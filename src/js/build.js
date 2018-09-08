@@ -21347,52 +21347,11 @@ if (typeof jQuery === 'undefined') {
 var common = function () {
 	$(function () {
 
-		// tooltip 提示框
-		//$('[data-toggle="tooltip"]').tooltip();
+		//
 
 
 	});
 }();
-
-/**
- * iframe
- * **/
-
-//
-
-var iframe = function ($) {
-
-	// 设置iframe 高度
-	var _setHeight = function _setHeight() {
-		$(function () {
-			set(true);
-		});
-	};
-
-	function set(bl) {
-		var p_w = $(window.parent.document).find(".index-cont-iframe").height() - 4;
-		$(window.parent.document).find(".iframe-box").css("height", p_w);
-		$(window.parent.document).find(".iframe-box").css("width", 0);
-		var window_h = $("body").height();
-		var window_w = $("body").width();
-
-		if (window_h > p_w && bl) {
-
-			$(window.parent.document).find(".iframe-box").css("height", window_h);
-			$(window.parent.document).find(".iframe-box").css("width", window_w);
-		} else {
-			$(window.parent.document).find(".iframe-box").css("height", 0);
-			$(window.parent.document).find(".iframe-box").css("height", window_h);
-			$(window.parent.document).find(".iframe-box").css("width", window_w);
-		}
-
-		console.log(window_h);
-	}
-
-	return {
-		setHeight: _setHeight
-	};
-}(window.jQuery);
 
 /*登陆模块*/
 
@@ -21428,6 +21387,27 @@ var login = {
 
 var index = {
 	init: function init() {
+
+		// 菜单height
+		resetWindowHeight();
+		$(window).resize(function () {
+			resetWindowHeight();
+		});
+
+		function resetWindowHeight() {
+			var window_h = $(window).height();
+			var logo = $(".index-aside-logo").outerHeight();
+			var nemu = $(".index-aside-nemu").outerHeight(window_h - logo);
+			//console.log(window_h);
+
+
+			var con_top = $(".index-cont-top").outerHeight();
+			var cont_nav = $(".index-nav").outerHeight();
+			var iframe_h = window_h - (con_top + cont_nav);
+			$(".index-cont-iframe").height(iframe_h);
+			//console.log(con_top+cont_nav);
+
+		}
 
 		// 一级菜单点击
 		$(".index-aside-nemu ._nemu-1 ._nemu-item").on("click", function (event) {
@@ -21538,7 +21518,6 @@ var pattern = {
 //pattern页面;
 
 exports.common = common;
-exports.iframe = iframe;
 exports.login = login;
 exports.index = index;
 exports.pattern = pattern;

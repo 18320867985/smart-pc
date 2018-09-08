@@ -4,9 +4,10 @@
     height: 100%;
 }
 
-.index-bg{
+.index-bg {
     height: 100%;
 }
+
 .index-box {
     display: flex;
     flex-flow: row nowrap;
@@ -19,6 +20,7 @@
 .index-aside {
     width: 236px;
     height: 100%;
+    flex: 0 0 236px;
     color: white;
     background: $index-bg;
 }
@@ -28,6 +30,7 @@
 
 .index-aside-logo {
     padding: 11px 27px 16px 27px;
+    box-sizing: border-box;
     img {
         width: 145px;
     }
@@ -39,6 +42,8 @@
 .index-aside-nemu {
     padding-left: 5px;
     display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
     ._nemu-1 {
         >div {
             display: flex;
@@ -88,7 +93,7 @@
                 color: rgba(131, 144, 164, 1);
                 line-height: 19px;
                 cursor: pointer;
-                width:146px;
+                width: 146px;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
@@ -147,7 +152,6 @@
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
-                    
                     transition: all .5s;
                     cursor: pointer;
                     a {
@@ -155,11 +159,11 @@
                         font-size: 12px;
                     }
                     img.active {
-                            display: none;
-                     }
-                     img.df {
-                            display: inline-block;
-                        }
+                        display: none;
+                    }
+                    img.df {
+                        display: inline-block;
+                    }
                     .iconfont {
                         font-size: 16px;
                         margin-right: 3px;
@@ -177,7 +181,6 @@
                             display: inline-block;
                         }
                     }
-                    
                     >* {
                         vertical-align: middle;
                     }
@@ -199,15 +202,12 @@
 .index-cont {
     position: relative;
     flex: 1;
-    display: flex;
-    flex-flow: column;
     border-left: 1px solid #333;
 }
 
 .index-cont-top {
     width: 100%;
     height: 60px;
-    flex-basis: 60px;
     background: $index-bg;
     color: #fff;
     line-height: 00px;
@@ -219,10 +219,10 @@
         line-height: 31px;
         margin-right: 40px;
         .txt.form-control {
-             padding: 4px 10px;
+            padding: 4px 10px;
             padding-left: 40px;
             width: 185px;
-            height: 31px;  
+            height: 31px;
             border: 1px solid #ddd;
             border-radius: 15px;
             background: transparent;
@@ -276,13 +276,12 @@
     }
     .dropdown-menu {
         min-width: 88px;
-         width: 110px;
+        width: 110px;
         top: 137%;
         .glyphicon {
             margin-right: 5px;
         }
-        
-        li>a{
+        li>a {
             padding: 3px 12px;
         }
     }
@@ -304,7 +303,6 @@
 /*导航*/
 
 .index-nav {
-    display: flex;
     height: 34px;
     background: #3F4151;
 }
@@ -313,24 +311,20 @@
 /*iframe*/
 
 .index-cont-iframe {
-    flex: 1;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.iframe-box {
+    width: 100% !important;
+  height: 100% !important;
+    margin: 0;
     overflow-y: auto;
     overflow-x: hidden;
-
-}
-
-.iframe-box{
- width: 100%;
- overflow-x: hidden;
-}
-
-/* iframe 框架*/
-//
-.iframe-box {
-    position: relative;
     border: none;
-    width: 100% !important;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -346,5 +340,3 @@
     //  background: url(../images/index-nav.png) no-repeat  center center;
     //  background-size:100% 100% ;
 }
-
-
