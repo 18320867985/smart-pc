@@ -6334,6 +6334,29 @@ select.form-control {
 .no-scroll-bar::-o-scrollbar-resizer {
   background-color: rgba(0, 0, 0, 0); }
 
+/*moz*/
+.no-scroll-bar -moz-scrollbar {
+  -moz-appearance: none !important;
+  background: rgba(0, 255, 0, 0) !important; }
+
+.no-scroll-bar::-moz-scrollbar-button {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-moz-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-moz-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-moz-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-moz-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0); }
+
+.no-scroll-bar::-moz-scrollbar-resizer {
+  background-color: rgba(0, 0, 0, 0); }
+
 /*IE10,IE11,IE12*/
 .no-scroll-bar {
   -ms-scroll-chaining: chained;
@@ -6933,6 +6956,9 @@ select.form-control {
   padding-left: 1px;
   padding-right: 1px;
   height: 336px; }
+  @media (min-width: 1360px) {
+    .pattern-tab {
+      height: 448px; } }
 
 .pattern-scroll {
   position: relative;
@@ -6943,6 +6969,9 @@ select.form-control {
   overflow-y: auto;
   background: #f4f4fc;
   border-radius: 0 0 5px 5px; }
+  @media (min-width: 1360px) {
+    .pattern-scroll {
+      height: 408px; } }
 
 .scroll-slide {
   position: absolute;
@@ -6953,6 +6982,10 @@ select.form-control {
   height: 275px;
   background: rgba(144, 169, 232, 0.33);
   border-radius: 3px; }
+  @media (min-width: 1360px) {
+    .scroll-slide {
+      height: 367px;
+      top: 55px; } }
 
 .scroll-bar {
   position: absolute;

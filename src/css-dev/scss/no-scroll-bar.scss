@@ -63,6 +63,38 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
+/*moz*/
+.no-scroll-bar -moz-scrollbar {
+    -moz-appearance: none !important;
+    background: rgba(0, 255, 0, 0) !important;
+ 
+}
+
+.no-scroll-bar::-moz-scrollbar-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll-bar::-moz-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll-bar::-moz-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll-bar::-moz-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll-bar::-moz-scrollbar-corner {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.no-scroll-bar::-moz-scrollbar-resizer {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
 
 /*IE10,IE11,IE12*/
 .no-scroll-bar {

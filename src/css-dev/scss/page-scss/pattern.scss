@@ -138,6 +138,10 @@
     padding-left: 1px;
     padding-right: 1px;
     height: 336px;
+    
+    @media(min-width:$media-1600){
+        height:448px
+    }
 }
 
 // 滚动条
@@ -150,6 +154,10 @@
     overflow-y: auto;
     background: rgb(244, 244, 252);
     border-radius: 0 0 5px 5px;
+    
+     @media(min-width:$media-1600){
+        height:408px
+    }
 }
 
 .scroll-slide {
@@ -160,8 +168,12 @@
     width: 6px;
     height: 275px;
     background: rgba(144, 169, 232, .33);
-  
     border-radius: 3px;
+    
+     @media(min-width:$media-1600){
+        height:367px;
+        top: 55px;
+    }
 }
 
 .scroll-bar {
@@ -174,6 +186,7 @@
     width: 6px;
     background: rgba(#467CC3, 1);
     border-radius: 3px;
+    
 }
 
 .table-big {
