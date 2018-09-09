@@ -11,8 +11,6 @@
 
 		<!--check css-->
 		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<!--css3 prefix-->
-		<script src="js/prefix-css3.min.js" type="text/javascript" charset="utf-8"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
@@ -71,48 +69,50 @@
 							</tr>
 						</thead>
 					</table>
-					<div class="pattern-scroll no-scroll-bar">
+					<div class="pattern-scroll no-scroll-box">
 
 						<!--滚动内容-->
-						<table class="pattern-table table  table-bordered  table-fixed ">
+						<div class="no-scroll-bar">
 
-							<tbody>
-								<tr v-for=" item in list ">
-									<td class="col-xs-1 text-center" v-on:click="item.ck=!item.ck">
-										<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
-										<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
-									</td>
-									<td class="col-xs-1 text-center">
-										1
-									</td>
-									<td class="col-xs-3 text-center">
-										huangming@szyh-smart.com
+							<table class="pattern-table table  table-bordered  table-fixed ">
 
-									</td>
-									<td class="col-xs-2 text-center">
-										基本管理
+								<tbody>
+									<tr v-for=" item in list ">
+										<td class="col-xs-1 text-center" v-on:click="item.ck=!item.ck">
+											<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+											<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+										</td>
+										<td class="col-xs-1 text-center">
+											1
+										</td>
+										<td class="col-xs-3 text-center">
+											huangming@szyh-smart.com
 
-									</td>
-									<td class="col-xs-2 text-center">
-										2018-09-09
+										</td>
+										<td class="col-xs-2 text-center">
+											基本管理
 
-									</td>
+										</td>
+										<td class="col-xs-2 text-center">
+											2018-09-09
 
-									<td class="col-xs-3 text-center">
-										<a href="javascript:;" class="btn btn-sm btn-default rd">编辑</a>
-										<a href="javascript:;" class="btn btn-sm btn-default rd">禁用</a>
+										</td>
 
-									</td>
+										<td class="col-xs-3 text-center">
+											<a href="javascript:;" class="btn btn-sm btn-default rd">编辑</a>
+											<a href="javascript:;" class="btn btn-sm btn-default rd">禁用</a>
 
-								</tr>
+										</td>
 
-							</tbody>
+									</tr>
 
-						</table>
+								</tbody>
 
-					</div>
-					<div class="scroll-slide">
-						<div class="scroll-bar"></div>
+							</table>
+						</div>
+						<div class="scroll-slide">
+							<div class="scroll-bar"></div>
+						</div>
 					</div>
 
 					<div class="pattern-submit">
@@ -127,7 +127,6 @@
 				</div>
 
 				<!--{{$data}}-->
-
 
 			</div>
 

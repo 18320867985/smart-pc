@@ -139,7 +139,7 @@ var pattern = {
 			setrScroll();
 		});
 		function setrScroll() {
-			$(".scroll-bar-box").each(function() {
+			$(".no-scroll-box").each(function() {
 				var p = $(this);
 				$(".no-scroll-bar", p).scroll(function() {
 					var obj = $(this)[0];
@@ -178,8 +178,7 @@ var pattern = {
 
 				$(".scroll-bar", p).css("top", scroll_el_h * slide_sp);
 				
-				console.log(scroll_h);
-
+			
 			});
 
 		}

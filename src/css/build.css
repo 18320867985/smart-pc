@@ -5820,6 +5820,9 @@ button.close {
           box-sizing: border-box;
   outline: none; }
 
+html {
+  height: 100%; }
+
 body {
   font-size: 14px;
   font-family: "微软雅黑", "宋体", "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -6370,6 +6373,36 @@ select.form-control {
   -ms-overflow-style: none;
   overflow: auto; }
 
+/*-moz-
+ 引用browser.js
+        <div class="no-scroll-box">
+            <div class="no-scroll-bar">
+                
+            </div>
+           <div class="scroll-slide">
+               <div class="scroll-bar"></div>
+             </div>
+        </div>
+ * */
+.no-scroll-box {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.no-scroll-bar {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.no-scroll-box .scroll-slide {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  z-index: 999; }
+
 /*head*/
 /*footer*/
 /*管理index頁*/
@@ -6410,11 +6443,13 @@ select.form-control {
 /*侧边菜单*/
 .index-aside-nemu {
   padding-left: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  width: 236px;
   overflow-y: auto;
   overflow-x: hidden; }
+  .index-aside-nemu .no-scroll-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .index-aside-nemu ._nemu-1 > div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6654,6 +6689,8 @@ select.form-control {
           perspective: 1000px; }
   .login.container-fluid-12 .row {
     height: 100%; }
+  .login .row {
+    height: 100% !important; }
 
 /*3d动画*/
 .csstransforms3d .row {
@@ -6709,10 +6746,11 @@ select.form-control {
 .login-box {
   position: absolute;
   right: 0px;
-  top: 216px;
+  top: 50%;
   z-index: 99;
   width: 357px;
   height: 374px;
+  margin-top: -187px;
   background: #d5d8e1;
   background-size: 100% 100%;
   border-radius: 10px;
@@ -6794,6 +6832,12 @@ select.form-control {
     .login-box .checkbox ._keep {
       margin-left: 23px;
       color: #A3B0C4; }
+    .login-box .checkbox .ok {
+      display: none; }
+    .login-box .checkbox.active .ok {
+      display: inline-block; }
+    .login-box .checkbox.active .df {
+      display: none; }
     .login-box .checkbox.active * {
       color: #467CC3; }
   .login-box a.find-pwd {
@@ -6910,7 +6954,7 @@ select.form-control {
     border: 1px solid #dbe3f8;
     border-radius: 13px;
     color: #777;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
     text-align: center;
     -webkit-transition: all .5s;
@@ -6973,21 +7017,24 @@ select.form-control {
     .pattern-scroll {
       height: 408px; } }
 
-.scroll-slide {
+.pattern-scroll .no-scroll-bar {
+  width: 100%; }
+
+.pattern-scroll.no-scroll-box .scroll-slide {
   position: absolute;
   right: 20px;
-  top: 49px;
+  top: 8px;
   z-index: 99;
   width: 6px;
   height: 275px;
   background: rgba(144, 169, 232, 0.33);
   border-radius: 3px; }
   @media (min-width: 1360px) {
-    .scroll-slide {
+    .pattern-scroll.no-scroll-box .scroll-slide {
       height: 367px;
       top: 55px; } }
 
-.scroll-bar {
+.pattern-scroll .scroll-bar {
   position: absolute;
   right: 0px;
   top: 0;

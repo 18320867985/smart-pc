@@ -41,9 +41,14 @@
 
 .index-aside-nemu {
     padding-left: 5px;
-    display: flex;
+    width: 236px;
     overflow-y: auto;
     overflow-x: hidden;
+    
+    .no-scroll-bar{
+        display: flex;
+      
+    }
     ._nemu-1 {
         >div {
             display: flex;

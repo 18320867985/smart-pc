@@ -12,7 +12,6 @@
 				overflow-x: hidden;
 				border: 1px solid red
 			}
-			
 			/*webkit内核*/
 			
 			.no-scroll-bar::-webkit-scrollbar {
@@ -92,141 +91,169 @@
 				-ms-overflow-style: none;
 				overflow: auto;
 			}
+			
+			.scroll-bar-box {
+				position: relative;
+				width: 400px;
+				height: 400px;
+				padding: 0;
+			}
+			
+			.scroll-bar {
+				position: absolute;
+				right: 0px;
+				top: 0;
+				z-index: 99;
+				width: 3px;
+				height: 100%;
+				background: cornflowerblue;
+				 opacity: .8;
+				  transition:  all .2s;
+			}
 		</style>
 	</head>
 
 	<body>
+		<div class="scroll-bar-box">
+			<div class="no-scroll-bar">
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				<p>1</p>
+				
+				
 
-		<div class="no-scroll-bar">
-
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-			<p>1</p>
-
+			</div>
+			<div class="scroll-bar"></div>
 		</div>
+		<script src="../js-dev/libs/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".no-scroll-bar").scroll(function(){
+					var  obj=$(this)[0];
+					var h=obj.clientHeight;
+					var scroll_h=obj.scrollHeight;
+					var scroll_t=obj.scrollTop;
+					if(scroll_h<h){
+						return;
+					}
+					
+					var slide_h=scroll_h-h;
+					var slide_sp=scroll_t/slide_h;
+					var scroll_el_h=h- $(".scroll-bar").height();
+					
+					$(".scroll-bar").css("top",scroll_el_h*slide_sp);
+					
+				});
+				
+				var  obj=$(".no-scroll-bar")[0];
+					var h=obj.clientHeight;
+					var scroll_h=obj.scrollHeight;
+					var scroll_t=obj.scrollTop;
+					if(scroll_h<h){
+						return;
+					}
+					
+					var sp=h/scroll_h;
+					$(".scroll-bar").height(sp*h)
+					console.log(scroll_h);
+				
+				
+			});
+			
+		</script>
 	</body>
 
 </html>

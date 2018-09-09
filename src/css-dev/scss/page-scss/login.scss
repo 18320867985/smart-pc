@@ -8,6 +8,9 @@
     &.container-fluid-12 .row {
         height: 100%;
     }
+    .row {
+        height: 100% !important;
+    }
 }
 
 
@@ -68,10 +71,11 @@
 .login-box {
     position: absolute;
     right: 0px;
-    top: 216px;
+    top: 50%;
     z-index: 99;
     width: 357px;
     height: 374px;
+    margin-top: -187px;
     background: rgba(213, 216, 225, 1);
     background-size: 100% 100%;
     border-radius: 10px;
@@ -164,13 +168,22 @@
             left: 0;
             top: -6px;
             font-size: 24px;
-            color:#A3B0C4;
+            color: #A3B0C4;
         }
         ._keep {
             margin-left: 23px;
             color: #A3B0C4;
         }
+        .ok {
+            display: none;
+        }
         &.active {
+            .ok {
+                display: inline-block;
+            }
+            .df {
+                display: none;
+            }
             * {
                 color: $text-primary;
             }

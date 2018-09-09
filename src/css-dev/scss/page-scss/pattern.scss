@@ -90,7 +90,7 @@
         border: 1px solid rgba(219, 227, 248, 1);
         border-radius: 13px;
         color: #777;
-        font-size: 13px;
+        font-size: 14px;
         letter-spacing: 1px;
         text-align: center;
         transition: all .5s;
@@ -138,8 +138,7 @@
     padding-left: 1px;
     padding-right: 1px;
     height: 336px;
-    
-    @media(min-width:$media-1600){
+    @media(min-width: $media-1600) {
         height:448px
     }
 }
@@ -154,29 +153,33 @@
     overflow-y: auto;
     background: rgb(244, 244, 252);
     border-radius: 0 0 5px 5px;
-    
-     @media(min-width:$media-1600){
+    @media(min-width: $media-1600) {
         height:408px
     }
 }
 
-.scroll-slide {
+.pattern-scroll .no-scroll-bar {
+    width: 100%;
+  
+}
+
+.pattern-scroll.no-scroll-box  .scroll-slide {
     position: absolute;
     right: 20px;
-    top: 49px;
+    top: 8px;
     z-index: 99;
     width: 6px;
     height: 275px;
     background: rgba(144, 169, 232, .33);
     border-radius: 3px;
-    
-     @media(min-width:$media-1600){
-        height:367px;
+    @media(min-width: $media-1600) {
+       
+        height: 367px;
         top: 55px;
     }
 }
 
-.scroll-bar {
+.pattern-scroll  .scroll-bar {
     position: absolute;
     right: 0px;
     top: 0;
@@ -186,7 +189,6 @@
     width: 6px;
     background: rgba(#467CC3, 1);
     border-radius: 3px;
-    
 }
 
 .table-big {

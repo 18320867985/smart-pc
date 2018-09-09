@@ -11,8 +11,6 @@
 
 		<!--check css-->
 		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<!--css3 prefix-->
-		<script src="js/prefix-css3.min.js" type="text/javascript" charset="utf-8"></script>
 
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
@@ -65,41 +63,43 @@
 							</tr>
 						</thead>
 					</table>
-					<div class="pattern-scroll no-scroll-bar">
+					<div class="pattern-scroll no-scroll-box">
 
 						<!--滚动内容-->
-						<table class="pattern-table table  table-bordered  table-fixed ">
+						<div class="no-scroll-bar">
 
-							<tbody>
-								<tr v-for=" item in list ">
-									<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
-										<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
-										<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
-									</td>
-									<td class="table-1 text-center">
-										1
-									</td>
-									<td class=" table-4 text-center">
-										<span v-html="item.hsy"></span>
+							<table class="pattern-table table  table-bordered  table-fixed ">
 
-									</td>
+								<tbody>
+									<tr v-for=" item in list ">
+										<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+											<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+											<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+										</td>
+										<td class="table-1 text-center">
+											1
+										</td>
+										<td class=" table-4 text-center">
+											<span v-html="item.hsy"></span>
 
-									<td class="table-4 text-center">
-										<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
-										<a href="javascript:;" class="btn btn-sm btn-primary rd">删除</a>
-										<a href="javascript:;" class="btn btn-sm btn-primary rd">测试</a>
+										</td>
 
-									</td>
+										<td class="table-4 text-center">
+											<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
+											<a href="javascript:;" class="btn btn-sm btn-primary rd">删除</a>
+											<a href="javascript:;" class="btn btn-sm btn-primary rd">测试</a>
 
-								</tr>
+										</td>
 
-							</tbody>
+									</tr>
 
-						</table>
+								</tbody>
 
-					</div>
-					<div class="scroll-slide">
-						<div class="scroll-bar"></div>
+							</table>
+						</div>
+						<div class="scroll-slide">
+							<div class="scroll-bar"></div>
+						</div>
 					</div>
 
 					<div class="pattern-submit">
