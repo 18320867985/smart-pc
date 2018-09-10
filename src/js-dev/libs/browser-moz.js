@@ -268,6 +268,8 @@
 	window.addEventListener("load", function() {
 		$(function(){
 			resetScroll();
+			
+			//$(window).trigger("resize");
 		})
 		
 		$(window).resize(function() {
@@ -275,7 +277,6 @@
 		});
 
 		function resetScroll() {
-
 			$(".-moz- .no-scroll-box").each(function() {
 
 				var p = $(this);
@@ -283,12 +284,9 @@
 				var cont = $(".no-scroll-bar", p)[0];
 				var scroll_h = cont.scrollHeight;
 				var cont_h = cont.clientHeight;
-				//if(scroll_h > cont_h) {
-					$(cont).css("width", w + 17);
-				//} else {
-					//$(cont).css("width", w);
-				//}
-
+			
+				$(cont).css("width", w + 16);
+				
 			});
 
 		}

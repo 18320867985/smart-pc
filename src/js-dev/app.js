@@ -20,6 +20,8 @@ export  {index} from  './module/index.js'  		 // index页面;
 
 export  {pattern} from  './module/pattern.js'   //pattern页面;
 
+export  {status} from  './module/status.js'   //status 页面;
+
 
 
 

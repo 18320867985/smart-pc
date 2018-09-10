@@ -4,256 +4,348 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<style type="text/css">
-			.no-scroll-bar {
-				width: 400px;
-				height: 400px;
-				overflow-y: auto;
-				overflow-x: hidden;
-				border: 1px solid red
-			}
-			/*webkit内核*/
-			
-			.no-scroll-bar::-webkit-scrollbar {
-				width: 0px;
-				height: 0px;
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-button {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-track {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-track-piece {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-thumb {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-corner {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar-resizer {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-webkit-scrollbar {
-				width: 10px;
-				height: 10px;
-			}
-			/*o内核*/
-			
-			.no-scroll-bar .-o-scrollbar {
-				-moz-appearance: none !important;
-				background: rgba(0, 255, 0, 0) !important;
-			}
-			
-			.no-scroll-bar::-o-scrollbar-button {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-o-scrollbar-track {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-o-scrollbar-track-piece {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-o-scrollbar-thumb {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-o-scrollbar-corner {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			
-			.no-scroll-bar::-o-scrollbar-resizer {
-				background-color: rgba(0, 0, 0, 0);
-			}
-			/*IE10,IE11,IE12*/
-			
-			.no-scroll-bar {
-				-ms-scroll-chaining: chained;
-				-ms-overflow-style: none;
-				-ms-content-zooming: zoom;
-				-ms-scroll-rails: none;
-				-ms-content-zoom-limit-min: 100%;
-				-ms-content-zoom-limit-max: 500%;
-				-ms-scroll-snap-type: proximity;
-				-ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
-				-ms-overflow-style: none;
-				overflow: auto;
-			}
-			
-			.scroll-bar-box {
-				position: relative;
-				width: 400px;
-				height: 400px;
-				padding: 0;
-			}
-			
-			.scroll-bar {
-				position: absolute;
-				right: 0px;
-				top: 0;
-				z-index: 99;
-				width: 3px;
-				height: 100%;
-				background: cornflowerblue;
-				 opacity: .8;
-				  transition:  all .2s;
-			}
-		</style>
+		<!--check css-->
+		
+		<link rel="stylesheet" type="text/css" href=".././css/build.css" />
+		
 	</head>
+<body class="test status-bg no-scroll-bar">
+		<section class="status clearfix">
 
-	<body>
-		<div class="scroll-bar-box">
-			<div class="no-scroll-bar">
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				<p>1</p>
-				
-				
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">机器信息</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (6).png" alt="机器信息" />
+						</div>
+
+						<div class=" no-scroll-box">
+							<div class="no-scroll-bar">
+								<ul class="status-det">
+									<li>
+										<span>名称：会展中心一号馆</span>
+									</li>
+									<li>
+
+										<span>控制状态：本机控制</span>
+									</li>
+									<li>
+
+										<span>剩余电量：78%</span>
+									</li>
+									<li>
+
+										<span>剩余可用时长：5个小时</span>
+									</li>
+									<li>
+
+										<span>状态：在线</span>
+									</li>
+									
+								</ul>
+							</div>
+							<!--滚动条-->
+							<div class="scroll-slide">
+								<div class="scroll-bar"></div>
+							</div>
+						</div>
+					</div>
+
+				</a>
 
 			</div>
-			<div class="scroll-bar"></div>
-		</div>
-		<script src="../js-dev/libs/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			$(function(){
-				$(".no-scroll-bar").scroll(function(){
-					var  obj=$(this)[0];
-					var h=obj.clientHeight;
-					var scroll_h=obj.scrollHeight;
-					var scroll_t=obj.scrollTop;
-					if(scroll_h<h){
-						return;
-					}
-					
-					var slide_h=scroll_h-h;
-					var slide_sp=scroll_t/slide_h;
-					var scroll_el_h=h- $(".scroll-bar").height();
-					
-					$(".scroll-bar").css("top",scroll_el_h*slide_sp);
-					
-				});
-				
-				var  obj=$(".no-scroll-bar")[0];
-					var h=obj.clientHeight;
-					var scroll_h=obj.scrollHeight;
-					var scroll_t=obj.scrollTop;
-					if(scroll_h<h){
-						return;
-					}
-					
-					var sp=h/scroll_h;
-					$(".scroll-bar").height(sp*h)
-					console.log(scroll_h);
-				
-				
-			});
-			
-		</script>
+
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">超声波&红外线</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (1).png" alt="超声波&红外线" />
+						</div>
+						<div class=" no-scroll-box">
+							<div class="no-scroll-bar">
+								<ul class="status-det  _t2">
+									<li>
+										<a href="javascript:;" class="btn ">红外线1</a>
+
+									</li>
+									<li>
+										<a href="javascript:;" class="btn ">红外线2</a>
+
+									</li>
+
+								</ul>
+							</div>
+							<!--滚动条-->
+							<div class="scroll-slide">
+								<div class="scroll-bar"></div>
+							</div>
+						</div>
+
+					</div>
+
+				</a>
+
+			</div>
+
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">激光雷达数据</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (2).png" alt="激光雷达数据" />
+
+						</div>
+					</div>
+
+			</div>
+
+			</a>
+
+			</div>
+
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">硬件版本</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (4).png" alt="硬件版本" />
+						</div>
+						<div class=" no-scroll-box">
+							<div class="no-scroll-bar">
+								<ul class="status-det ">
+									<li>
+										<strong>右轮驱动器</strong>
+
+									</li>
+									<li>
+
+										<span>右轮驱动器内容右轮驱动器内容右轮驱动器内容右轮驱动器内容 </span>
+									</li>
+									<li>
+
+										<strong>头部灯板</strong>
+									</li>
+									<li>
+
+										<span>头部灯板内容头部灯板内容头部灯板内容</span>
+									</li>
+									<li>
+
+										<strong>头部水平仓机</strong>
+									</li>
+									<li>
+
+										<span>右轮驱动器内容 </span>
+									</li>
+									<li>
+
+										<strong>头部灯板</strong>
+									</li>
+									<li>
+
+										<span>头部灯板内容头部灯板内容头部灯板内容</span>
+									</li>
+									<li>
+
+										<strong>头部水平仓机</strong>
+									</li>
+								</ul>
+							</div>
+
+							<!--滚动条-->
+							<div class="scroll-slide">
+								<div class="scroll-bar"></div>
+							</div>
+						</div>
+
+					</div>
+
+				</a>
+
+			</div>
+
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">超声波&红外线</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (3).png" alt="超声波&红外线" />
+						</div>
+						<div class=" no-scroll-box">
+							<div class="no-scroll-bar">
+								<ul class="status-det">
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+
+								</ul>
+							</div>
+
+							<!--滚动条-->
+							<div class="scroll-slide">
+								<div class="scroll-bar"></div>
+							</div>
+						</div>
+					</div>
+
+				</a>
+
+			</div>
+
+			<div class="status-item">
+				<a href="admin-status-dtl.html">
+					<h1 class="status-ttl">激光雷达数据</h1>
+					<div class="status-cont">
+						<div class="_img">
+							<img src="images/status/new-1 (5).png" alt="激光雷达数据" />
+						</div>
+						<div class=" no-scroll-box">
+
+							<div class="no-scroll-bar">
+								<ul class="status-det ">
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+									<li>
+										<strong>电量</strong>
+
+									</li>
+									<li>
+
+										<strong>电压</strong>
+									</li>
+									<li>
+
+										<strong>电流</strong>
+									</li>
+									<li>
+
+										<strong>左轮速度</strong>
+									</li>
+									<li>
+
+										<strong>邮轮速度</strong>
+									</li>
+
+								</ul>
+
+							</div>
+
+							<!--滚动条-->
+							<div class="scroll-slide">
+								<div class="scroll-bar"></div>
+							</div>
+						</div>
+					</div>
+
+				</a>
+
+			</div>
+
+		</section>
+
+		<!--[if lte IE 9]>
+			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+	<!--	<script data-parent="umd" data-umd="status.init" src="../js/build.js" type="text/javascript" charset="utf-8"></script>-->
+
 	</body>
+
 
 </html>

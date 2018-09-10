@@ -7000,7 +7000,7 @@ select.form-control {
   padding-left: 1px;
   padding-right: 1px;
   height: 336px; }
-  @media (min-width: 1360px) {
+  @media (min-width: 1364px) {
     .pattern-tab {
       height: 448px; } }
 
@@ -7013,12 +7013,13 @@ select.form-control {
   overflow-y: auto;
   background: #f4f4fc;
   border-radius: 0 0 5px 5px; }
-  @media (min-width: 1360px) {
+  @media (min-width: 1364px) {
     .pattern-scroll {
       height: 408px; } }
 
 .pattern-scroll .no-scroll-bar {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
 
 .pattern-scroll.no-scroll-box .scroll-slide {
   position: absolute;
@@ -7029,10 +7030,10 @@ select.form-control {
   height: 275px;
   background: rgba(144, 169, 232, 0.33);
   border-radius: 3px; }
-  @media (min-width: 1360px) {
+  @media (min-width: 1364px) {
     .pattern-scroll.no-scroll-box .scroll-slide {
       height: 367px;
-      top: 55px; } }
+      top: 20px; } }
 
 .pattern-scroll .scroll-bar {
   position: absolute;
@@ -7152,37 +7153,40 @@ select.form-control {
       left: 28px; }
 
 /*
- 状态管理
- 
- * */
+   状态管理
+   
+   * */
 .status {
-  width: 900px;
-  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 789px;
   margin: 0 auto;
-  margin-top: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start; }
+  padding-top: 120px; }
+  @media (min-width: 1364px) {
+    .status {
+      width: 1052px;
+      margin: 0 auto; } }
 
 .status-bg {
   height: 100%; }
 
 .status-item {
   position: relative;
-  width: 200px;
+  width: 253px;
   height: 160px;
   background: #fff;
+  overflow: hidden;
+  float: left;
+  margin-left: 10px;
   margin-top: 20px;
-  overflow: hidden; }
+  -webkit-transition: all .8s;
+  transition: all .8s; }
+  @media (min-width: 1364px) {
+    .status-item {
+      width: 340px;
+      margin-left: 10px;
+      margin-top: 20px;
+      height: 210px; } }
 
 .status-ttl {
   margin: 0;
@@ -7193,86 +7197,30 @@ select.form-control {
   background: #f4f4fc;
   font-size: 13px;
   color: #777; }
+  @media (min-width: 1364px) {
+    .status-ttl {
+      font-size: 16px; } }
 
 .status-cont {
-  height: 124px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
-  .status-cont img {
+          align-items: center;
+  height: 120px;
+  padding: 0 15px; }
+  @media (min-width: 1364px) {
+    .status-cont {
+      height: 170px;
+      padding: 0 30px; } }
+  .status-cont ._img {
     -webkit-transition: all .8s;
-    transition: all .8s; }
-
-.status-det {
-  position: absolute;
-  z-index: 99;
-  top: 34px;
-  left: -295px;
-  width: 100%;
-  height: 124px;
-  padding-left: 20px;
-  -webkit-transition: all .8s;
-  transition: all .8s;
-  background: rgba(255, 255, 255, 0.8); }
-  .status-det li {
-    margin-top: 3px;
-    color: #777;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-
-.status-item:hover .status-det {
-  left: 0px; }
-  .status-item:hover .status-det img {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg); }
-
-.status-item:hover img {
-  -webkit-transform: rotateY(360deg);
-          transform: rotateY(360deg); }
-
-@media (min-width: 1360px) {
-  .status {
-    width: 1100px;
-    height: 100%;
-    margin: 0 auto;
-    margin-top: 120px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: start;
-        align-content: flex-start; }
-  .status-item {
-    position: relative;
-    width: 251px;
-    height: 209px;
-    background: #fff;
-    margin-top: 40px;
-    overflow: hidden; }
-  .status-ttl {
-    margin: 0;
-    padding: 0;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 10px;
-    background: #f4f4fc;
-    font-size: 15px;
-    color: #777; }
-  .status-cont {
-    height: 169px;
+    transition: all .8s;
+    width: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7282,25 +7230,177 @@ select.form-control {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .status-det {
-    position: absolute;
+    @media (min-width: 1364px) {
+      .status-cont ._img {
+        width: 100px; } }
+    .status-cont ._img img {
+      width: 70px; }
+      @media (min-width: 1364px) {
+        .status-cont ._img img {
+          width: 100px; } }
+  .status-cont .no-scroll-box {
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 130px;
+            flex: 1 0 130px;
+    width: 130px;
     z-index: 99;
-    top: 40px;
-    left: -295px;
-    width: 100%;
-    height: 169px;
-    padding-left: 20px;
+    height: 100%;
+    margin-left: 10px;
     -webkit-transition: all .8s;
     transition: all .8s;
+    margin-top: 10px;
     background: rgba(255, 255, 255, 0.8); }
-    .status-det li {
-      margin-top: 10px;
+    @media (min-width: 1364px) {
+      .status-cont .no-scroll-box {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 180px;
+                flex: 1 0 180px;
+        width: 180px; } }
+    .status-cont .no-scroll-box .no-scroll-bar {
+      width: 100%;
+      height: 100%; }
+    .status-cont .no-scroll-box .scroll-slide {
+      position: absolute;
+      right: 1px;
+      top: 0px;
+      z-index: 99;
+      width: 6px;
+      height: 120px;
+      background: rgba(144, 169, 232, 0.33);
+      border-radius: 3px; }
+      @media (min-width: 1364px) {
+        .status-cont .no-scroll-box .scroll-slide {
+          height: 170px;
+          top: 0px; } }
+    .status-cont .no-scroll-box .scroll-bar {
+      position: absolute;
+      right: 0px;
+      top: 0;
+      z-index: 99;
+      height: 10px;
+      width: 6px;
+      background: #467cc3;
+      border-radius: 5px; }
+  .status-cont .status-det {
+    width: 100%; }
+    @media (min-width: 1364px) {
+      .status-cont .status-det {
+        width: 180px; } }
+    .status-cont .status-det li {
+      width: 100%;
       color: #777;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap; }
-  .status-item:hover .status-det {
-    left: 0px; } }
+      white-space: nowrap;
+      font-size: 11px;
+      margin-top: 3px; }
+      @media (min-width: 1364px) {
+        .status-cont .status-det li {
+          width: 100%;
+          font-size: 14px;
+          margin-top: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; } }
+      .status-cont .status-det li .btn {
+        padding: 1px 10px;
+        background: #f4f4fc;
+        border: 1px solid #dbe3f8;
+        border-radius: 15px;
+        font-size: 12px;
+        color: #71727E; }
+    .status-cont .status-det._t2 {
+      margin-top: 10px;
+      margin-left: 20px; }
+      .status-cont .status-det._t2 li + li {
+        margin-top: 10px; }
+
+.status-item:nth-child(1) .status-cont ._img img {
+  width: 64px; }
+  @media (min-width: 1364px) {
+    .status-item:nth-child(1) .status-cont ._img img {
+      width: 85px; } }
+
+@media (min-width: 1364px) {
+  .status-item:nth-child(2) .status-cont ._img {
+    width: 150px; } }
+
+.status-item:nth-child(2) .status-cont ._img img {
+  width: 90px; }
+  @media (min-width: 1364px) {
+    .status-item:nth-child(2) .status-cont ._img img {
+      width: 150px; } }
+
+.status-item:nth-child(3) .status-cont {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .status-item:nth-child(3) .status-cont ._img img {
+    width: 70px; }
+    @media (min-width: 1364px) {
+      .status-item:nth-child(3) .status-cont ._img img {
+        width: 100px; } }
+
+.status-item:hover .status-cont ._img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+
+.status-item:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+
+/*激活机器人 statusdtl-form*/
+.statusdtl-form {
+  position: absolute;
+  left: 314px;
+  top: 0px;
+  z-index: 999;
+  width: 500px;
+  padding: 20px; }
+  .statusdtl-form h2 {
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #7a7a7a;
+    line-height: 30px; }
+  .statusdtl-form > ._input-gp {
+    margin-top: 30px;
+    height: 35px; }
+    .statusdtl-form > ._input-gp label {
+      display: inline-block;
+      line-height: 35px;
+      width: 80px;
+      font-size: 19px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: #80848d; }
+    .statusdtl-form > ._input-gp input {
+      width: 211px;
+      height: 35px;
+      padding: 6px 12px;
+      border: 1px solid #467cc3;
+      border-radius: 18px;
+      background: transparent;
+      text-indent: 20px;
+      line-height: 20px; }
+  .statusdtl-form .btn {
+    width: 211px;
+    height: 35px;
+    background: #467cc3;
+    border-radius: 18px;
+    margin-left: 80px;
+    margin-top: 30px;
+    font-size: 18px; }
+  .statusdtl-form ._tj {
+    margin-top: 50px;
+    font-size: 15px;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #7a7a7a;
+    line-height: 23px; }
+    .statusdtl-form ._tj p {
+      font-weight: 400; }
 
 /*
  状态管理-详情
@@ -7334,9 +7434,10 @@ select.form-control {
 .statusdtl-box {
   position: absolute;
   z-index: 99;
-  top: 56px;
+  top: 60px;
   left: 377px; }
   .statusdtl-box li {
+    position: relative;
     margin-bottom: 5px;
     color: #7371FD; }
     .statusdtl-box li label {
@@ -7344,6 +7445,42 @@ select.form-control {
       font-weight: 400; }
     .statusdtl-box li span {
       font-size: 14px; }
+    .statusdtl-box li::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -15px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7371FD; }
+
+/*按钮组*/
+.statusdtl-btns {
+  position: absolute;
+  top: 270px;
+  left: 350px; }
+  .statusdtl-btns li + li {
+    margin-top: 20px; }
+  .statusdtl-btns li .btn {
+    width: 115px;
+    height: 31px;
+    margin-left: 20px;
+    line-height: 31px;
+    padding: 0;
+    text-align: center;
+    background: #F4F4FC;
+    font-size: 15px;
+    font-family: Adobe Heiti Std R;
+    font-weight: normal;
+    color: #71727e;
+    border-radius: 15px; }
+    .statusdtl-btns li .btn:hover {
+      background: #e0e0f7; }
+    .statusdtl-btns li .btn.active {
+      color: #fff;
+      background: #467CC3; }
 
 /*密碼*/
 /*修改密碼*/

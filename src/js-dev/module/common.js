@@ -25,6 +25,26 @@ var common = (function() {
 			$(this).parents(".form-gp").removeClass("active");
 
 		});
+		
+		
+		/* 按钮 单击选择的全局样式  [data-click]*/
+		$("[data-btn-click]").on("click", function(event) {
+
+			var isHasClass = $(this).hasClass("active");
+			if(isHasClass) {
+				$(this).removeClass("active");
+			} else {
+				$(this).addClass("active");
+			}
+//			
+//			var primary = $(this).hasClass("btn-primary");
+//			if(isHasClass) {
+//				$(this).removeClass("active");
+//			} else {
+//				$(this).addClass("active");
+//			}
+
+		});
 
 	})
 

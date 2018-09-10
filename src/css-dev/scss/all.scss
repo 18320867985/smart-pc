@@ -7,6 +7,8 @@
 
 @import "mixin.scss";                          // 函数
 
+//@import "_media.scss";  
+
 @import "df-pc.scss";                            // pc端     default scss
 
 @import "no-scroll-bar.scss";                   // 隱藏滾動條
@@ -22,7 +24,7 @@
 
 @import "page-scss/all-page.scss";                 // 子页面scss集合 
 
-//@import "test.scss";
+@import "test.scss";
 
 
 

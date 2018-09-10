@@ -1,4 +1,17 @@
 /*var*/
+//
+//
+///*设计图width*/
+//$screenwidth:1200;
+//
+///*rem 份数*/
+//$remSize:12;
+//
+///* 320/16 =20px=1rem */
+//
+///*html rem比例*/
+//$rem:($screenwidth/$remSize);
+
 
 /*全局*/
 $font-family:"微软雅黑","宋体","Helvetica Neue", Helvetica, Arial, sans-serif !default;
@@ -14,7 +27,7 @@ $text-warning: #f0ad4e; // 警告
 $text-danger : #f05a00; // 危险 
 
 
-$media-1600:1360px;  // 大屏1600-1920 media 查詢
+$media-1600:1364px;  // 大屏1600-1920 media 查詢
 
 /*頁面*/
 $index-bg:#191722;   // 管理頁背景
