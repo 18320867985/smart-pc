@@ -1,16 +1,21 @@
 /*var*/
-//
-//
-///*设计图width*/
-//$screenwidth:1200;
-//
-///*rem 份数*/
-//$remSize:12;
-//
-///* 320/16 =20px=1rem */
-//
-///*html rem比例*/
-//$rem:($screenwidth/$remSize);
+
+/*设计图width*/
+$screenwidth:1200;
+
+/*rem 份数*/
+$remSize:16;
+
+/* 320/16 =20px=1rem */
+
+
+/*html rem比例*/
+$rem:($screenwidth/$remSize);
+
+// 左边菜单
+$nemu:246px;
+
+
 
 
 /*全局*/

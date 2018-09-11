@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /*var*/
+/*设计图width*/
+/*rem 份数*/
+/* 320/16 =20px=1rem */
+/*html rem比例*/
 /*全局*/
 /*頁面*/
 /*!
@@ -5812,6 +5816,30 @@ button.close {
     <button class="plus btn" type="button">+</button>
  </div>
  * */
+@media screen and (max-width: 953px) {
+  html {
+    font-size: 75px; } }
+
+@media screen and (min-width: 954px) {
+  html {
+    font-size: 75px; } }
+
+@media screen and (min-width: 1034px) {
+  html {
+    font-size: 80px; } }
+
+@media screen and (min-width: 1194px) {
+  html {
+    font-size: 90px; } }
+
+@media screen and (min-width: 1354px) {
+  html {
+    font-size: 100px; } }
+
+@media screen and (min-width: 1434px) {
+  html {
+    font-size: 105px; } }
+
 /*默认样式*/
 * {
   padding: 0;
@@ -7159,47 +7187,34 @@ select.form-control {
 .status {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 789px;
+  width: 10.53333rem;
   margin: 0 auto;
-  padding-top: 120px; }
-  @media (min-width: 1364px) {
-    .status {
-      width: 1052px;
-      margin: 0 auto; } }
+  padding-top: 1.46667rem; }
 
 .status-bg {
   height: 100%; }
 
 .status-item {
   position: relative;
-  width: 253px;
-  height: 160px;
+  width: 3.37333rem;
+  height: 2.13333rem;
   background: #fff;
   overflow: hidden;
   float: left;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-left: 0.13333rem;
+  margin-top: 0.26667rem;
   -webkit-transition: all .8s;
   transition: all .8s; }
-  @media (min-width: 1364px) {
-    .status-item {
-      width: 340px;
-      margin-left: 10px;
-      margin-top: 20px;
-      height: 210px; } }
 
 .status-ttl {
   margin: 0;
   padding: 0;
-  height: 34px;
-  line-height: 34px;
-  padding-left: 10px;
+  height: 0.45333rem;
+  line-height: 0.45333rem;
+  padding-left: 0.13333rem;
   background: #f4f4fc;
-  font-size: 13px;
+  font-size: 0.17333rem;
   color: #777; }
-  @media (min-width: 1364px) {
-    .status-ttl {
-      font-size: 16px; } }
 
 .status-cont {
   display: -webkit-box;
@@ -7211,16 +7226,12 @@ select.form-control {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 120px;
-  padding: 0 15px; }
-  @media (min-width: 1364px) {
-    .status-cont {
-      height: 170px;
-      padding: 0 30px; } }
+  height: 1.6rem;
+  padding: 0 0.2rem; }
   .status-cont ._img {
     -webkit-transition: all .8s;
     transition: all .8s;
-    width: 100px;
+    width: 1.33333rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7230,125 +7241,137 @@ select.form-control {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    @media (min-width: 1364px) {
-      .status-cont ._img {
-        width: 100px; } }
     .status-cont ._img img {
-      width: 70px; }
-      @media (min-width: 1364px) {
-        .status-cont ._img img {
-          width: 100px; } }
+      width: 0.93333rem; }
   .status-cont .no-scroll-box {
     position: relative;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 130px;
-            flex: 1 0 130px;
-    width: 130px;
+        -ms-flex: 1 0 1.73333rem;
+            flex: 1 0 1.73333rem;
+    width: 1.73333rem;
     z-index: 99;
     height: 100%;
-    margin-left: 10px;
+    margin-left: 0.13333rem;
     -webkit-transition: all .8s;
     transition: all .8s;
-    margin-top: 10px;
+    margin-top: 0.13333rem;
     background: rgba(255, 255, 255, 0.8); }
-    @media (min-width: 1364px) {
-      .status-cont .no-scroll-box {
-        -webkit-box-flex: 1;
-            -ms-flex: 1 0 180px;
-                flex: 1 0 180px;
-        width: 180px; } }
     .status-cont .no-scroll-box .no-scroll-bar {
       width: 100%;
       height: 100%; }
     .status-cont .no-scroll-box .scroll-slide {
       position: absolute;
-      right: 1px;
-      top: 0px;
+      right: 0.01333rem;
+      top: 0rem;
       z-index: 99;
-      width: 6px;
-      height: 120px;
+      width: 0.08rem;
+      height: 1.6rem;
       background: rgba(144, 169, 232, 0.33);
-      border-radius: 3px; }
-      @media (min-width: 1364px) {
-        .status-cont .no-scroll-box .scroll-slide {
-          height: 170px;
-          top: 0px; } }
+      border-radius: 0.04rem; }
     .status-cont .no-scroll-box .scroll-bar {
       position: absolute;
-      right: 0px;
+      right: 0rem;
       top: 0;
       z-index: 99;
-      height: 10px;
-      width: 6px;
+      height: 0.13333rem;
+      width: 0.08rem;
       background: #467cc3;
-      border-radius: 5px; }
+      border-radius: 0.06667rem; }
   .status-cont .status-det {
     width: 100%; }
-    @media (min-width: 1364px) {
-      .status-cont .status-det {
-        width: 180px; } }
     .status-cont .status-det li {
       width: 100%;
       color: #777;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      font-size: 11px;
-      margin-top: 3px; }
-      @media (min-width: 1364px) {
-        .status-cont .status-det li {
-          width: 100%;
-          font-size: 14px;
-          margin-top: 10px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap; } }
+      font-size: 0.14667rem;
+      margin-top: 0.04rem; }
       .status-cont .status-det li .btn {
-        padding: 1px 10px;
+        padding: 0.01333rem 0.13333rem;
         background: #f4f4fc;
-        border: 1px solid #dbe3f8;
-        border-radius: 15px;
-        font-size: 12px;
+        border: 0.01333rem solid #dbe3f8;
+        border-radius: 0.2rem;
+        font-size: 0.16rem;
         color: #71727E; }
     .status-cont .status-det._t2 {
-      margin-top: 10px;
-      margin-left: 20px; }
+      margin-top: 0.13333rem;
+      margin-left: 0.26667rem; }
       .status-cont .status-det._t2 li + li {
-        margin-top: 10px; }
+        margin-top: 0.13333rem; }
 
 .status-item:nth-child(1) .status-cont ._img img {
-  width: 64px; }
-  @media (min-width: 1364px) {
-    .status-item:nth-child(1) .status-cont ._img img {
-      width: 85px; } }
-
-@media (min-width: 1364px) {
-  .status-item:nth-child(2) .status-cont ._img {
-    width: 150px; } }
+  width: 0.85333rem; }
 
 .status-item:nth-child(2) .status-cont ._img img {
-  width: 90px; }
-  @media (min-width: 1364px) {
-    .status-item:nth-child(2) .status-cont ._img img {
-      width: 150px; } }
+  width: 1.2rem; }
 
 .status-item:nth-child(3) .status-cont {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
   .status-item:nth-child(3) .status-cont ._img img {
-    width: 70px; }
-    @media (min-width: 1364px) {
-      .status-item:nth-child(3) .status-cont ._img img {
-        width: 100px; } }
+    width: 0.93333rem; }
 
 .status-item:hover .status-cont ._img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg); }
 
 .status-item:hover {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+  -webkit-box-shadow: 0 0.06667rem 0.13333rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.06667rem 0.13333rem rgba(0, 0, 0, 0.1); }
+
+/*激活机器人 statusdtl-form*/
+.statusdtl-form {
+  position: absolute;
+  left: 4.18667rem;
+  top: 0rem;
+  z-index: 999;
+  width: 6.66667rem;
+  padding: 0.26667rem; }
+  .statusdtl-form h2 {
+    font-size: 0.25333rem;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #7a7a7a;
+    line-height: 0.4rem; }
+  .statusdtl-form > ._input-gp {
+    margin-top: 0.4rem;
+    height: 0.46667rem; }
+    .statusdtl-form > ._input-gp label {
+      display: inline-block;
+      line-height: 0.46667rem;
+      width: 1.06667rem;
+      font-size: 0.25333rem;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: #80848d; }
+    .statusdtl-form > ._input-gp input {
+      width: 2.81333rem;
+      height: 0.46667rem;
+      padding: 0.08rem 0.16rem;
+      border: 0.01333rem solid #467cc3;
+      border-radius: 0.24rem;
+      background: transparent;
+      text-indent: 0.26667rem;
+      line-height: 0.26667rem; }
+  .statusdtl-form .btn {
+    width: 2.81333rem;
+    height: 0.46667rem;
+    background: #467cc3;
+    border-radius: 0.24rem;
+    margin-left: 1.06667rem;
+    margin-top: 0.4rem;
+    font-size: 0.24rem; }
+  .statusdtl-form ._tj {
+    margin-top: 0.66667rem;
+    font-size: 0.2rem;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: #7a7a7a;
+    line-height: 0.30667rem; }
+    .statusdtl-form ._tj p {
+      font-weight: 400; }
 
 /*激活机器人 statusdtl-form*/
 .statusdtl-form {

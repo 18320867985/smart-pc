@@ -7,7 +7,7 @@
 
 @import "mixin.scss";                          // 函数
 
-//@import "_media.scss";  
+@import "_media.scss";                         // 使用rem布局 必須放在bootstrap.scss的之後
 
 @import "df-pc.scss";                            // pc端     default scss
 
