@@ -7,54 +7,48 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 		<meta name="Keywords" content="" />
 		<meta name="Description" content="" />
-		<title>状态管理-详情</title>
+		<title>模式管理-创建场景</title>
 
 		<!--check css-->
 		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
-		
+
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
 
 	</head>
 
-	<body class="statusdtl-bg no-scroll-bar">
-		<section class="statusdtl">
+	<body class="overview no-scroll-bar">
+		<div class="overview-form container-child-center">
+			<div class="overview-form-gp">
 
-			<div class="statusdtl-cont container-child-center">
-
-				<div class="statusdtl-img">
-			
-					<img class="_img1" src="images/status/status-bg.png" alt="" />
-					
-					<div class="statusdtl-form">
-						<h2>点击机器人列表中的机器人，进行激活</h2>
-						<div class="_input-gp">
-							
-							<label for="pwd">确认密码</label>
-							<input type="text" id="pwd" placeholder="输入确认密码" />
-							
-						</div>
-						
-						<button class="btn  active rd" type="button">确认</button>
-						
-						<div class="_tj">
-							<strong>温馨提示：</strong>
-							<p>若机器人名称重复，则在新添加名称后加”(1)“的形式</p>
-						</div>
-					</div>
-				
+				<h2>场景名称：</h2>
+				<div class="_input">
+					<input class="active" type="text" name="" id="" value="" placeholder="输入名称" />
+					<button class="btn active" type="button">创建场景</button>
 				</div>
-				
-			</div>
-			<!--详情内容-->
 
-		</section>
-		
+				<h2>设置场景路径：</h2>
+
+				<div class="_input">
+					
+					<!--添加-->
+					<span  class="iconfont icon-jia1"></span>
+
+					<button class="btn" type="button">完成</button>
+				</div>
+				<div class="_input text-center">
+					<button class="btn _subimt active" type="button">保存</button>
+				</div>
+
+			</div>
+
+		</div>
+
 		<!--[if lte IE 9]>
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
 		<script data-parent="umd" data-umd="" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
-		
+
 	</body>
 
 </html>

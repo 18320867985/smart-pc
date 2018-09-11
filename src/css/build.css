@@ -5883,22 +5883,6 @@ body {
     margin-left: auto;
     width: 960px; } }
 
-@media (min-width: 960px) {
-  .container-child-12 {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 960px; } }
-
-@media (min-width: 1360px) {
-  .container-child-12 {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 1360px; } }
-
 .container {
   min-width: 300px; }
 
@@ -6191,71 +6175,6 @@ input:focus,
 .img-100 {
   width: 100%;
   height: auto; }
-
-/*内联表单*/
-.container-12 .form-inline .form-group,
-.container-fluid-12 .form-inline .form-group {
-  display: inline-block;
-  margin-bottom: 0;
-  vertical-align: middle; }
-
-.container-12 .form-inline .form-control,
-.container-fluid-12 .form-inline .form-control {
-  display: inline-block;
-  width: auto;
-  vertical-align: middle; }
-
-.container-12 .form-inline .form-control-static,
-.container-fluid-12 .form-inline .form-control-static {
-  display: inline-block; }
-
-.container-12 .form-inline .input-group,
-.container-fluid-12 .form-inline .input-group {
-  display: inline-table;
-  vertical-align: middle; }
-
-.container-12 .form-inline .input-group .input-group-addon,
-.container-12 .form-inline .input-group .input-group-btn,
-.container-12 .form-inline .input-group .form-control,
-.container-fluid-12 .form-inline .input-group .input-group-addon,
-.container-fluid-12 .form-inline .input-group .input-group-btn,
-.container-fluid-12 .form-inline .input-group .form-control {
-  width: auto; }
-
-.container-12 .form-inline .input-group > .form-control,
-.container-fluid-12 .form-inline .input-group > .form-control {
-  width: 100%; }
-
-.container-12 .form-inline .control-label,
-.container-fluid-12 .form-inline .control-label {
-  margin-bottom: 0;
-  vertical-align: middle; }
-
-.container-12 .form-inline .radio,
-.container-12 .form-inline .checkbox,
-.container-fluid-12 .form-inline .radio,
-.container-fluid-12 .form-inline .checkbox {
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: middle; }
-
-.container-12 .form-inline .radio label,
-.container-12 .form-inline .checkbox label,
-.container-fluid-12 .form-inline .radio label,
-.container-fluid-12 .form-inline .checkbox label {
-  padding-left: 0; }
-
-.container-12 .form-inline .radio input[type="radio"],
-.container-12 .form-inline .checkbox input[type="checkbox"],
-.container-fluid-12 .form-inline .radio input[type="radio"],
-.container-fluid-12 .form-inline .checkbox input[type="checkbox"] {
-  position: relative;
-  margin-left: 0; }
-
-.container-12 .form-inline .has-feedback .form-control-feedback,
-.container-fluid-12 .form-inline .has-feedback .form-control-feedback {
-  top: 0; }
 
 /* 输入框focus焦点*/
 input[type=text]:focus,
@@ -7324,58 +7243,6 @@ select.form-control {
 /*激活机器人 statusdtl-form*/
 .statusdtl-form {
   position: absolute;
-  left: 4.18667rem;
-  top: 0rem;
-  z-index: 999;
-  width: 6.66667rem;
-  padding: 0.26667rem; }
-  .statusdtl-form h2 {
-    font-size: 0.25333rem;
-    font-family: PingFangSC-Regular;
-    font-weight: 400;
-    color: #7a7a7a;
-    line-height: 0.4rem; }
-  .statusdtl-form > ._input-gp {
-    margin-top: 0.4rem;
-    height: 0.46667rem; }
-    .statusdtl-form > ._input-gp label {
-      display: inline-block;
-      line-height: 0.46667rem;
-      width: 1.06667rem;
-      font-size: 0.25333rem;
-      font-family: PingFangSC-Regular;
-      font-weight: 400;
-      color: #80848d; }
-    .statusdtl-form > ._input-gp input {
-      width: 2.81333rem;
-      height: 0.46667rem;
-      padding: 0.08rem 0.16rem;
-      border: 0.01333rem solid #467cc3;
-      border-radius: 0.24rem;
-      background: transparent;
-      text-indent: 0.26667rem;
-      line-height: 0.26667rem; }
-  .statusdtl-form .btn {
-    width: 2.81333rem;
-    height: 0.46667rem;
-    background: #467cc3;
-    border-radius: 0.24rem;
-    margin-left: 1.06667rem;
-    margin-top: 0.4rem;
-    font-size: 0.24rem; }
-  .statusdtl-form ._tj {
-    margin-top: 0.66667rem;
-    font-size: 0.2rem;
-    font-family: PingFangSC-Semibold;
-    font-weight: 600;
-    color: #7a7a7a;
-    line-height: 0.30667rem; }
-    .statusdtl-form ._tj p {
-      font-weight: 400; }
-
-/*激活机器人 statusdtl-form*/
-.statusdtl-form {
-  position: absolute;
   left: 314px;
   top: 0px;
   z-index: 999;
@@ -7389,7 +7256,10 @@ select.form-control {
     line-height: 30px; }
   .statusdtl-form > ._input-gp {
     margin-top: 30px;
-    height: 35px; }
+    height: 35px;
+    /*IE10+*/
+    /*Firefox4-18*/
+    /*Firefox19+*/ }
     .statusdtl-form > ._input-gp label {
       display: inline-block;
       line-height: 35px;
@@ -7407,14 +7277,36 @@ select.form-control {
       background: transparent;
       text-indent: 20px;
       line-height: 20px; }
+    .statusdtl-form > ._input-gp input::-webkit-input-placeholder {
+      color: #999;
+      font-size: 16px; }
+    .statusdtl-form > ._input-gp input:-ms-input-placeholder {
+      color: #999;
+      font-size: 16px; }
+    .statusdtl-form > ._input-gp input:-moz-placeholder {
+      color: #999;
+      font-size: 16px; }
+    .statusdtl-form > ._input-gp input::-moz-placeholder {
+      color: #999;
+      font-size: 16px; }
   .statusdtl-form .btn {
     width: 211px;
     height: 35px;
-    background: #467cc3;
     border-radius: 18px;
-    margin-left: 80px;
+    margin-left: 81px;
     margin-top: 30px;
-    font-size: 18px; }
+    font-size: 18px;
+    color: #999; }
+    .statusdtl-form .btn.active {
+      background: #467cc3;
+      color: #fff;
+      -webkit-transition: all .2s;
+      transition: all .2s; }
+      .statusdtl-form .btn.active:hover {
+        background: #3464a2;
+        color: #e6e6e6;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
   .statusdtl-form ._tj {
     margin-top: 50px;
     font-size: 15px;
@@ -7575,3 +7467,73 @@ select.form-control {
       padding: 0;
       text-align: center;
       line-height: 36px; }
+
+/*
+ * 模式管理-创建场景
+ * 
+ */
+.overview-form {
+  width: 600px;
+  padding: 20px; }
+
+.overview-form-gp h2 {
+  font-size: 19px;
+  font-family: PingFangSC-Regular;
+  color: #80848d; }
+
+.overview-form-gp ._input {
+  /*webkit*/
+  /*IE10+*/
+  /*Firefox4-18*/
+  /*Firefox19+*/ }
+  .overview-form-gp ._input input {
+    width: 383px;
+    height: 40px;
+    padding: 8px 12px;
+    line-height: 24px;
+    padding-left: 30px;
+    margin: 20px 0;
+    font-size: 18px;
+    border: 1px solid #467CC3;
+    border-radius: 20px;
+    background: transparent; }
+    .overview-form-gp ._input input.active {
+      background: #fff;
+      border: 1px solid #fff; }
+  .overview-form-gp ._input input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .overview-form-gp ._input input:-ms-input-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .overview-form-gp ._input input:-moz-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .overview-form-gp ._input input::-moz-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .overview-form-gp ._input .btn {
+    width: 108px;
+    height: 35px;
+    background: #f4f4fc;
+    border-radius: 18px;
+    margin-left: 30px;
+    padding: 0;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px; }
+    .overview-form-gp ._input .btn.active {
+      background: #467cc3;
+      color: #fff; }
+      .overview-form-gp ._input .btn.active:hover {
+        background: #3464a2;
+        color: #e6e6e6; }
+  .overview-form-gp ._input .iconfont {
+    font-size: 87px;
+    background: #fff;
+    color: #777;
+    cursor: pointer; }
+
+.overview-form-gp .btn._subimt {
+  width: 211px;
+  margin-top: 30px; }
