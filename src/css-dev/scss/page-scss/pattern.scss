@@ -161,10 +161,9 @@
 .pattern-scroll .no-scroll-bar {
     width: 100%;
     height: 100%;
-  
 }
 
-.pattern-scroll.no-scroll-box  .scroll-slide {
+.pattern-scroll.no-scroll-box .scroll-slide {
     position: absolute;
     right: 20px;
     top: 8px;
@@ -174,13 +173,12 @@
     background: rgba(144, 169, 232, .33);
     border-radius: 3px;
     @media(min-width: $media-1600) {
-       
         height: 367px;
         top: 20px;
     }
 }
 
-.pattern-scroll  .scroll-bar {
+.pattern-scroll .scroll-bar {
     position: absolute;
     right: 0px;
     top: 0;
@@ -330,6 +328,114 @@
         }
         &.active ._ck-hd {
             left: 28px;
+        }
+    }
+}
+
+
+/*编辑场景列表 pattern-overview-edit*/
+
+.pattern-overview-edit {
+    
+    top: 30px;
+    .pattern-ttl1 {
+        font-size: 19px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        color: rgba(128, 132, 141, 1);
+    }
+    &.pattern-box.pattern-overview .pattern-ttl2 {
+        right: 5px;
+        float: right !important;
+        width: 155px;
+    }
+    .pattern-ttl2 ._btn1 {
+        z-index: 3;
+        width: 90px;
+        //  color: #777;
+    }
+    .pattern-ttl2 ._btn2 {
+        left: 65px;
+        z-index: 2;
+        width: 90px;
+    }
+}
+
+.pattern-overview-serach {
+    h3 {
+            font-size: 19px;
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            color: rgba(128, 132, 141, 1);
+        }
+    ._input {
+        
+        input {
+            width: 383px;
+            height: 35px;
+            padding: 8px 12px;
+            line-height: 24px;
+            padding-left: 30px;
+            margin: 15px 0;
+            font-size: 18px;
+            border: 1px solid $text-primary;
+            border-radius: 20px;
+            background: transparent;
+            &.active {
+                background: #fff;
+                border: 1px solid #fff;
+            }
+        }
+        /*webkit*/
+        $input-font:18px;
+        $input-color:#999;
+        input::-webkit-input-placeholder {
+            font-size: $input-font;
+            color: $input-color;
+        }
+        /*IE10+*/
+        input:-ms-input-placeholder {
+            font-size: $input-font;
+            color: $input-color;
+        }
+        /*Firefox4-18*/
+        input:-moz-placeholder {
+            font-size: $input-font;
+            color: $input-color;
+        }
+        /*Firefox19+*/
+        input::-moz-placeholder {
+            font-size: $input-font;
+            color: $input-color;
+        }
+        // 查询
+        .btn {
+            width: 108px;
+            height: 35px;
+            background: rgba(244, 244, 252, 1);
+            border-radius: 18px;
+            margin-left: 30px;
+            padding: 0;
+          
+             margin-top: -6px;
+            line-height: 35px;
+            text-align: center;
+            font-size: 18px;
+            &.active {
+                background: rgba(70, 124, 195, 1);
+                color: #fff;
+                &:hover {
+                    background: darken( rgba(70, 124, 195, 1), 10%);
+                    color: darken( #fff, 10%);
+                }
+            }
+        }
+        // 添加图标
+        .iconfont {
+            font-size: 87px;
+            background: #fff;
+            color: #777;
+            cursor: pointer;
         }
     }
 }

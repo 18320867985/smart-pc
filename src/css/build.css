@@ -6107,44 +6107,6 @@ input:focus,
 .btn:focus {
   outline: none !important; }
 
-.input-underline {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  -webkit-box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-          box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important; }
-
-.input-underline:focus {
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
-  -webkit-box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-          box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important; }
-
-.input-br-no {
-  border: none !important;
-  -webkit-box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-          box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-  background: none; }
-
-.input-br-no:focus {
-  border: none !important;
-  background: none;
-  -webkit-box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important;
-          box-shadow: 0px 0px 0px #fff, 0px 0px 0px #fff !important; }
-
-.input-xs-x {
-  line-height: 28px;
-  height: 28px;
-  padding: 2px 8px;
-  font-size: 12px; }
-
-.btn-xs-x {
-  line-height: 28px !important;
-  height: 28px !important;
-  padding: 0px 7px !important;
-  font-size: 12px !important; }
-
 /*其他*/
 .overflow-y {
   overflow-y: hidden; }
@@ -6235,6 +6197,9 @@ select option {
 /*select兼容safari */
 select.form-control {
   line-height: 28px; }
+
+.btn {
+  font-size: 14px; }
 
 /*modal ie8*/
 /* 隐藏滚动条*/
@@ -7099,6 +7064,86 @@ select.form-control {
     .pattern-overview .pattern-ttl3 ._ck.active ._ck-hd {
       left: 28px; }
 
+/*编辑场景列表 pattern-overview-edit*/
+.pattern-overview-edit {
+  top: 30px; }
+  .pattern-overview-edit .pattern-ttl1 {
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #80848d; }
+  .pattern-overview-edit.pattern-box.pattern-overview .pattern-ttl2 {
+    right: 5px;
+    float: right !important;
+    width: 155px; }
+  .pattern-overview-edit .pattern-ttl2 ._btn1 {
+    z-index: 3;
+    width: 90px; }
+  .pattern-overview-edit .pattern-ttl2 ._btn2 {
+    left: 65px;
+    z-index: 2;
+    width: 90px; }
+
+.pattern-overview-serach h3 {
+  font-size: 19px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #80848d; }
+
+.pattern-overview-serach ._input {
+  /*webkit*/
+  /*IE10+*/
+  /*Firefox4-18*/
+  /*Firefox19+*/ }
+  .pattern-overview-serach ._input input {
+    width: 383px;
+    height: 35px;
+    padding: 8px 12px;
+    line-height: 24px;
+    padding-left: 30px;
+    margin: 15px 0;
+    font-size: 18px;
+    border: 1px solid #467CC3;
+    border-radius: 20px;
+    background: transparent; }
+    .pattern-overview-serach ._input input.active {
+      background: #fff;
+      border: 1px solid #fff; }
+  .pattern-overview-serach ._input input::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .pattern-overview-serach ._input input:-ms-input-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .pattern-overview-serach ._input input:-moz-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .pattern-overview-serach ._input input::-moz-placeholder {
+    font-size: 18px;
+    color: #999; }
+  .pattern-overview-serach ._input .btn {
+    width: 108px;
+    height: 35px;
+    background: #f4f4fc;
+    border-radius: 18px;
+    margin-left: 30px;
+    padding: 0;
+    margin-top: -6px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px; }
+    .pattern-overview-serach ._input .btn.active {
+      background: #467cc3;
+      color: #fff; }
+      .pattern-overview-serach ._input .btn.active:hover {
+        background: #3464a2;
+        color: #e6e6e6; }
+  .pattern-overview-serach ._input .iconfont {
+    font-size: 87px;
+    background: #fff;
+    color: #777;
+    cursor: pointer; }
+
 /*
    状态管理
    
@@ -7474,66 +7519,123 @@ select.form-control {
  */
 .overview-form {
   width: 600px;
-  padding: 20px; }
+  padding: 20px;
+  margin: 0 auto; }
 
-.overview-form-gp h2 {
-  font-size: 19px;
-  font-family: PingFangSC-Regular;
-  color: #80848d; }
-
-.overview-form-gp ._input {
-  /*webkit*/
-  /*IE10+*/
-  /*Firefox4-18*/
-  /*Firefox19+*/ }
-  .overview-form-gp ._input input {
-    width: 383px;
-    height: 40px;
-    padding: 8px 12px;
-    line-height: 24px;
-    padding-left: 30px;
-    margin: 20px 0;
-    font-size: 18px;
-    border: 1px solid #467CC3;
-    border-radius: 20px;
-    background: transparent; }
-    .overview-form-gp ._input input.active {
+.overview-form-gp {
+  /*编辑场景*/ }
+  .overview-form-gp h2 {
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+    color: #80848d; }
+  .overview-form-gp ._input {
+    /*webkit*/
+    /*IE10+*/
+    /*Firefox4-18*/
+    /*Firefox19+*/ }
+    .overview-form-gp ._input input {
+      width: 383px;
+      height: 40px;
+      padding: 8px 12px;
+      line-height: 24px;
+      padding-left: 30px;
+      margin: 20px 0;
+      font-size: 18px;
+      border: 1px solid #467CC3;
+      border-radius: 20px;
+      background: transparent; }
+      .overview-form-gp ._input input.active {
+        background: #fff;
+        border: 1px solid #fff; }
+    .overview-form-gp ._input input::-webkit-input-placeholder {
+      font-size: 18px;
+      color: #999; }
+    .overview-form-gp ._input input:-ms-input-placeholder {
+      font-size: 18px;
+      color: #999; }
+    .overview-form-gp ._input input:-moz-placeholder {
+      font-size: 18px;
+      color: #999; }
+    .overview-form-gp ._input input::-moz-placeholder {
+      font-size: 18px;
+      color: #999; }
+    .overview-form-gp ._input .btn {
+      width: 108px;
+      height: 35px;
+      background: #f4f4fc;
+      border-radius: 18px;
+      margin-left: 30px;
+      padding: 0;
+      line-height: 35px;
+      text-align: center;
+      font-size: 18px; }
+      .overview-form-gp ._input .btn.active {
+        background: #467cc3;
+        color: #fff; }
+        .overview-form-gp ._input .btn.active:hover {
+          background: #3464a2;
+          color: #e6e6e6; }
+    .overview-form-gp ._input .iconfont {
+      font-size: 87px;
       background: #fff;
-      border: 1px solid #fff; }
-  .overview-form-gp ._input input::-webkit-input-placeholder {
-    font-size: 18px;
-    color: #999; }
-  .overview-form-gp ._input input:-ms-input-placeholder {
-    font-size: 18px;
-    color: #999; }
-  .overview-form-gp ._input input:-moz-placeholder {
-    font-size: 18px;
-    color: #999; }
-  .overview-form-gp ._input input::-moz-placeholder {
-    font-size: 18px;
-    color: #999; }
-  .overview-form-gp ._input .btn {
-    width: 108px;
-    height: 35px;
-    background: #f4f4fc;
-    border-radius: 18px;
-    margin-left: 30px;
-    padding: 0;
-    line-height: 35px;
-    text-align: center;
-    font-size: 18px; }
-    .overview-form-gp ._input .btn.active {
-      background: #467cc3;
-      color: #fff; }
-      .overview-form-gp ._input .btn.active:hover {
-        background: #3464a2;
-        color: #e6e6e6; }
-  .overview-form-gp ._input .iconfont {
-    font-size: 87px;
-    background: #fff;
-    color: #777;
-    cursor: pointer; }
-
-.overview-form-gp .btn._subimt {
-  width: 211px;
-  margin-top: 30px; }
+      color: #777;
+      cursor: pointer; }
+  .overview-form-gp .btn._subimt {
+    width: 211px;
+    margin-top: 30px; }
+  .overview-form-gp ._edit {
+    position: relative; }
+    .overview-form-gp ._edit ._item {
+      position: relative;
+      float: left; }
+      .overview-form-gp ._edit ._item + ._item {
+        margin-left: 40px; }
+    .overview-form-gp ._edit ._item-cont {
+      position: relative;
+      width: 87px;
+      height: 87px;
+      background: #f4f4fc;
+      border-radius: 9px;
+      overflow: hidden; }
+      .overview-form-gp ._edit ._item-cont h3 {
+        font-size: 19px;
+        font-family: PingFangSC-Regular;
+        font-weight: 600;
+        color: #467cc3;
+        text-align: center; }
+      .overview-form-gp ._edit ._item-cont ._index {
+        position: absolute;
+        right: -4px;
+        bottom: -6px;
+        display: inline-block;
+        height: 31px;
+        width: 31px;
+        line-height: 31px;
+        text-align: center;
+        border-radius: 50%;
+        background: #467CC3;
+        color: #fff; }
+    .overview-form-gp ._edit .btn {
+      margin-top: 10px;
+      background: #f4f4fc;
+      width: 88px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0;
+      text-align: center;
+      color: #71727e;
+      line-height: 7px; }
+      .overview-form-gp ._edit .btn.active {
+        background: #467CC3;
+        color: #fff; }
+        .overview-form-gp ._edit .btn.active:hover {
+          background: #3464a2;
+          color: #e6e6e6; }
+    .overview-form-gp ._edit .iconfont {
+      position: absolute;
+      left: 95px;
+      top: 30px;
+      font-size: 28px;
+      color: #467CC3;
+      font-weight: 500;
+      cursor: pointer; }
