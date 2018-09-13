@@ -439,3 +439,53 @@
         }
     }
 }
+
+/* 弹框*/
+ .pop-box.pattern-pop{
+        padding: 10px;
+        padding-top: 40px;
+     .pop-box-gp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        &+.pop-box-gp {
+            margin-top: 10px;
+        }
+        label {
+            width: 60px;
+            flex: 0 0 60px;
+            color: #666;
+        }
+        
+        /*保存按钮*/
+       .btn{
+           width: 219px;
+            border-radius: 9px;
+       }
+    }
+    input,
+    textarea {
+        width: 159px;
+        height: 34px;
+        line-height: 20px;
+        padding: 6px 12px;
+        background: transparent;
+        border-radius: 9px;
+        border: 1px solid $text-primary;
+        text-indent: 5px;
+        &.active {
+            background: #fff;
+            color: $text-primary;
+            border: 1px solid $text-primary;
+        }
+    }
+    textarea {
+        width: 159px;
+        min-width: 159px;
+        max-width: 70%;
+        max-height: 100px;
+        min-height: 34px;
+    }
+     
+ }

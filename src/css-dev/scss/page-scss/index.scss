@@ -44,10 +44,8 @@
     width: 236px;
     overflow-y: auto;
     overflow-x: hidden;
-    
-    .no-scroll-bar{
+    .no-scroll-bar {
         display: flex;
-      
     }
     ._nemu-1 {
         >div {
@@ -202,6 +200,30 @@
 }
 
 
+
+/*滚动条*/
+.index-aside-nemu.no-scroll-box {
+    position: relative;
+    .scroll-slide {
+        position: absolute;
+        top: 1%;
+        z-index: 9999;
+        right: 2px;
+        height: 98%;
+        width: 3px;
+        overflow: hidden;
+        .scroll-bar {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            right: 0;
+            background: rgba(102, 109, 119, 0.6) !important;
+            border-radius: 5px;
+        }
+    }
+}
+
+
 /*右边*/
 
 .index-cont {
@@ -324,7 +346,7 @@
 
 .iframe-box {
     width: 100% !important;
-  height: 100% !important;
+    height: 100% !important;
     margin: 0;
     overflow-y: auto;
     overflow-x: hidden;

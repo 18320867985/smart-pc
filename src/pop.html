@@ -18,14 +18,98 @@
 	</head>
 
 	<body class="pop no-scroll-bar">
-		<div class="pop-cont">
+		
+	  <div class="btn-group" style="padding: 100px;">
+	  	
+	  	<a class="btn btn-primary btn-pop" href="javascript:;" >弹框</a>
+	  	
+	  	 	<a class="btn btn-primary btn-pop2" href="javascript:;" >系统提示</a>
+	  	
+	  </div>
+		
+		
+		<div class="pop-mask pop">
+			
+			<div class="pop-box pattern-pop ">
+				
+				<!--<h2 class="pop-ttl">弹框</h2>-->
+				
+				<div class="pop-box-gp">
+					<label for="">名称：</label>
+					<input type="text" placeholder="前台" />
+				</div>
+				<div class="pop-box-gp">
+					<label for="">X坐标：</label>
+					<input  class="active" type="text" placeholder="X坐标" />
+				</div>
+				<div class="pop-box-gp">
+					<label for="">Y坐标：</label>
+					<input type="text" placeholder="Y坐标" />
+				</div>
+				<div class="pop-box-gp">
+					<label for="">角度：</label>
+					<input type="text" placeholder="角度" />
+				</div>
+				
+				<div class="pop-box-gp">
+					<label for="">备注：</label>
+					 <textarea class="active" name="" rows="" cols="" placeholder="备注"></textarea>
+				</div>
+				
+				<div class="pop-box-gp text-center">
+					 <button class="btn btn-primary btn-block" type="button"> 保存坐标点</button>
+				</div>
+				
+			</div>
 
 		</div>
+		
+		<div class="pop-mask pop2  sysset">
+			
+			<div class="pop-box">
+				
+				<h2 class="pop-ttl">系统提示</h2>
+				
+				<div class="pop-box-gp">
+					<img class="_img" src="images/wrong.png" alt="" />
+					<div class="_cont">
+						检测到权限角色"高级管理"已经关联管理员账号，请修改管理员账号的权限角色后，再删除
+					</div>
+					
+				</div>
+				
+				<div class="pop-box-gp _submit">
+					<button class="btn btn-default" type="button">取消</button>
+					<button class="btn btn-primary" type="button">确认</button>
+				</div>
+			</div>
+
+		</div>
+		
+		
+	
 
 		<!--[if lte IE 9]>
 			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
 		<![endif]-->
 		<script data-parent="umd" data-umd="popoer" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				$(".btn-pop").on("click",function(){
+					umd.pop(".pop-mask.pop");
+				
+				});
+				$(".btn-pop2").on("click",function(){
+					umd.pop(".pop-mask.pop2");
+				
+				});
+				
+				
+			})
+			
+		</script>
 	
 		
 	</body>
