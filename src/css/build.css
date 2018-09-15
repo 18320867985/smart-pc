@@ -6638,15 +6638,13 @@ select.form-control {
     -webkit-animation: logo 2s 1s ease forwards;
             animation: logo 2s 1s ease forwards; }
 
-.csstransforms3d body {
-  -webkit-perspective: 1200px;
-          perspective: 1200px; }
-
 .csstransforms3d .wrap {
   position: relative;
   height: 100%;
   margin: 0 auto;
-  display: block; }
+  display: block;
+  -webkit-perspective: 1200px;
+          perspective: 1200px; }
 
 .csstransforms3d .outset {
   position: relative;
@@ -6693,6 +6691,13 @@ select.form-control {
   -webkit-backface-visibility: visible;
           backface-visibility: visible; }
 
+.csstransforms3d .inset {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d; }
+
 .csstransforms3d .inset .side2 {
   position: absolute;
   width: 50px;
@@ -6703,7 +6708,6 @@ select.form-control {
   text-align: center;
   border: 1px solid #fff;
   text-align: center;
-  line-height: 100px;
   font-size: 14px;
   font-weight: bold;
   color: white;
@@ -6712,14 +6716,14 @@ select.form-control {
   transition: all .8s;
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
-  background: rgba(255, 0, 0, 0.8); }
+  background: rgba(255, 100, 100, 0.7); }
 
 .csstransforms3d .w1 {
   position: absolute;
   top: 38%;
   left: 42%;
-  -webkit-animation: rotate 30s 1s infinite ease-in alternate forwards;
-          animation: rotate 30s 1s infinite ease-in alternate forwards; }
+  -webkit-animation: rotate 50s 0s infinite ease-in alternate forwards;
+          animation: rotate 50s 0s infinite ease-in alternate forwards; }
 
 .csstransforms3d .w1 .side {
   font-size: 16px;
@@ -6727,55 +6731,55 @@ select.form-control {
 
 .csstransforms3d .outset .side.front {
   display: block;
-  -webkit-transform: translateZ(50px);
-          transform: translateZ(50px); }
+  -webkit-transform: translateZ(100px);
+          transform: translateZ(100px); }
 
 .csstransforms3d .outset .side.top {
   display: block;
-  -webkit-transform: rotateX(90deg) translateZ(50px);
-          transform: rotateX(90deg) translateZ(50px); }
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px); }
 
 .csstransforms3d .outset .side.right {
   display: block;
-  -webkit-transform: rotateY(90deg) translateZ(50px);
-          transform: rotateY(90deg) translateZ(50px); }
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px); }
 
 .csstransforms3d .outset .side.left {
   display: block;
-  -webkit-transform: rotateY(-90deg) translateZ(50px);
-          transform: rotateY(-90deg) translateZ(50px); }
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px); }
 
 .csstransforms3d .outset .side.bottom {
   display: block;
-  -webkit-transform: rotateX(-90deg) translateZ(50px);
-          transform: rotateX(-90deg) translateZ(50px); }
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px); }
 
 .csstransforms3d .outset .side.back {
   display: block;
-  -webkit-transform: rotateY(180deg) translateZ(50px);
-          transform: rotateY(180deg) translateZ(50px); }
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+          transform: rotateY(180deg) translateZ(100px); }
 
-.csstransforms3d .inset .front {
+.csstransforms3d .inset .side2.front {
   display: block;
   -webkit-transform: translateZ(25px);
           transform: translateZ(25px); }
 
-.csstransforms3d .inset .top {
+.csstransforms3d .inset .side2.top {
   display: block;
   -webkit-transform: rotateX(90deg) translateZ(25px);
           transform: rotateX(90deg) translateZ(25px); }
 
-.csstransforms3d .inset .right {
+.csstransforms3d .inset .side2.right {
   display: block;
   -webkit-transform: rotateY(90deg) translateZ(25px);
           transform: rotateY(90deg) translateZ(25px); }
 
-.csstransforms3d .inset .left {
+.csstransforms3d .inset .side2.left {
   display: block;
   -webkit-transform: rotateY(-90deg) translateZ(25px);
           transform: rotateY(-90deg) translateZ(25px); }
 
-.csstransforms3d inset .bottom {
+.csstransforms3d inset .side2.bottom {
   display: block;
   -webkit-transform: rotateX(-90deg) translateZ(25px);
           transform: rotateX(-90deg) translateZ(25px); }
@@ -6790,16 +6794,16 @@ select.form-control {
     -webkit-transform: rotateX(15deg) rotateY(45deg);
             transform: rotateX(15deg) rotateY(45deg); }
   100% {
-    -webkit-transform: rotateX(360deg) rotateY(360deg);
-            transform: rotateX(360deg) rotateY(360deg); } }
+    -webkit-transform: rotateX(-360deg) rotateY(-360deg);
+            transform: rotateX(-360deg) rotateY(-360deg); } }
 
 @keyframes rotate {
   0% {
     -webkit-transform: rotateX(15deg) rotateY(45deg);
             transform: rotateX(15deg) rotateY(45deg); }
   100% {
-    -webkit-transform: rotateX(360deg) rotateY(360deg);
-            transform: rotateX(360deg) rotateY(360deg); } }
+    -webkit-transform: rotateX(-360deg) rotateY(-360deg);
+            transform: rotateX(-360deg) rotateY(-360deg); } }
 
 @-webkit-keyframes logo {
   %0 {
@@ -6970,7 +6974,7 @@ select.form-control {
 
 .login-footer {
   position: absolute;
-  bottom: 39px;
+  bottom: 20px;
   z-index: 99;
   width: 100%;
   text-align: center;
