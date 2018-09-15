@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>闲聊问答</title>
+
+		<!--check css-->
+		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="./css/build.css" />
+
+	</head>
+
+	<body class="pattern-bg no-scroll-bar">
+		<div class="pattern answer">
+
+			<div class="pattern-box app ">
+
+				<div class="pattern-ttl clearfix">
+
+					<!--tab 头部-->
+					<div class="pattern-ttl1 clearfix pull-left nav ">
+						<a class="_btn-list active" href="javascript:;" data-toggle="tab" data-target="#tab1">闲聊问答</a>
+						<a class="_btn-two _wendattl " href="javascript:;" data-toggle="tab" data-target="#tab2">业务问答</a>
+						<a class="_btn-three _wendattl" href="javascript:;" data-toggle="tab" data-target="#tab3">查询聊天记录</a>
+
+					</div>
+
+					<div class="pattern-ttl2 clearfix pull-right">
+						<a class="_btn1 " href="javascript:;"><span class="iconfont icon-jia1"></span>
+							<span>添加问答</span>
+						</a>
+						<a class="_btn2" href="javascript:;">删除</a>
+
+						<a class="_btn3" href="javascript:;">全选</a>
+
+					</div>
+				</div>
+
+				<!--tab 选项卡 内容-->
+				<div class=" tab-content">
+					<div class="tab-pane  active fade in" id="tab1">
+						<!--tab1-->
+						<div class="pattern-tab scroll-bar-box">
+							<!--固定头部-->
+							<table class="pattern-table table  table-bordered  table-fixed ">
+
+								<thead>
+									<tr class="list-item">
+										<th class="table-1 text-center">
+											选择
+										</th>
+										<th class="table-1 text-center">
+											序号
+										</th>
+
+										<th class="table-4 text-center">
+											问答库
+										</th>
+										<th class="table-4 text-center">
+											操作
+										</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="pattern-scroll no-scroll-box">
+
+								<!--滚动内容-->
+								<div class="no-scroll-bar">
+
+									<table class="pattern-table table  table-bordered  table-fixed ">
+
+										<tbody>
+											<tr v-for=" item in list ">
+												<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+													<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+													<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+												</td>
+												<td class="table-1 text-center">
+													1
+												</td>
+												<td class=" table-4 text-center">
+													<span>机器人行业</span>
+													<span>dantianshi </span>
+
+												</td>
+
+												<td class="table-4 text-center">
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">删除</a>
+												</td>
+
+											</tr>
+
+										</tbody>
+
+									</table>
+								</div>
+								<div class="scroll-slide">
+									<div class="scroll-bar"></div>
+								</div>
+							</div>
+
+							<div class="pattern-submit">
+								<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+							</div>
+
+							<!--{{$data}}-->
+						</div>
+
+					</div>
+					
+					<div class="tab-pane" id="tab2">
+						<!--tab2-->
+						<div class="pattern-tab scroll-bar-box">
+							<!--固定头部-->
+							<table class="pattern-table table  table-bordered  table-fixed ">
+
+								<thead>
+									<tr class="list-item">
+										<th class="table-1 text-center">
+											选择
+										</th>
+										<th class="table-1 text-center">
+											序号
+										</th>
+
+										<th class="table-4 text-center">
+											业务问答
+										</th>
+										<th class="table-4 text-center">
+											操作
+										</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="pattern-scroll no-scroll-box">
+
+								<!--滚动内容-->
+								<div class="no-scroll-bar">
+
+									<table class="pattern-table table  table-bordered  table-fixed ">
+
+										<tbody>
+											<tr v-for=" item in list ">
+												<td class="table-1 text-center" v-on:click="item.ck=!item.ck">
+													<img v-if="item.ck" class="active" src="images/pattern/ck-ok.png" alt="" />
+													<img v-if="!item.ck" class="default" src="images/pattern/ck.png" alt="" />
+												</td>
+												<td class="table-1 text-center">
+													1
+												</td>
+												<td class=" table-4 text-center">
+													<span>机器人行业</span>
+													<span>dantianshi </span>
+
+												</td>
+
+												<td class="table-4 text-center">
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">删除</a>
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">测试</a>
+
+												</td>
+
+											</tr>
+
+										</tbody>
+
+									</table>
+								</div>
+								<div class="scroll-slide">
+									<div class="scroll-bar"></div>
+								</div>
+							</div>
+
+							<div class="pattern-submit">
+								<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+							</div>
+
+							<!--{{$data}}-->
+						</div>
+
+					</div>
+					
+					<div class="tab-pane" id="tab3">
+						<!--tab3-->
+						<div class="pattern-tab scroll-bar-box">
+							<!--固定头部-->
+							<table class="pattern-table table  table-bordered  table-fixed ">
+
+								<thead>
+									<tr class="list-item">
+										<th class="table-2-5 text-center">
+											时间
+										</th>
+										<th class="table-2-5  text-center">
+											用户咨询问题
+										</th>
+
+										<th class="table-2-5  text-center">
+											机器人回答
+										</th>
+										<th class="table-2-5  text-center">
+											操作
+										</th>
+									</tr>
+								</thead>
+							</table>
+							<div class="pattern-scroll no-scroll-box">
+
+								<!--滚动内容-->
+								<div class="no-scroll-bar">
+
+									<table class="pattern-table table  table-bordered  table-fixed ">
+
+										<tbody>
+											<tr v-for=" item in list ">
+												<td class="table-2-5 text-center" >
+													<span>2018-09-14</span>
+												</td>
+												<td class="table-2-5 text-center">
+													机器行业哪家强
+												</td>
+												<td class="table-2-5 text-center">
+													神州云海
+												</td>
+
+												<td class="table-2-5 text-center">
+													<a href="javascript:;" class="btn btn-sm btn-primary rd">编辑</a>
+											</tr>
+
+										</tbody>
+
+									</table>
+								</div>
+								<div class="scroll-slide">
+									<div class="scroll-bar"></div>
+								</div>
+							</div>
+
+							<div class="pattern-submit">
+								<button class="btn btn-sm  btn-primary  rd" type="button"> 发布基本模式</button>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--[if lte IE 9]>
+			<script src="js/ie9.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+		<script data-parent="umd" data-umd="pattern.init" src="./js/build.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>

@@ -285,7 +285,7 @@
 				var scroll_h = cont.scrollHeight;
 				var cont_h = cont.clientHeight;
 			
-				$(cont).css("width", w + 16);
+				$(cont).css("width", w + 17);
 				
 			});
 

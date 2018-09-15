@@ -208,13 +208,14 @@
         position: absolute;
         top: 1%;
         z-index: 9999;
-        right: 2px;
+        right: 5px;
         height: 98%;
-        width: 3px;
+        width: 5px;
         overflow: hidden;
+        
         .scroll-bar {
             position: absolute;
-            width: 100%;
+            width:3px ;
             top: 0;
             right: 0;
             background: rgba(102, 109, 119, 0.6) !important;

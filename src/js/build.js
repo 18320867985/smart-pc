@@ -336,7 +336,7 @@
 				var scroll_h = cont.scrollHeight;
 				var cont_h = cont.clientHeight;
 
-				$(cont).css("width", w + 16);
+				$(cont).css("width", w + 17);
 			});
 		}
 	});
@@ -21688,20 +21688,12 @@ var common = function () {
 var pop = function pop(el) {
 
 	var mask = $(el);
-	if (mask.hasClass("active")) {
-		mask.removeClass("active");
-	} else {
-		mask.addClass("active");
-	}
+	mask.toggleClass("active");
 
 	mask.off("click");
 	mask.click(function (event) {
 
-		if (mask.hasClass("active")) {
-			mask.removeClass("active");
-		} else {
-			mask.addClass("active");
-		}
+		mask.toggleClass("active");
 	});
 
 	mask.find(".pop-box").on("click", function (event) {
@@ -21950,6 +21942,10 @@ var pattern = {
 				var p = $(this).parents(".pattern-ttl1");
 				p.find("a").removeClass("active");
 				$(this).addClass("active");
+			});
+
+			$(".pattern-ttl1 a").on('shown.bs.tab', function (e) {
+				setrScroll();
 			});
 
 			// pattern-ttl2

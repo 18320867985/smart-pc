@@ -105,7 +105,13 @@ var pattern = {
 				var p = $(this).parents(".pattern-ttl1");
 				p.find("a").removeClass("active");
 				$(this).addClass("active");
+				
 			});
+			
+			$(".pattern-ttl1 a").on('shown.bs.tab', function (e) {
+				setrScroll();
+			})
+
 
 			// pattern-ttl2
 			$(".pattern-ttl2 a").on("click", function() {

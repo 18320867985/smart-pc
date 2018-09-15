@@ -13,7 +13,7 @@
 		<script src="js/modernizr-2.6.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<link rel="stylesheet" type="text/css" href="css/cstFonts/iconfont.css" />
 		<link rel="stylesheet" type="text/css" href="./css/build.css" />
-		
+
 	</head>
 
 	<body class="login-bg no-scroll-bar">
@@ -29,8 +29,8 @@
 
 					<h2>云端管理系统</h2>
 					<form>
-						<div class="form-gp " v-bind:class="{'active':user.length>0}" tabindex="1" >
-							<input class="txt" type="text" name="user" value="" v-model="user" placeholder="请输入用户名"  />
+						<div class="form-gp " v-bind:class="{'active':user.length>0}" tabindex="1">
+							<input class="txt" type="text" name="user" value="" v-model="user" placeholder="请输入用户名" />
 							<span class="iconfont icon-user"></span>
 						</div>
 
@@ -40,14 +40,14 @@
 						</div>
 						<div class="form-gp form-gp-ck clearfix">
 							<!--v-on:click="ck=!ck" v-bind:class="{'active':ck==true}"-->
-							<div class="checkbox pull-left "   v-on:click="ck=!ck" v-bind:class="{'active':ck==true}">
+							<div class="checkbox pull-left " v-on:click="ck=!ck" v-bind:class="{'active':ck==true}">
 								<!--<label class=""> 
 									<input type="checkbox" name="" id="" value=""  v-model="ck"/>记住密码
 								</label>-->
-							
-									<span class="iconfont icon-checkbox  df" ></span>
-									<span class="iconfont icon-checkbox1 ok" v-if="ck" ></span>
-									<span class="_keep">记住密码</span>
+
+								<span class="iconfont icon-checkbox  df"></span>
+								<span class="iconfont icon-checkbox1 ok" v-if="ck"></span>
+								<span class="_keep">记住密码</span>
 							</div>
 
 							<a class="find-pwd pull-right" href="javascript:;">忘记密码？</a>
@@ -56,20 +56,43 @@
 						<div class="form-gp submit-box">
 							<button class="submit" v-on:click="login($event)" v-bind:class="{'active':user.length>0&&pwd.length>0}" tabindex="3" type="button" v-on:keydown.enter="login($event)">登录</button>
 						</div>
-						
+
 					</form>
 
 				</section>
+
+				<!--3d-->
+				<div class="wrap">
+					<div class="cube w1 outset">
+
+						<div class="side front"></div>
+						<div class="side back"></div>
+						<div class="side right"></div>
+						<div class="side left"></div>
+						<div class="side top"></div>
+						<div class="side bottom"></div>
+
+						<div class=" inset">
+							<div class="side2 front"></div>
+							<div class="side2 back"></div>
+							<div class="side2 right"></div>
+							<div class="side2 left"></div>
+							<div class="side2 top"></div>
+							<div class="side2 bottom"></div>
+
+						</div>
+
+					</div>
+
+				</div>
 			</div>
-	
-		
+		</div>
 		</div>
 
 		<footer class=" login-footer container-12">
-			
-				<span>神州云海科技有限公司</span>
-		
-			
+
+			<span>神州云海科技有限公司</span>
+
 		</footer>
 
 		<!--[if lte IE 9]>
