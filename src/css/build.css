@@ -6624,7 +6624,7 @@ select.form-control {
     height: 100% !important; }
 
 /*3d动画*/
-.wrap {
+.css-3d-wrap {
   display: none; }
 
 .csstransforms3d .row {
@@ -6638,7 +6638,10 @@ select.form-control {
     -webkit-animation: logo 2s 1s ease forwards;
             animation: logo 2s 1s ease forwards; }
 
-.csstransforms3d .wrap {
+.csstransforms3d.-ms- .css-3d-wrap {
+  display: none; }
+
+.csstransforms3d .css-3d-wrap {
   position: relative;
   height: 100%;
   margin: 0 auto;
@@ -6720,7 +6723,7 @@ select.form-control {
 
 .csstransforms3d .w1 {
   position: absolute;
-  top: 38%;
+  top: 40%;
   left: 42%;
   -webkit-animation: rotate 50s 0s infinite ease-in alternate forwards;
           animation: rotate 50s 0s infinite ease-in alternate forwards; }

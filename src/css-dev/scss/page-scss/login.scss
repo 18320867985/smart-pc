@@ -16,7 +16,7 @@
 
 /*3d动画*/
 
-.wrap {
+.css-3d-wrap {
     display: none;
 }
 
@@ -32,13 +32,16 @@
             //transform: rotateY(0deg);
         }
     }
-   
-    .wrap {
+    // ie 10+
+    &.-ms- .css-3d-wrap {
+        display: none;
+    }
+    .css-3d-wrap {
         position: relative;
         height: 100%;
         margin: 0 auto;
         display: block;
-          perspective: 1200px;
+        perspective: 1200px;
     }
     .outset {
         position: relative;
@@ -80,14 +83,15 @@
         display: none;
         transition: all .8s;
         backface-visibility: visible;
+        
+       
     }
-    
-     .inset{
-         position: absolute;
+    .inset {
+        position: absolute;
         width: 50px;
         height: 50px;
-           transform-style: preserve-3d;
-     }
+        transform-style: preserve-3d;
+    }
     .inset .side2 {
         position: absolute;
         width: 50px;
@@ -104,11 +108,11 @@
         display: none;
         transition: all .8s;
         backface-visibility: visible;
-            background: rgba(255, 100, 100, .7);
+        background: rgba(255, 100, 100, .7);
     }
     .w1 {
         position: absolute;
-        top: 38%;
+        top: 40%;
         left: 42%;
         animation: rotate 50s 0s infinite ease-in alternate forwards;
     }
@@ -119,6 +123,7 @@
     .outset .side.front {
         display: block;
         transform: translateZ(100px);
+        
     }
     .outset .side.top {
         display: block;
@@ -140,8 +145,6 @@
         display: block;
         transform: rotateY(180deg) translateZ(100px);
     }
-    
-    
     .inset .side2.front {
         display: block;
         transform: translateZ(25px);
@@ -174,6 +177,8 @@
             transform: rotateX(-360deg) rotateY(-360deg);
         }
     }
+    
+    
 }
 
 @keyframes logo {
