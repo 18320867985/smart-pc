@@ -336,9 +336,15 @@
 				var scroll_h = cont.scrollHeight;
 				var cont_h = cont.clientHeight;
 
-				$(cont).css("width", w + 17);
+				$(cont).css("width", parseFloat(w) + 17);
+				console.log(parseFloat(w) + 17);
 			});
 		}
+
+		// 重新获取火狐浏览器的滚动的no-scroll-box的width
+		window._moz_ = {
+			resetScroll: resetScroll
+		};
 	});
 })();
 
@@ -21945,6 +21951,7 @@ var pattern = {
 			});
 
 			$(".pattern-ttl1 a").on('shown.bs.tab', function (e) {
+				_moz_.resetScroll();
 				setrScroll();
 			});
 
@@ -21977,8 +21984,10 @@ var pattern = {
 			setrScroll();
 		});
 		function setrScroll() {
+
 			$(".no-scroll-box").each(function () {
 				var p = $(this);
+
 				$(".no-scroll-bar", p).scroll(function () {
 					var obj = $(this)[0];
 					h = obj.clientHeight;
@@ -22028,6 +22037,7 @@ var status = {
 		/*滚动条*/
 		setrScroll();
 		$(window).resize(function () {
+			_moz_.resetScroll();
 			setrScroll();
 		});
 

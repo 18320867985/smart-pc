@@ -6,6 +6,7 @@ var status = {
 		/*滚动条*/
 		setrScroll();
 		$(window).resize(function() {
+			_moz_.resetScroll();
 			setrScroll();
 		});
 

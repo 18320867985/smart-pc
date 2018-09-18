@@ -6500,7 +6500,7 @@ select.form-control {
     overflow: hidden; }
     .index-aside-nemu.no-scroll-box .scroll-slide .scroll-bar {
       position: absolute;
-      width: 3px;
+      width: 4px;
       top: 0;
       right: 0;
       background: rgba(102, 109, 119, 0.6) !important;
@@ -6725,8 +6725,8 @@ select.form-control {
   position: absolute;
   top: 40%;
   left: 42%;
-  -webkit-animation: rotate 50s 0s infinite ease-in alternate forwards;
-          animation: rotate 50s 0s infinite ease-in alternate forwards; }
+  -webkit-animation: rotate 40s 0s infinite ease-in alternate both;
+          animation: rotate 40s 0s infinite ease-in alternate both; }
 
 .csstransforms3d .w1 .side {
   font-size: 16px;
@@ -7468,10 +7468,10 @@ select.form-control {
     .status-cont .no-scroll-box .scroll-slide {
       position: absolute;
       right: 0.01333rem;
-      top: 0rem;
+      top: 0.04rem;
       z-index: 99;
-      width: 0.08rem;
-      height: 1.6rem;
+      width: 0.06667rem;
+      height: 1.46667rem;
       background: rgba(144, 169, 232, 0.33);
       border-radius: 0.04rem; }
     .status-cont .no-scroll-box .scroll-bar {
@@ -7480,7 +7480,7 @@ select.form-control {
       top: 0;
       z-index: 99;
       height: 0.13333rem;
-      width: 0.08rem;
+      width: 0.06667rem;
       background: #467cc3;
       border-radius: 0.06667rem; }
   .status-cont .status-det {

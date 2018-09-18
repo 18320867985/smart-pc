@@ -109,7 +109,9 @@ var pattern = {
 			});
 			
 			$(".pattern-ttl1 a").on('shown.bs.tab', function (e) {
+				_moz_.resetScroll();
 				setrScroll();
+
 			})
 
 
@@ -139,14 +141,17 @@ var pattern = {
 
 		});
 
+
 		/*滚动条*/
 		setrScroll();
 		$(window).resize(function(){
 			setrScroll();
 		});
-		function setrScroll() {
+		function setrScroll() {	
+			
 			$(".no-scroll-box").each(function() {
 				var p = $(this);
+				
 				$(".no-scroll-bar", p).scroll(function() {
 					var obj = $(this)[0];
 					 h = obj.clientHeight;
