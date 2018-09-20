@@ -40,15 +40,22 @@
 /*侧边菜单*/
 
 .index-aside-nemu {
-    padding-left: 5px;
-    width: 236px;
+    display: flex;
+   width: 100%;
+   padding-left: 5px;
+   box-sizing: border-box;
+
     overflow-y: auto;
     overflow-x: hidden;
-    .no-scroll-bar {
-        display: flex;
+    .no-scroll-box {
+        height: 100%;
     }
+    /*一级*/
     ._nemu-1 {
-        >div {
+         width: 85px;
+        height: 100%;
+        .no-scroll-box{height: 100%; width: 100%;}
+        ._nemu-item {
             display: flex;
             flex-flow: column;
             justify-content: center;
@@ -79,13 +86,15 @@
             }
         }
     }
+    /*二级*/
     ._nemu-2 {
-        //      margin-left: 5px;
-        flex: 1;
+        width: 146px;
         ._nemu-item {
+            width: 100%;
             transition: all .5s;
             dl>dd {
                 display: none;
+                  width: 100%;
             }
             dt {
                 padding-left: 10px;
@@ -200,29 +209,32 @@
 }
 
 
-
 /*滚动条*/
-.index-aside-nemu.no-scroll-box {
-    position: relative;
+
+.index-aside-nemu ._nemu-2 .no-scroll-box {
+ 
     .scroll-slide {
         position: absolute;
         top: 1%;
         z-index: 9999;
-        right: 5px;
+        right: 4px;
         height: 98%;
-        width: 5px;
-        overflow: hidden;
+        width: 4px;
         
         .scroll-bar {
             position: absolute;
-            width:4px ;
+            width: 4px;
             top: 0;
-            right: 0;
+            right: 0px;
+            z-index: 9999;
             background: rgba(102, 109, 119, 0.6) !important;
             border-radius: 5px;
         }
     }
 }
+
+
+
 
 
 /*右边*/

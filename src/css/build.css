@@ -6354,59 +6354,70 @@ select.form-control {
 
 /*侧边菜单*/
 .index-aside-nemu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   padding-left: 5px;
-  width: 236px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow-y: auto;
-  overflow-x: hidden; }
-  .index-aside-nemu .no-scroll-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  .index-aside-nemu ._nemu-1 > div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  overflow-x: hidden;
+  /*一级*/
+  /*二级*/ }
+  .index-aside-nemu .no-scroll-box {
+    height: 100%; }
+  .index-aside-nemu ._nemu-1 {
     width: 85px;
-    height: 84px;
-    margin-bottom: 10px;
-    cursor: pointer; }
-    .index-aside-nemu ._nemu-1 > div.active {
-      border-left: 5px solid #fff;
-      background: #467CC3;
-      -webkit-transition: all .5s;
-      transition: all .5s;
-      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
-      .index-aside-nemu ._nemu-1 > div.active span {
-        color: #fff; }
-    .index-aside-nemu ._nemu-1 > div > img {
-      width: 46px;
-      height: 46px;
-      margin-bottom: 5px; }
-    .index-aside-nemu ._nemu-1 > div > span {
-      display: block;
-      font-size: 13px;
-      color: #8390A4;
-      line-height: 19px; }
+    height: 100%; }
+    .index-aside-nemu ._nemu-1 .no-scroll-box {
+      height: 100%;
+      width: 100%; }
+    .index-aside-nemu ._nemu-1 ._nemu-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      width: 85px;
+      height: 84px;
+      margin-bottom: 10px;
+      cursor: pointer; }
+      .index-aside-nemu ._nemu-1 ._nemu-item.active {
+        border-left: 5px solid #fff;
+        background: #467CC3;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
+        .index-aside-nemu ._nemu-1 ._nemu-item.active span {
+          color: #fff; }
+      .index-aside-nemu ._nemu-1 ._nemu-item > img {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 5px; }
+      .index-aside-nemu ._nemu-1 ._nemu-item > span {
+        display: block;
+        font-size: 13px;
+        color: #8390A4;
+        line-height: 19px; }
   .index-aside-nemu ._nemu-2 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; }
+    width: 146px; }
     .index-aside-nemu ._nemu-2 ._nemu-item {
+      width: 100%;
       -webkit-transition: all .5s;
       transition: all .5s; }
       .index-aside-nemu ._nemu-2 ._nemu-item dl > dd {
-        display: none; }
+        display: none;
+        width: 100%; }
       .index-aside-nemu ._nemu-2 ._nemu-item dt {
         padding-left: 10px;
         padding-top: 10px;
@@ -6488,23 +6499,21 @@ select.form-control {
           vertical-align: middle; }
 
 /*滚动条*/
-.index-aside-nemu.no-scroll-box {
-  position: relative; }
-  .index-aside-nemu.no-scroll-box .scroll-slide {
+.index-aside-nemu ._nemu-2 .no-scroll-box .scroll-slide {
+  position: absolute;
+  top: 1%;
+  z-index: 9999;
+  right: 4px;
+  height: 98%;
+  width: 4px; }
+  .index-aside-nemu ._nemu-2 .no-scroll-box .scroll-slide .scroll-bar {
     position: absolute;
-    top: 1%;
+    width: 4px;
+    top: 0;
+    right: 0px;
     z-index: 9999;
-    right: 5px;
-    height: 98%;
-    width: 5px;
-    overflow: hidden; }
-    .index-aside-nemu.no-scroll-box .scroll-slide .scroll-bar {
-      position: absolute;
-      width: 4px;
-      top: 0;
-      right: 0;
-      background: rgba(102, 109, 119, 0.6) !important;
-      border-radius: 5px; }
+    background: rgba(102, 109, 119, 0.6) !important;
+    border-radius: 5px; }
 
 /*右边*/
 .index-cont {

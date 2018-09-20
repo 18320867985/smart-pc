@@ -21723,11 +21723,11 @@ var login = {
 
 				login: function login(event) {
 					var o = event.target;
-					if (this.user.length > 0 && this.pwd.length > 0) {
 
+					if (this.user.length > 0 && this.pwd.length > 0) {
 						o.innerHTML = "正在登录中...";
 						$(o).parents("form").find("input").attr("disabled", "disabled"); // 阻住重复提交
-
+						window.location.href = "index.html";
 					}
 				}
 			}
@@ -21751,7 +21751,7 @@ var index = {
 		function resetWindowHeight() {
 			var window_h = $(window).height();
 			var logo = $(".index-aside-logo").outerHeight();
-			var nemu = $(".index-aside-nemu").outerHeight(window_h - logo);
+			var nemu = $(".index-aside-nemu,.index-aside-nemu ._nemu-2 ").outerHeight(window_h - logo);
 			//console.log(window_h);
 
 			var con_top = $(".index-cont-top").outerHeight();
@@ -21776,13 +21776,20 @@ var index = {
 		// 二级菜单点击
 		$(".index-aside-nemu ._nemu-2  ._nemu-item").on("click", function (event) {
 			event.preventDefault();
-			$(this).siblings().removeClass("active");
-			$(this).addClass("active");
-			var src = $(this).find(" dt a").attr("href");
-			if (src && src != "javascript:;") {
-				$(".iframe-box").attr("src", src);
-				$(this).parents("._nemu-2").find("dd").removeClass("active");
+			if ($(this).hasClass("active")) {
+				$(this).siblings().removeClass("active");
+				$(this).removeClass("active");
+			} else {
+				$(this).siblings().removeClass("active");
+				$(this).addClass("active");
 			}
+
+			//			var src = $(this).find(" dt a").attr("href");
+			//			if(src && src != "javascript:;") {
+			//				$(".iframe-box").attr("src", src);
+			//				$(this).parents("._nemu-2").find("dd").removeClass("active");
+			//
+			//			}
 			setrScroll();
 		});
 
